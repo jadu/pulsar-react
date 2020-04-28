@@ -1,7 +1,7 @@
 import React from 'react';
 import FormLabel from '../FormLabel/FormLabel';
 
-export default class TextInput extends React.Component {
+export default class CheckboxInput extends React.Component {
   render() {
     let {
       helpText,

@@ -1,12 +1,19 @@
 import React from 'react';
+import classnames from 'classnames';
 
 export default class FormLabel extends React.Component {
   render() {
     let {
+      className,
+      hideLabel,
       id,
       labelText, 
       required,
       ...props} = this.props;
+
+    let labelClasses = classnames('control__label', className, {
+      'hide': hideLabel
+    })
 
     let requiredIndicator = required && (
       <span aria-hidden="true" className="required-indicator" data-tippy-content="required">*</span>
@@ -16,7 +23,7 @@ export default class FormLabel extends React.Component {
       <>
       {labelText 
         ? (
-          <label htmlFor={id} className="control__label" {...props}>
+          <label htmlFor={id} className={labelClasses} {...props}>
             {labelText}
             {requiredIndicator}
           </label>

@@ -1,13 +1,13 @@
 import React from 'react';
 import FormLabel from '../FormLabel/FormLabel';
 
-export default class TextInput extends React.Component {
+export default class RadioButton extends React.Component {
   render() {
     let {
       helpText,
-      hideLabel,
       id,
       labelText,
+      required,
       ...props
     } = this.props;
 
@@ -19,9 +19,9 @@ export default class TextInput extends React.Component {
 
     return (
       <>
-      <FormLabel id={id} labelText={labelText} required={props.required} hideLabel={hideLabel} />
+      <FormLabel id={id} labelText={labelText} required={props.required} />
       <div className="controls">
-        <input className="form__control" type="text" {...props} />
+        <input className="form__control radio" type="radio" required={false} {...props} />
         {helpBlock}
       </div>
       </>
