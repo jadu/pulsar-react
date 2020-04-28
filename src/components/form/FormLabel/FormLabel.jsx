@@ -6,7 +6,7 @@ export default class FormLabel extends React.Component {
     let {
       className,
       hideLabel,
-      id,
+      htmlFor,
       labelText, 
       required,
       ...props} = this.props;
@@ -23,7 +23,7 @@ export default class FormLabel extends React.Component {
       <>
       {labelText 
         ? (
-          <label htmlFor={id} className={labelClasses} {...props}>
+          <label htmlFor={htmlFor} className={labelClasses} {...props}>
             {labelText}
             {requiredIndicator}
           </label>

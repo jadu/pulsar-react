@@ -1,7 +1,14 @@
 import React from 'react';
+import shortid from 'shortid';
 import FormLabel from '../FormLabel/FormLabel';
 
 export default class TextInput extends React.Component {
+
+  componentWillMount() {
+    this.idGuid = 'id-guid-' + shortid.generate();
+    this.helpGuid = 'help-guid-' + shortid.generate();
+  }
+
   render() {
     let {
       helpText,
@@ -14,14 +21,16 @@ export default class TextInput extends React.Component {
     let helpClasses = 'help-block';
 
     let helpBlock = helpText ? (
-      <span className={helpClasses}>{helpText}</span>
+      <span id={this.helpGuid} className={helpClasses}>{helpText}</span>
     ) : null;
+
+    let ariaDescribedby = helpText ? this.helpGuid : null;
 
     return (
       <>
-      <FormLabel id={id} labelText={labelText} required={props.required} hideLabel={hideLabel} />
+      <FormLabel htmlFor={id || this.idGuid} labelText={labelText} required={props.required} hideLabel={hideLabel} />
       <div className="controls">
-        <input className="form__control" type="text" {...props} />
+        <input id={id || this.idGuid} aria-describedby={ariaDescribedby} className="form__control" type="text" {...props} />
         {helpBlock}
       </div>
       </>
