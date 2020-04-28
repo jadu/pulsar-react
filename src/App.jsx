@@ -34,7 +34,7 @@ export default class App extends React.Component {
             />
         </FormGroup>
 
-        <FormGroup className="form-checkbox">
+        <FormGroup checkbox>
           <CheckboxInput 
             required
             id="bar"
