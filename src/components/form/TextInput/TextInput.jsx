@@ -18,21 +18,38 @@ export default class TextInput extends React.Component {
       ...props
     } = this.props;
 
+    let ariaDescribedby = helpText ? this.helpGuid : null;
+
     let helpClasses = 'help-block';
 
     let helpBlock = helpText ? (
       <span id={this.helpGuid} className={helpClasses}>{helpText}</span>
     ) : null;
 
-    let ariaDescribedby = helpText ? this.helpGuid : null;
-
     return (
       <>
-      <FormLabel htmlFor={id || this.idGuid} labelText={labelText} required={props.required} hideLabel={hideLabel} />
-      <div className="controls">
-        <input id={id || this.idGuid} aria-describedby={ariaDescribedby} className="form__control" type="text" {...props} />
-        {helpBlock}
-      </div>
+
+        <FormLabel 
+          hideLabel={hideLabel} 
+          htmlFor={id || this.idGuid} 
+          labelText={labelText} 
+          required={props.required} 
+          />
+
+        <div className="controls">
+
+          <input 
+            id={id || this.idGuid} 
+            className="form__control" 
+            type="text" 
+            aria-describedby={ariaDescribedby} 
+            {...props} 
+            />
+
+          {helpBlock}
+
+        </div>
+
       </>
     );
   }

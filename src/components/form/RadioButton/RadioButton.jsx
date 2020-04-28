@@ -5,6 +5,7 @@ export default class RadioButton extends React.Component {
   render() {
     let {
       helpText,
+      hideLabel,
       id,
       labelText,
       required,
@@ -19,11 +20,27 @@ export default class RadioButton extends React.Component {
 
     return (
       <>
-      <FormLabel id={id} labelText={labelText} required={props.required} />
-      <div className="controls">
-        <input className="form__control radio" type="radio" required={false} {...props} />
-        {helpBlock}
-      </div>
+
+        <FormLabel 
+          hideLabel={hideLabel} 
+          htmlFor={id || this.idGuid} 
+          labelText={labelText} 
+          required={props.required} 
+          />
+
+        <div className="controls">
+
+          <input 
+            className="form__control radio" 
+            required={false} 
+            type="radio" 
+            {...props} 
+            />
+
+          {helpBlock}
+
+        </div>
+
       </>
     );
   }

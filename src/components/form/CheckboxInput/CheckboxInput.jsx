@@ -5,11 +5,14 @@ export default class CheckboxInput extends React.Component {
   render() {
     let {
       helpText,
+      hideLabel,
       id,
       labelText,
       required,
       ...props
     } = this.props;
+
+    let ariaDescribedby = helpText ? this.helpGuid : null;
 
     let helpClasses = 'help-block';
 
@@ -19,11 +22,27 @@ export default class CheckboxInput extends React.Component {
 
     return (
       <>
-      <FormLabel id={id} labelText={labelText} required={props.required} />
-      <div className="controls">
-        <input className="form__control checkbox" type="checkbox" required={false} {...props} />
-        {helpBlock}
-      </div>
+        <FormLabel 
+          id={id} 
+          labelText={labelText} 
+          required={props.required} 
+          />
+
+        <div className="controls">
+
+          <input 
+            id={id || this.idGuid} 
+            className="form__control checkbox" 
+            type="checkbox" 
+            aria-describedby={ariaDescribedby} 
+            required={false} // don't allow required attribute to be set
+            {...props} 
+            />
+
+          {helpBlock}
+
+        </div>
+
       </>
     );
   }
