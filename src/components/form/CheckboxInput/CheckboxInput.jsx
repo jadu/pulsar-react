@@ -26,20 +26,20 @@ export default class CheckboxInput extends React.Component {
           id={id} 
           labelText={labelText} 
           required={props.required} 
-          />
+        />
 
-        <div className="controls">
+          <div className="controls">
 
-          <input 
-            id={id || this.idGuid} 
-            className="form__control checkbox" 
-            type="checkbox" 
-            aria-describedby={ariaDescribedby} 
-            required={false} // don't allow required attribute to be set
-            {...props} 
+            <input 
+              id={id || this.idGuid} 
+              className="form__control checkbox" 
+              type="checkbox" 
+              aria-describedby={ariaDescribedby} 
+              required={false} // don't allow required attribute to be set
+              {...props} 
             />
 
-          {helpBlock}
+            {helpBlock}
 
         </div>
 
