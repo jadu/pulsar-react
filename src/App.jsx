@@ -18,29 +18,101 @@ export default class App extends React.Component {
         <Button className="btn--primary" id="baz" data-foo="bar">Baz</Button>
         <Button disabled>Disabled</Button>
         <hr />
-<form>
 
-        <FormGroup
-          htmlFor="alpha" 
-          labelText="This is my top level label"
-        >
-          <TextInput required
-            id="alpha"
-            placeholder="My placeholder"
-            />
-        </FormGroup>
+        <form className="form">
+          <FormGroup
+            htmlFor="alpha" 
+            labelText="This is my top level label"
+          >
+            <TextInput required
+              id="alpha"
+              placeholder="My placeholder"
+              />
+          </FormGroup>
 
-        <FormGroup error required 
-          helpText="This is my help text"
-          errorText="Errrrorrrrr"
-          labelText="This is my top level label"
-        >
-          <TextInput required
-            placeholder="My placeholder"
-            />
-        </FormGroup>
+          <FormGroup error required 
+            helpText="This is my help text"
+            errorText="Errrrorrrrr"
+            labelText="This is my top level label"
+          >
+            <TextInput required
+              placeholder="My placeholder"
+              />
+          </FormGroup>
 
-</form>
+          <FormGroup topLabel
+            htmlFor="alpha" 
+            labelText="This is my top level label"
+          >
+            <TextInput required
+              id="alpha"
+              placeholder="My placeholder"
+              />
+          </FormGroup>
+
+          <FormGroup width={1}
+            labelText="One Column" 
+          >
+            <TextInput 
+              />
+          </FormGroup>
+
+          <FormGroup width={2}
+            labelText="Two Columns" 
+          >
+            <TextInput 
+              />
+          </FormGroup>
+
+          <FormGroup width={3}
+            labelText="Three Columns" 
+          >
+            <TextInput 
+              />
+          </FormGroup>
+
+          <FormGroup width={4}
+            labelText="Four Columns" 
+          >
+            <TextInput 
+              />
+          </FormGroup>
+
+          <FormGroup width={5}
+            labelText="Five Columns" 
+          >
+            <TextInput 
+              />
+          </FormGroup>
+
+          <FormGroup width={6}
+            labelText="Six Columns" 
+          >
+            <TextInput 
+              />
+          </FormGroup>
+
+          <FormGroup width={7}
+            labelText="Seven Columns" 
+          >
+            <TextInput 
+              />
+          </FormGroup>
+
+          <FormGroup width={8}
+            labelText="Eight Columns" 
+          >
+            <TextInput 
+              />
+          </FormGroup>
+
+          <FormGroup width={9}
+            labelText="Nine Columns" 
+          >
+            <TextInput 
+              />
+          </FormGroup>
+        </form>
 
       </div>
     );

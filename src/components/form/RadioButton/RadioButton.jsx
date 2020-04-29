@@ -1,47 +1,24 @@
 import React from 'react';
-import FormLabel from '../FormLabel/FormLabel';
 
 export default class RadioButton extends React.Component {
   render() {
     let {
+      helpGuid,
       helpText,
-      hideLabel,
       id,
-      labelText,
-      required,
+      idGuid,
       ...props
     } = this.props;
 
-    let helpClasses = 'help-block';
-
-    let helpBlock = helpText ? (
-      <span className={helpClasses}>{helpText}</span>
-    ) : null;
-
     return (
-      <>
-
-        <FormLabel 
-          hideLabel={hideLabel} 
-          htmlFor={id || this.idGuid} 
-          labelText={labelText} 
-          required={props.required} 
-          />
-
-        <div className="controls">
-
-          <input 
-            className="form__control radio" 
-            required={false} 
-            type="radio" 
-            {...props} 
-            />
-
-          {helpBlock}
-
-        </div>
-
-      </>
+      <input 
+        id={id ? id : idGuid} 
+        className="form__control radio" 
+        type="radio" 
+        required={false} 
+        aria-describedby={helpText && helpGuid} 
+        {...props} 
+      />
     );
   }
 }

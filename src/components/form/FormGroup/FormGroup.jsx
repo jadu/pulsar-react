@@ -25,10 +25,12 @@ export default class FormGroup extends React.Component {
       flushLabel,
       radio,
       topLabel,
+      width,
       ...props} = this.props;
 
     // Convert variants to their required classes
     let variantClasses = classnames('form__group', className, {
+      [`form__control-col--${width}`]: width,
       'form-checkbox': checkbox,
       'form-radio': radio,
       'form__group--top': topLabel,
