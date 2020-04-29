@@ -44,7 +44,7 @@ export default class FormGroup extends React.Component {
     // use it as aria-describedby
     let childrenWithGuids = React.cloneElement(children, {
       helpGuid: this.helpGuid, 
-      helpText: this.props.helpText,
+      helpText: props.helpText,
       idGuid: this.idGuid
     });
 
