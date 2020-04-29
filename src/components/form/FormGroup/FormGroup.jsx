@@ -9,11 +9,13 @@ import HelpBlock from '../HelpBlock/HelpBlock';
 export default class FormGroup extends React.Component {
 
   componentWillMount() {
+    let guid = shortid.generate();
+
     // GUID to use if no explicit ID has been set
-    this.idGuid = 'id-guid-' + shortid.generate();
+    this.idGuid = 'id-guid-' + guid;
 
     // GUID to use to link the input with any help text 
-    this.helpGuid = 'help-guid-' + shortid.generate();
+    this.helpGuid = 'help-guid-' + guid;
   }
 
   render() {
