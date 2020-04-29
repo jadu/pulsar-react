@@ -6,12 +6,13 @@ export default class TextInput extends React.Component {
       helpGuid,
       helpText,
       id,
+      idGuid,
       ...props
     } = this.props;
 
     return (
       <input 
-        id={id} 
+        id={id ? id : idGuid} 
         className="form__control" 
         type="text" 
         aria-describedby={helpText && helpGuid} 

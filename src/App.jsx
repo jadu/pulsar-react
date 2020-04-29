@@ -21,23 +21,21 @@ export default class App extends React.Component {
 <form>
 
         <FormGroup
-          htmlFor="foo" 
+          htmlFor="alpha" 
           labelText="This is my top level label"
-          >
+        >
           <TextInput required
-            id="foo"
+            id="alpha"
             placeholder="My placeholder"
             />
         </FormGroup>
 
         <FormGroup error required 
-          htmlFor="foo" 
           helpText="This is my help text"
           errorText="Errrrorrrrr"
           labelText="This is my top level label"
-          >
+        >
           <TextInput required
-            id="foo"
             placeholder="My placeholder"
             />
         </FormGroup>

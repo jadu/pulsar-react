@@ -40,12 +40,13 @@ export default class FormGroup extends React.Component {
     // use it as aria-describedby
     let childrenWithGuids = React.cloneElement(children, {
       helpGuid: this.helpGuid, 
-      helpText: this.props.helpText
+      helpText: this.props.helpText,
+      idGuid: this.idGuid
     });
 
     return (
       <div className={variantClasses}>
-        <FormLabel {...props} />
+        <FormLabel idGuid={this.idGuid} {...props} />
         <div className="controls">
           {childrenWithGuids}
           <ErrorBlock {...props} />
@@ -54,4 +55,4 @@ export default class FormGroup extends React.Component {
       </div>
     );
   }
-}
+} 
