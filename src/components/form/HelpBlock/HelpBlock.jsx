@@ -2,17 +2,17 @@ import React from 'react';
 
 export default class HelpBlock extends React.Component {
   render() {
+    if (!this.props.children) {
+      return null;
+    }
+
     let {
+      children,
       helpGuid,
-      helpText, 
       ...props} = this.props;
 
     return (
-      <>
-      {helpText && (
-        <span id={helpGuid} className="help-block">{helpText}</span>
-      )}
-      </>
+      <span id={helpGuid} className="help-block">{children}</span>
     );
   }
 }

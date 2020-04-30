@@ -19,6 +19,7 @@ export default class FormGroup extends React.Component {
       className,
       error,
       flushLabel,
+      helpText,
       radio,
       topLabel,
       width,
@@ -63,7 +64,9 @@ export default class FormGroup extends React.Component {
           <ErrorBlock errorGuid={errorGuid}>
             {error}
           </ErrorBlock>
-          <HelpBlock helpGuid={helpGuid} {...props} />
+          <HelpBlock helpGuid={helpGuid}>
+            {helpText}
+          </HelpBlock>
         </div>
       </div>
     );
