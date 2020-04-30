@@ -16,6 +16,9 @@ export default class FormGroup extends React.Component {
 
     // GUID to use to link the input with any help text 
     this.helpGuid = 'help-guid-' + guid;
+
+    // GUID to use to link the input with any errors
+    this.errorGuid = this.props.error && 'error-guid-' + guid;
   }
 
   render() {
@@ -40,11 +43,15 @@ export default class FormGroup extends React.Component {
       'has-error': error
     });
 
+    let ariaDescribedby = classnames({
+      [`${this.errorGuid}`]: error,
+      [`${this.helpGuid}`]: this.props.helpText
+    });
+
     // If help text is present, pass the GUIDs to the child inputs so they can 
     // use it as aria-describedby
     let childrenWithGuids = React.cloneElement(children, {
-      helpGuid: this.helpGuid, 
-      helpText: props.helpText,
+      ariaDescribedby: ariaDescribedby ? ariaDescribedby : null,
       idGuid: this.idGuid
     });
 
@@ -53,7 +60,9 @@ export default class FormGroup extends React.Component {
         <FormLabel idGuid={this.idGuid} {...props} />
         <div className="controls">
           {childrenWithGuids}
-          <ErrorBlock {...props} />
+          <ErrorBlock errorGuid={this.errorGuid}>
+            {error}
+          </ErrorBlock>
           <HelpBlock helpGuid={this.helpGuid} {...props} />
         </div>
       </div>

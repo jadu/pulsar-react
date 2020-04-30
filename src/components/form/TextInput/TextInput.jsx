@@ -3,8 +3,7 @@ import React from 'react';
 export default class TextInput extends React.Component {
   render() {
     let {
-      helpGuid,
-      helpText,
+      ariaDescribedby,
       id,
       idGuid,
       ...props
@@ -15,7 +14,7 @@ export default class TextInput extends React.Component {
         id={id ? id : idGuid} 
         className="form__control" 
         type="text" 
-        aria-describedby={helpText && helpGuid} 
+        aria-describedby={ariaDescribedby}
         {...props} 
       />
     );

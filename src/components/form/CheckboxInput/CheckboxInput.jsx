@@ -3,8 +3,7 @@ import React from 'react';
 export default class RadioButton extends React.Component {
   render() {
     let {
-      helpGuid,
-      helpText,
+      ariaDescribedby,
       id,
       idGuid,
       ...props
@@ -16,7 +15,7 @@ export default class RadioButton extends React.Component {
         className="form__control checkbox" 
         type="checkbox" 
         required={false} 
-        aria-describedby={helpText && helpGuid} 
+        aria-describedby={ariaDescribedby}
         {...props} 
       />
     );
