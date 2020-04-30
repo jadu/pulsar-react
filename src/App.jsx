@@ -1,13 +1,13 @@
 import React from 'react';
 import Button from './components/html/Button';
 
-import FormGroup from './components/form/FormGroup/FormGroup';
-import Fieldset from './components/form/Fieldset/Fieldset';
-import CheckboxInput from './components/form/CheckboxInput/CheckboxInput';
-import RadioButton from './components/form/RadioButton/RadioButton';
-import TextInput from './components/form/TextInput/TextInput';
-import PasswordInput from './components/form/TextInput/PasswordInput';
-import TextArea from './components/form/TextArea/TextArea';
+import FormGroup from './components/form/FormGroup';
+import Fieldset from './components/form/Fieldset';
+import CheckboxInput from './components/form/CheckboxInput';
+import RadioButton from './components/form/RadioButton';
+import TextInput from './components/form/TextInput';
+import PasswordInput from './components/form/PasswordInput';
+import TextArea from './components/form/TextArea';
 
 
 export default class App extends React.Component {
@@ -69,6 +69,30 @@ export default class App extends React.Component {
               labelText="This is my top level label"
             >
               <TextInput required />
+            </FormGroup>
+
+            <FormGroup changed
+              labelText="Changed"
+            >
+              <TextInput />
+            </FormGroup>
+
+            <FormGroup success
+              labelText="Success"
+            >
+              <TextInput />
+            </FormGroup>
+
+            <FormGroup warning
+              labelText="Warning"
+            >
+              <TextInput />
+            </FormGroup>
+
+            <FormGroup
+              labelText="Disabled"
+            >
+              <TextInput disabled />
             </FormGroup>
 
           </Fieldset>

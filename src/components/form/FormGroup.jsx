@@ -2,9 +2,9 @@ import React from 'react';
 import classnames from 'classnames';
 import shortid from 'shortid';
 
-import FormLabel from '../FormLabel/FormLabel';
-import ErrorBlock from '../ErrorBlock/ErrorBlock';
-import HelpBlock from '../HelpBlock/HelpBlock';
+import FormLabel from './FormLabel';
+import ErrorBlock from './ErrorBlock';
+import HelpBlock from './HelpBlock';
 
 export default class FormGroup extends React.Component {
 
@@ -14,6 +14,7 @@ export default class FormGroup extends React.Component {
 
   render() {
     let {
+      changed,
       checkbox,
       children,
       className,
@@ -21,7 +22,9 @@ export default class FormGroup extends React.Component {
       flushLabel,
       helpText,
       radio,
+      success,
       topLabel,
+      warning,
       width,
       ...props} = this.props;
 
@@ -32,6 +35,9 @@ export default class FormGroup extends React.Component {
       'form-radio': radio,
       'form__group--top': topLabel,
       'form__group--flush': flushLabel,
+      'has-changed': changed,
+      'has-success': success,
+      'has-warning': warning,
       'has-error': error
     });
 
