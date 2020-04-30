@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class RadioButton extends React.Component {
+export default class CheckboxInput extends React.Component {
   render() {
     let {
       ariaDescribedby,

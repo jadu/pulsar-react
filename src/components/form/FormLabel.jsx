@@ -4,11 +4,11 @@ import classnames from 'classnames';
 export default class FormLabel extends React.Component {
   render() {
     let {
+      children,
       className,
       hideLabel,
       htmlFor,
       idGuid,
-      labelText, 
       required,
       ...props} = this.props;
 
@@ -22,12 +22,12 @@ export default class FormLabel extends React.Component {
 
     return (
       <>
-      {labelText ? (
+      {children ? (
         <label 
           htmlFor={htmlFor ? htmlFor : idGuid} 
           className={variantClasses}
         >
-          {labelText}
+          {children}
           {requiredIndicator}
         </label>
       )

@@ -21,6 +21,10 @@ export default class FormGroup extends React.Component {
       error,
       flushLabel,
       helpText,
+      indented,
+      inlineCheckbox,
+      inlineRadioButton,
+      labelText,
       radio,
       success,
       topLabel,
@@ -32,6 +36,9 @@ export default class FormGroup extends React.Component {
     let variantClasses = classnames('form__group', className, {
       [`form__control-col--${width}`]: width,
       'form-checkbox': checkbox,
+      'form-checkbox-inline': inlineCheckbox,
+      'form-radio-inline': inlineRadioButton,
+      'form__group--indent': indented,
       'form-radio': radio,
       'form__group--top': topLabel,
       'form__group--flush': flushLabel,
@@ -64,7 +71,9 @@ export default class FormGroup extends React.Component {
 
     return (
       <div className={variantClasses}>
-        <FormLabel idGuid={idGuid} {...props} />
+        <FormLabel idGuid={idGuid}>
+          {labelText}
+        </FormLabel>
         <div className="controls">
           {childrenWithGuids}
           <ErrorBlock errorGuid={errorGuid}>

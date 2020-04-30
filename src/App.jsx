@@ -3,7 +3,10 @@ import Button from './components/html/Button';
 
 import FormGroup from './components/form/FormGroup';
 import Fieldset from './components/form/Fieldset';
-import CheckboxInput from './components/form/CheckboxInput';
+import Checkbox from './components/form/Checkbox';
+import FileInput from './components/form/FileInput';
+import InlineCheckbox from './components/form/InlineCheckbox';
+import InlineRadioButton from './components/form/InlineRadioButton';
 import RadioButton from './components/form/RadioButton';
 import TextInput from './components/form/TextInput';
 import PasswordInput from './components/form/PasswordInput';
@@ -15,6 +18,15 @@ export default class App extends React.Component {
   render () {
     let helpText = 'Help text to give more information about expected input';
 
+    let changedLabel = 'Changed';
+    let changedHelp = 'Something changed';
+    let successLabel = 'Success';
+    let successHelp = 'Something good happened';
+    let warningLabel = 'Warning';
+    let warningHelp = 'Something bad happened';
+    let disabledLabel = 'Disabled';
+    let disabledHelp = 'Can’t touch this';
+
     return (
       <div>
         <h1>Buttons</h1>
@@ -25,6 +37,7 @@ export default class App extends React.Component {
 
         <form className="form">
 
+          {/* Text */}
           <Fieldset legendText="Text inputs">
             <FormGroup labelText="Basic">
               <TextInput />
@@ -53,10 +66,8 @@ export default class App extends React.Component {
               />
             </FormGroup>
           </Fieldset>
-
           <Fieldset legendText="States and validation">
-
-          <FormGroup
+            <FormGroup
               error="This is my error message"
               labelText="This is my top level label"
             >
@@ -72,31 +83,33 @@ export default class App extends React.Component {
             </FormGroup>
 
             <FormGroup changed
-              labelText="Changed"
+              labelText={changedLabel}
+              helpText={changedHelp}
             >
               <TextInput />
             </FormGroup>
 
             <FormGroup success
-              labelText="Success"
+              labelText={successLabel}
+              helpText={successHelp}
             >
               <TextInput />
             </FormGroup>
 
             <FormGroup warning
-              labelText="Warning"
+              labelText={warningLabel}
+              helpText={warningHelp}
             >
               <TextInput />
             </FormGroup>
 
             <FormGroup
-              labelText="Disabled"
+              labelText={disabledLabel}
+              helpText={disabledHelp}
             >
               <TextInput disabled />
             </FormGroup>
-
           </Fieldset>
-
           <Fieldset legendText="Alignment">
             <FormGroup hideLabel
               helpText="This example hides the label with the show-label option"
@@ -125,11 +138,8 @@ export default class App extends React.Component {
             >
               <TextInput />
             </FormGroup>
-
           </Fieldset>
-
           <Fieldset legendText="Grid sizes">
-
             <FormGroup width={1}
               labelText="One Column" 
             >
@@ -183,7 +193,258 @@ export default class App extends React.Component {
             >
               <TextInput />
             </FormGroup>
+          </Fieldset>
 
+          {/* Checkboxes */}
+          <Fieldset legendText="Checkbox inputs">
+            <FormGroup checkbox labelText="Basic">
+              <Checkbox />
+            </FormGroup>
+
+            <FormGroup checkbox required
+              labelText="Required"
+            >
+              <Checkbox required />
+            </FormGroup>
+
+            <FormGroup checkbox
+              labelText="Help text"
+              helpText={helpText}
+            >
+              <Checkbox 
+                placeholder="Placeholder"
+              />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="States and validation">
+            <FormGroup checkbox
+              error="This is my error message"
+              labelText="This is my top level label"
+            >
+              <Checkbox required />
+            </FormGroup>
+
+            <FormGroup checkbox
+              error="This is my error message"
+              helpText={helpText}
+              labelText="This is my top level label"
+            >
+              <Checkbox required />
+            </FormGroup>
+
+            <FormGroup checkbox changed
+              labelText={changedLabel}
+              helpText={changedHelp}
+            >
+              <Checkbox />
+            </FormGroup>
+
+            <FormGroup checkbox success
+              labelText={successLabel}
+              helpText={successHelp}
+            >
+              <Checkbox />
+            </FormGroup>
+
+            <FormGroup checkbox warning
+              labelText={warningLabel}
+              helpText={warningHelp}
+            >
+              <Checkbox />
+            </FormGroup>
+
+            <FormGroup checkbox
+              labelText={disabledLabel}
+              helpText={disabledHelp}
+
+            >
+              <Checkbox disabled />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="Alignment">
+            <FormGroup checkbox hideLabel
+              helpText="This example hides the label with the show-label option"
+              labelText="This label should not be displayed, but kept in the markup for screen readers"
+            >
+              <Checkbox />
+            </FormGroup>
+
+            <FormGroup checkbox 
+              helpText={helpText}
+              labelText="Text input with a longer than expected label which will probably wrap multiple lines"
+            >
+              <Checkbox />
+            </FormGroup>
+
+            <FormGroup checkbox topLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label but using the topLabel variant"
+            >
+              <Checkbox />
+            </FormGroup>
+
+            <FormGroup checkbox topLabel flushLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label, using the topLabel and flushLabel variant"
+            >
+              <Checkbox />
+            </FormGroup>
+
+            <FormGroup inlineCheckbox
+            >
+              <InlineCheckbox 
+                labelText="Inline checkbox"
+              />
+            </FormGroup>
+
+            <FormGroup inlineCheckbox
+              helpText={helpText}
+              >
+              <InlineCheckbox 
+                labelText="Inline checkbox with help"
+                />
+            </FormGroup>
+
+            <FormGroup inlineCheckbox indented
+            >
+              <InlineCheckbox 
+                labelText="Inline checkbox and indented"
+                />
+            </FormGroup>
+
+            <FormGroup inlineCheckbox indented
+              helpText={helpText}
+              >
+              <InlineCheckbox 
+                labelText="Inline checkbox, indented with help"
+                />
+            </FormGroup>
+          </Fieldset>
+
+          {/* Radios */}
+          <Fieldset legendText="Radio buttons">
+            <FormGroup radio labelText="Basic">
+              <RadioButton />
+            </FormGroup>
+
+            <FormGroup radio required
+              labelText="Required"
+            >
+              <RadioButton required />
+            </FormGroup>
+
+            <FormGroup radio
+              labelText="Help text"
+              helpText={helpText}
+            >
+              <RadioButton 
+                placeholder="Placeholder"
+              />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="States and validation">
+            <FormGroup radio
+              error="This is my error message"
+              labelText="This is my top level label"
+            >
+              <RadioButton required />
+            </FormGroup>
+
+            <FormGroup radio
+              error="This is my error message"
+              helpText={helpText}
+              labelText="This is my top level label"
+            >
+              <RadioButton required />
+            </FormGroup>
+
+            <FormGroup radio changed
+              labelText={changedLabel}
+              helpText={changedHelp}
+            >
+              <RadioButton />
+            </FormGroup>
+
+            <FormGroup radio success
+              labelText={successLabel}
+              helpText={successHelp}
+            >
+              <RadioButton />
+            </FormGroup>
+
+            <FormGroup radio warning
+              labelText={warningLabel}
+              helpText={warningHelp}
+            >
+              <RadioButton />
+            </FormGroup>
+
+            <FormGroup radio
+              labelText={disabledLabel}
+              helpText={disabledHelp}
+
+            >
+              <RadioButton disabled />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="Alignment">
+            <FormGroup radio hideLabel
+              helpText="This example hides the label with the show-label option"
+              labelText="This label should not be displayed, but kept in the markup for screen readers"
+            >
+              <RadioButton />
+            </FormGroup>
+
+            <FormGroup radio 
+              helpText={helpText}
+              labelText="Text input with a longer than expected label which will probably wrap multiple lines"
+            >
+              <RadioButton />
+            </FormGroup>
+
+            <FormGroup radio topLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label but using the topLabel variant"
+            >
+              <RadioButton />
+            </FormGroup>
+
+            <FormGroup radio topLabel flushLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label, using the topLabel and flushLabel variant"
+            >
+              <RadioButton />
+            </FormGroup>
+
+            <FormGroup inlineRadioButton
+            >
+              <InlineRadioButton 
+                labelText="Inline radio"
+              />
+            </FormGroup>
+
+            <FormGroup inlineRadioButton
+              helpText={helpText}
+              >
+              <InlineRadioButton 
+                labelText="Inline radio with help"
+                />
+            </FormGroup>
+
+            <FormGroup inlineRadioButton indented
+            >
+              <InlineRadioButton 
+                labelText="Inline radio and indented"
+                />
+            </FormGroup>
+
+            <FormGroup inlineRadioButton indented
+              helpText={helpText}
+              >
+              <InlineRadioButton 
+                labelText="Inline radio, indented with help"
+                />
+            </FormGroup>
           </Fieldset>
 
         </form>
