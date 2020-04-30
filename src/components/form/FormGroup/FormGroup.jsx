@@ -41,7 +41,7 @@ export default class FormGroup extends React.Component {
     let helpGuid = 'help-guid-' + this.guid;
 
     // GUID to use to link the input with any errors 
-    let errorGuid = this.props.error && 'error-guid-' + this.guid;
+    let errorGuid = 'error-guid-' + this.guid;
 
     // Build list of IDs for the input based on the presence of help/error text 
     let ariaDescribedby = classnames({
