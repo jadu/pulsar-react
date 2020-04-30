@@ -9,16 +9,7 @@ import HelpBlock from '../HelpBlock/HelpBlock';
 export default class FormGroup extends React.Component {
 
   componentWillMount() {
-    let guid = shortid.generate();
-
-    // GUID to use if no explicit ID has been set
-    this.idGuid = 'id-guid-' + guid;
-
-    // GUID to use to link the input with any help text 
-    this.helpGuid = 'help-guid-' + guid;
-
-    // GUID to use to link the input with any errors
-    this.errorGuid = this.props.error && 'error-guid-' + guid;
+    this.guid = shortid.generate();
   }
 
   render() {
@@ -43,27 +34,36 @@ export default class FormGroup extends React.Component {
       'has-error': error
     });
 
+    // GUID to use if no explicit ID has been set
+    let idGuid = 'id-guid-' + this.guid;
+
+    // GUID to use to link the input with any help text 
+    let helpGuid = 'help-guid-' + this.guid;
+
+    // GUID to use to link the input with any errors 
+    let errorGuid = this.props.error && 'error-guid-' + this.guid;
+
+    // Build list of IDs for the input based on the presence of help/error text 
     let ariaDescribedby = classnames({
-      [`${this.errorGuid}`]: error,
-      [`${this.helpGuid}`]: this.props.helpText
+      [`${errorGuid}`]: error,
+      [`${helpGuid}`]: this.props.helpText
     });
 
-    // If help text is present, pass the GUIDs to the child inputs so they can 
-    // use it as aria-describedby
+    // If help/errors are present pass the GUIDs to the child inputs
     let childrenWithGuids = React.cloneElement(children, {
       ariaDescribedby: ariaDescribedby ? ariaDescribedby : null,
-      idGuid: this.idGuid
+      idGuid: idGuid
     });
 
     return (
       <div className={variantClasses}>
-        <FormLabel idGuid={this.idGuid} {...props} />
+        <FormLabel idGuid={idGuid} {...props} />
         <div className="controls">
           {childrenWithGuids}
-          <ErrorBlock errorGuid={this.errorGuid}>
+          <ErrorBlock errorGuid={errorGuid}>
             {error}
           </ErrorBlock>
-          <HelpBlock helpGuid={this.helpGuid} {...props} />
+          <HelpBlock helpGuid={helpGuid} {...props} />
         </div>
       </div>
     );
