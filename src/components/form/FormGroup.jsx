@@ -8,6 +8,11 @@ import HelpBlock from './HelpBlock';
 
 export default class FormGroup extends React.Component {
 
+  static defaultProps = {
+    className: 'form__group',
+    required: false
+  };
+
   componentWillMount() {
     this.guid = shortid.generate();
   }
@@ -25,6 +30,7 @@ export default class FormGroup extends React.Component {
       inlineCheckbox,
       inlineRadioButton,
       labelText,
+      required,
       radio,
       success,
       topLabel,
@@ -33,7 +39,7 @@ export default class FormGroup extends React.Component {
       ...props} = this.props;
 
     // Convert variants to their required classes
-    let variantClasses = classnames('form__group', className, {
+    let variantClasses = classnames(className, {
       [`form__control-col--${width}`]: width,
       'form-checkbox': checkbox,
       'form-checkbox-inline': inlineCheckbox,
@@ -71,7 +77,7 @@ export default class FormGroup extends React.Component {
 
     return (
       <div className={variantClasses}>
-        <FormLabel idGuid={idGuid}>
+        <FormLabel required={required} idGuid={idGuid}>
           {labelText}
         </FormLabel>
         <div className="controls">

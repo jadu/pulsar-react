@@ -1,6 +1,12 @@
 import React from 'react';
 
 export default class PasswordInput extends React.Component {
+
+  static defaultProps = {
+    className: 'form__control',
+    type: 'password',
+  };
+
   render() {
     let {
       ariaDescribedby,
@@ -12,9 +18,7 @@ export default class PasswordInput extends React.Component {
     return (
       <input 
         id={id ? id : idGuid} 
-        className="form__control" 
-        type="password" 
-        aria-describedby={ariaDescribedby}
+        aria-describedby={ariaDescribedby} 
         {...props} 
       />
     );

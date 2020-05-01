@@ -1,14 +1,17 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default class FiletInput extends React.Component {
+export default class DateInput extends React.Component {
 
   static defaultProps = {
-    className: 'form__control file',
-    type: 'file'
+    autoComplete: 'false',
+    className: 'form__control',
+    type: 'date',
+    'data-datepicker': 'true',
+    'data-format': 'default',
   };
 
   render() {
-
     let {
       ariaDescribedby,
       id,

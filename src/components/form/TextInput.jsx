@@ -1,6 +1,12 @@
 import React from 'react';
 
 export default class TextInput extends React.Component {
+
+  static defaultProps = {
+    className: 'form__control',
+    type: 'text'
+  };
+
   render() {
     let {
       ariaDescribedby,
@@ -12,8 +18,6 @@ export default class TextInput extends React.Component {
     return (
       <input 
         id={id ? id : idGuid} 
-        className="form__control" 
-        type="text" 
         aria-describedby={ariaDescribedby}
         {...props} 
       />

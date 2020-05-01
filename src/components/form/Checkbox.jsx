@@ -1,6 +1,13 @@
 import React from 'react';
 
 export default class CheckboxInput extends React.Component {
+
+  static defaultProps = {
+    className: 'form__control checkbox',
+    type: 'checkbox',
+    required: false
+  };
+
   render() {
     let {
       ariaDescribedby,
@@ -12,9 +19,6 @@ export default class CheckboxInput extends React.Component {
     return (
       <input 
         id={id ? id : idGuid} 
-        className="form__control checkbox" 
-        type="checkbox" 
-        required={false} 
         aria-describedby={ariaDescribedby}
         {...props} 
       />

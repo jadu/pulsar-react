@@ -1,22 +1,29 @@
 import React from 'react';
 
 export default class TextArea extends React.Component {
+
+  static defaultProps = {
+    className: 'form__control textarea',
+    rows: 2
+  };
+
   render() {
     let {
       ariaDescribedby,
+      children,
       id,
       idGuid,
       ...props
     } = this.props;
 
     return (
-      <input 
+      <textarea 
         id={id ? id : idGuid} 
-        className="form__control textarea" 
-        rows={rows || 2 }
-        aria-describedby={ariaDescribedby}
+        aria-describedby={ariaDescribedby} 
         {...props} 
-      />
+      >
+        {children}
+      </textarea>
     );
   }
 }

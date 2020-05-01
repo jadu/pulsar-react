@@ -4,6 +4,7 @@ import Button from './components/html/Button';
 import FormGroup from './components/form/FormGroup';
 import Fieldset from './components/form/Fieldset';
 import Checkbox from './components/form/Checkbox';
+import DateInput from './components/form/DateInput';
 import FileInput from './components/form/FileInput';
 import InlineCheckbox from './components/form/InlineCheckbox';
 import InlineRadioButton from './components/form/InlineRadioButton';
@@ -39,7 +40,7 @@ export default class App extends React.Component {
 
           {/* Text */}
           <Fieldset legendText="Text inputs">
-            <FormGroup labelText="Basic">
+            <FormGroup labelText="Basic" helpText={helpText}>
               <TextInput />
             </FormGroup>
 
@@ -444,6 +445,312 @@ export default class App extends React.Component {
               <InlineRadioButton 
                 labelText="Inline radio, indented with help"
                 />
+            </FormGroup>
+          </Fieldset>
+
+          {/* Date */}
+          <Fieldset legendText="Date">
+            <FormGroup labelText="Basic">
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup required
+              labelText="Required"
+            >
+              <DateInput required />
+            </FormGroup>
+
+            <FormGroup
+              labelText="Help text"
+              helpText={helpText}
+            >
+              <DateInput 
+                placeholder="Placeholder"
+              />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="States and validation">
+            <FormGroup
+              error="This is my error message"
+              labelText="This is my top level label"
+            >
+              <DateInput required />
+            </FormGroup>
+
+            <FormGroup
+              error="This is my error message"
+              helpText={helpText}
+              labelText="This is my top level label"
+            >
+              <DateInput required />
+            </FormGroup>
+
+            <FormGroup changed
+              labelText={changedLabel}
+              helpText={changedHelp}
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup success
+              labelText={successLabel}
+              helpText={successHelp}
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup warning
+              labelText={warningLabel}
+              helpText={warningHelp}
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup
+              labelText={disabledLabel}
+              helpText={disabledHelp}
+
+            >
+              <DateInput disabled />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="Alignment">
+            <FormGroup hideLabel
+              helpText="This example hides the label with the show-label option"
+              labelText="This label should not be displayed, but kept in the markup for screen readers"
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup 
+              helpText={helpText}
+              labelText="Text input with a longer than expected label which will probably wrap multiple lines"
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup topLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label but using the topLabel variant"
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup topLabel flushLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label, using the topLabel and flushLabel variant"
+            >
+              <DateInput />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="Grid sizes">
+            <FormGroup width={1}
+              labelText="One Column" 
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup width={2}
+              labelText="Two Columns" 
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup width={3}
+              labelText="Three Columns" 
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup width={4}
+              labelText="Four Columns" 
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup width={5}
+              labelText="Five Columns" 
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup width={6}
+              labelText="Six Columns" 
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup width={7}
+              labelText="Seven Columns" 
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup width={8}
+              labelText="Eight Columns" 
+            >
+              <DateInput />
+            </FormGroup>
+
+            <FormGroup width={9}
+              labelText="Nine Columns" 
+            >
+              <DateInput />
+            </FormGroup>
+          </Fieldset>
+
+          {/* Textarea */}
+          <Fieldset legendText="Date">
+            <FormGroup labelText="Basic">
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup labelText="Rows">
+              <TextArea rows={5} />
+            </FormGroup>
+
+            <FormGroup required
+              labelText="Required"
+            >
+              <TextArea required />
+            </FormGroup>
+
+            <FormGroup
+              labelText="Help text"
+              helpText={helpText}
+            >
+              <TextArea 
+                placeholder="Placeholder"
+              />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="States and validation">
+            <FormGroup
+              error="This is my error message"
+              labelText="This is my top level label"
+            >
+              <TextArea required />
+            </FormGroup>
+
+            <FormGroup
+              error="This is my error message"
+              helpText={helpText}
+              labelText="This is my top level label"
+            >
+              <TextArea required />
+            </FormGroup>
+
+            <FormGroup changed
+              labelText={changedLabel}
+              helpText={changedHelp}
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup success
+              labelText={successLabel}
+              helpText={successHelp}
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup warning
+              labelText={warningLabel}
+              helpText={warningHelp}
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup
+              labelText={disabledLabel}
+              helpText={disabledHelp}
+
+            >
+              <TextArea disabled />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="Alignment">
+            <FormGroup hideLabel
+              helpText="This example hides the label with the show-label option"
+              labelText="This label should not be displayed, but kept in the markup for screen readers"
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup 
+              helpText={helpText}
+              labelText="Text input with a longer than expected label which will probably wrap multiple lines"
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup topLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label but using the topLabel variant"
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup topLabel flushLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label, using the topLabel and flushLabel variant"
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="Grid sizes">
+            <FormGroup width={1}
+              labelText="One Column" 
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup width={2}
+              labelText="Two Columns" 
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup width={3}
+              labelText="Three Columns" 
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup width={4}
+              labelText="Four Columns" 
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup width={5}
+              labelText="Five Columns" 
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup width={6}
+              labelText="Six Columns" 
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup width={7}
+              labelText="Seven Columns" 
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup width={8}
+              labelText="Eight Columns" 
+            >
+              <TextArea></TextArea>
+            </FormGroup>
+
+            <FormGroup width={9}
+              labelText="Nine Columns" 
+            >
+              <TextArea></TextArea>
             </FormGroup>
           </Fieldset>
 
