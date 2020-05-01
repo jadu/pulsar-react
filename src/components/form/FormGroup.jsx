@@ -77,6 +77,19 @@ export default class FormGroup extends React.Component {
       idGuid: idGuid
     });
 
+    // Standard group markup strategy for most components
+    let groupBlock = (
+      <>
+        <FormLabel 
+          required={required} 
+          idGuid={idGuid}
+        >
+          {labelText}
+        </FormLabel>
+        {controlsBlock}
+      </>
+    );
+
     let controlsBlock = (
       <div className="controls">
         {childrenWithGuids}
@@ -89,22 +102,10 @@ export default class FormGroup extends React.Component {
       </div>
     );
 
-    let groupMarkup = (
-      <div className={variantClasses}>
-        <FormLabel 
-          required={required} 
-          idGuid={idGuid}
-        >
-          {labelText}
-        </FormLabel>
-        {controlsBlock}
-      </div>
-    );
-
     // Switch markup strategies for certain non-standard components
     if (toggle) {
-      groupMarkup = (
-        <div className={variantClasses}>
+      groupBlock = (
+        <>
           <FormLabel 
             className="toggle-switch-wrapper-label" 
             required={required} 
@@ -115,21 +116,21 @@ export default class FormGroup extends React.Component {
             </span>
             {controlsBlock}
           </FormLabel>
-        </div>
+        </>
       );
     } 
     else if (inlineCheckbox || inlineRadioButton) {
-      groupMarkup = (
-        <div className={variantClasses}>
+      groupBlock = (
+        <>
           {controlsBlock}
           {labelText}
-        </div>
+        </>
       );
     }
 
     return (
       <div className={variantClasses}>
-        {groupMarkup}
+        {groupBlock}
       </div>
     );
   }
