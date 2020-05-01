@@ -90,6 +90,7 @@ export default class FormGroup extends React.Component {
       </>
     );
 
+    // Form controls, errors and help text
     let controlsBlock = (
       <div className="controls">
         {childrenWithGuids}
