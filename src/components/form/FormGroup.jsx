@@ -5,7 +5,6 @@ import shortid from 'shortid';
 import FormLabel from './FormLabel';
 import ErrorBlock from './ErrorBlock';
 import HelpBlock from './HelpBlock';
-import InlineRadioButton from './InlineRadioButton';
 
 export default class FormGroup extends React.Component {
 
