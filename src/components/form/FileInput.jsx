@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class FiletInput extends React.Component {
+export default class FileInput extends React.Component {
 
   static defaultProps = {
     className: 'form__control file',

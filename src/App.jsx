@@ -10,8 +10,11 @@ import InlineCheckbox from './components/form/InlineCheckbox';
 import InlineRadioButton from './components/form/InlineRadioButton';
 import RadioButton from './components/form/RadioButton';
 import TextInput from './components/form/TextInput';
+import TimeInput from './components/form/TimeInput';
 import PasswordInput from './components/form/PasswordInput';
+import Select from './components/form/Select';
 import TextArea from './components/form/TextArea';
+import ToggleSwitch from './components/form/ToggleSwitch';
 
 
 export default class App extends React.Component {
@@ -28,6 +31,12 @@ export default class App extends React.Component {
     let disabledLabel = 'Disabled';
     let disabledHelp = 'Can’t touch this';
 
+    const selectOptions = [
+      { value: 'chocolate', label: 'Chocolate' },
+      { value: 'strawberry', label: 'Strawberry' },
+      { value: 'vanilla', label: 'Vanilla' }
+    ];
+
     return (
       <div>
         <h1>Buttons</h1>
@@ -37,6 +46,46 @@ export default class App extends React.Component {
         <hr />
 
         <form className="form">
+
+          <FormGroup toggle labelText="Toggle">
+            <ToggleSwitch />
+          </FormGroup>
+
+          <FormGroup labelText="Text">
+            <TextInput />
+          </FormGroup>
+
+          <FormGroup labelText="Textarea">
+            <TextArea></TextArea>
+          </FormGroup>
+
+          <FormGroup checkbox labelText="Checkbox">
+            <Checkbox />
+          </FormGroup>
+
+          <FormGroup radio labelText="Radio">
+            <RadioButton />
+          </FormGroup>
+
+          <FormGroup labelText="Date">
+            <DateInput />
+          </FormGroup>
+
+          <FormGroup labelText="File">
+            <FileInput />
+          </FormGroup>
+
+          <FormGroup labelText="Password">
+            <PasswordInput />
+          </FormGroup>
+
+          <FormGroup labelText="Select">
+            <Select options={selectOptions} />
+          </FormGroup>
+
+          <FormGroup labelText="Time">
+            <TimeInput />
+          </FormGroup>
 
           {/* Text */}
           <Fieldset legendText="Text inputs">

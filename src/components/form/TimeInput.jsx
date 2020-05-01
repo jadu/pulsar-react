@@ -1,11 +1,10 @@
 import React from 'react';
 
-export default class Checkbox extends React.Component {
+export default class TimeInput extends React.Component {
 
   static defaultProps = {
-    className: 'form__control checkbox',
-    type: 'checkbox',
-    required: false
+    className: 'form__control',
+    type: 'time'
   };
 
   render() {

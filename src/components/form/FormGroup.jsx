@@ -33,6 +33,7 @@ export default class FormGroup extends React.Component {
       required,
       radio,
       success,
+      toggle,
       topLabel,
       warning,
       width,
@@ -41,13 +42,14 @@ export default class FormGroup extends React.Component {
     // Convert variants to their required classes
     let variantClasses = classnames(className, {
       [`form__control-col--${width}`]: width,
+      'form__group--indent': indented,
+      'form__group--toggle': toggle,
+      'form__group--top': topLabel,
+      'form__group--flush': flushLabel,
       'form-checkbox': checkbox,
       'form-checkbox-inline': inlineCheckbox,
       'form-radio-inline': inlineRadioButton,
-      'form__group--indent': indented,
       'form-radio': radio,
-      'form__group--top': topLabel,
-      'form__group--flush': flushLabel,
       'has-changed': changed,
       'has-success': success,
       'has-warning': warning,
@@ -75,21 +77,43 @@ export default class FormGroup extends React.Component {
       idGuid: idGuid
     });
 
-    return (
+    let controlsBlock = (
+      <div className="controls">
+        {childrenWithGuids}
+        <ErrorBlock errorGuid={errorGuid}>
+          {error}
+        </ErrorBlock>
+        <HelpBlock helpGuid={helpGuid}>
+          {helpText}
+        </HelpBlock>
+      </div>
+    )
+
+    let defaultGroup = (
       <div className={variantClasses}>
         <FormLabel required={required} idGuid={idGuid}>
           {labelText}
         </FormLabel>
-        <div className="controls">
-          {childrenWithGuids}
-          <ErrorBlock errorGuid={errorGuid}>
-            {error}
-          </ErrorBlock>
-          <HelpBlock helpGuid={helpGuid}>
-            {helpText}
-          </HelpBlock>
-        </div>
+        {controlsBlock}
       </div>
     );
+
+    let toggleGroup = (
+      <div className={variantClasses}>
+        <FormLabel className="toggle-switch-wrapper-label" required={required} idGuid={idGuid}>
+          <span className="control__label">
+            {labelText}
+          </span>
+          {controlsBlock}
+        </FormLabel>
+      </div>
+    );
+
+    if (toggle) {
+      return toggleGroup;
+    } 
+    else {
+      return defaultGroup;
+    }
   }
 } 
