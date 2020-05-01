@@ -1,5 +1,4 @@
 import React from 'react';
-import FormLabel from './FormLabel';
 
 export default class ToggleSwitch extends React.Component {
 

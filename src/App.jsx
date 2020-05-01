@@ -8,17 +8,16 @@ import DateInput from './components/form/DateInput';
 import FileInput from './components/form/FileInput';
 import InlineCheckbox from './components/form/InlineCheckbox';
 import InlineRadioButton from './components/form/InlineRadioButton';
-import RadioButton from './components/form/RadioButton';
-import TextInput from './components/form/TextInput';
-import TimeInput from './components/form/TimeInput';
 import PasswordInput from './components/form/PasswordInput';
+import RadioButton from './components/form/RadioButton';
 import Select from './components/form/Select';
 import TextArea from './components/form/TextArea';
+import TextInput from './components/form/TextInput';
+import TimeInput from './components/form/TimeInput';
 import ToggleSwitch from './components/form/ToggleSwitch';
 
-
 export default class App extends React.Component {
-  
+
   render () {
     let helpText = 'Help text to give more information about expected input';
 

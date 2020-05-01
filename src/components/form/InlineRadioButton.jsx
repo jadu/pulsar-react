@@ -12,9 +12,9 @@ export default class InlineRadioButton extends React.Component {
   render() {
     let {
       ariaDescribedby,
-      labelText,
       id,
       idGuid,
+      labelText,
       ...props
     } = this.props;
 

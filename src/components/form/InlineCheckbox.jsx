@@ -12,9 +12,9 @@ export default class InlineCheckboxInput extends React.Component {
   render() {
     let {
       ariaDescribedby,
-      labelText,
       id,
       idGuid,
+      labelText,
       ...props
     } = this.props;
 

@@ -18,9 +18,11 @@ export default class Select extends React.Component {
     } = this.props;
 
     if (!options) {
-      return <select disabled {...props}>
+      return (
+        <select disabled {...props}>
           <option>{loadingText || 'Loading...'}</option>
-      </select>;
+        </select>
+      )
     }
 
     return (
@@ -30,14 +32,14 @@ export default class Select extends React.Component {
         {...props} 
       >
         {emptyOption ? <option value="">{emptyOption}</option> : null}
-            {
-                options.map(function(option, i) {
-                    let {text, ...props} = option;
-                    props.key = i;
+        {
+          options.map(function(option, i) {
+            let {text, ...props} = option;
+            props.key = i;
 
-                    return <option {...props}>{text}</option>
-                })
-            }
+            return <option {...props}>{text}</option>
+          })
+        }
       </select>
     );
   }

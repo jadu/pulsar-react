@@ -5,6 +5,7 @@ import shortid from 'shortid';
 import FormLabel from './FormLabel';
 import ErrorBlock from './ErrorBlock';
 import HelpBlock from './HelpBlock';
+import InlineRadioButton from './InlineRadioButton';
 
 export default class FormGroup extends React.Component {
 
@@ -87,33 +88,50 @@ export default class FormGroup extends React.Component {
           {helpText}
         </HelpBlock>
       </div>
-    )
+    );
 
-    let defaultGroup = (
+    let groupMarkup = (
       <div className={variantClasses}>
-        <FormLabel required={required} idGuid={idGuid}>
+        <FormLabel 
+          required={required} 
+          idGuid={idGuid}
+        >
           {labelText}
         </FormLabel>
         {controlsBlock}
       </div>
     );
 
-    let toggleGroup = (
-      <div className={variantClasses}>
-        <FormLabel className="toggle-switch-wrapper-label" required={required} idGuid={idGuid}>
-          <span className="control__label">
-            {labelText}
-          </span>
+    // Switch markup strategies for certain non-standard components
+    if (toggle) {
+      groupMarkup = (
+        <div className={variantClasses}>
+          <FormLabel 
+            className="toggle-switch-wrapper-label" 
+            required={required} 
+            idGuid={idGuid}
+          >
+            <span className="control__label">
+              {labelText}
+            </span>
+            {controlsBlock}
+          </FormLabel>
+        </div>
+      );
+    } 
+    else if (inlineCheckbox || inlineRadioButton) {
+      groupMarkup = (
+        <div className={variantClasses}>
           {controlsBlock}
-        </FormLabel>
+          {labelText}
+        </div>
+      );
+    }
+
+    return (
+      <div className={variantClasses}>
+        {groupMarkup}
       </div>
     );
-
-    if (toggle) {
-      return toggleGroup;
-    } 
-    else {
-      return defaultGroup;
-    }
   }
-} 
+}
