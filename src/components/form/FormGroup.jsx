@@ -77,19 +77,6 @@ export default class FormGroup extends React.Component {
       idGuid: idGuid
     });
 
-    // Standard group markup strategy for most components
-    let groupBlock = (
-      <>
-        <FormLabel 
-          required={required} 
-          idGuid={idGuid}
-        >
-          {labelText}
-        </FormLabel>
-        {controlsBlock}
-      </>
-    );
-
     // Form controls, errors and help text
     let controlsBlock = (
       <div className="controls">
@@ -101,6 +88,19 @@ export default class FormGroup extends React.Component {
           {helpText}
         </HelpBlock>
       </div>
+    );
+
+    // Standard group markup strategy for most components
+    let groupBlock = (
+      <>
+        <FormLabel 
+          required={required} 
+          idGuid={idGuid}
+        >
+          {labelText}
+        </FormLabel>
+        {controlsBlock}
+      </>
     );
 
     // Switch markup strategies for certain non-standard components

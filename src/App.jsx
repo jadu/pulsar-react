@@ -1,6 +1,8 @@
 import React from 'react';
 import Button from './components/html/Button';
 
+import Form from './components/form/Form';
+import FormActions from './components/form/FormActions';
 import FormGroup from './components/form/FormGroup';
 import Fieldset from './components/form/Fieldset';
 import Checkbox from './components/form/Checkbox';
@@ -44,7 +46,7 @@ export default class App extends React.Component {
         <Button disabled>Disabled</Button>
         <hr />
 
-        <form className="form">
+        <Form method="PUT">
 
           <FormGroup toggle labelText="Toggle">
             <ToggleSwitch />
@@ -802,7 +804,12 @@ export default class App extends React.Component {
             </FormGroup>
           </Fieldset>
 
-        </form>
+          <FormActions>
+            <Button primary type="submit">Submit</Button>
+            <Button naked>Cancel</Button>
+            <Button danger>Delete</Button>
+          </FormActions>
+        </Form>
 
       </div>
     );
