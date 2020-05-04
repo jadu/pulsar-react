@@ -16,6 +16,7 @@ A collection of Pulsar components implemented using React.
 | ErrorSummary | ✖ |
 | Fieldset | ✅ |
 | File | ✅ |
+| Form | ✖ |
 | Hidden | ✖ |
 | InlineCheckbox | ✅ |
 | InlineRadioButton | ✅ |
