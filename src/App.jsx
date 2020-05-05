@@ -2,12 +2,13 @@ import React from 'react';
 import Button from './components/html/Button';
 
 import ButtonGroupItem from './components/form/ButtonGroupItem';
+import Checkbox from './components/form/Checkbox';
+import ChoiceGroupItem from './components/form/ChoiceGroupItem';
+import DateInput from './components/form/DateInput';
 import Form from './components/form/Form';
 import FormActions from './components/form/FormActions';
 import FormGroup from './components/form/FormGroup';
 import Fieldset from './components/form/Fieldset';
-import Checkbox from './components/form/Checkbox';
-import DateInput from './components/form/DateInput';
 import FileInput from './components/form/FileInput';
 import InlineCheckbox from './components/form/InlineCheckbox';
 import InlineRadioButton from './components/form/InlineRadioButton';
@@ -59,6 +60,24 @@ export default class App extends React.Component {
             <ButtonGroupItem type="checkbox" id="foo-2" name="group-2">Foo</ButtonGroupItem>
             <ButtonGroupItem type="checkbox" id="bar-2" name="group-2">Bar</ButtonGroupItem>
             <ButtonGroupItem type="checkbox" id="baz-2" name="group-2">Baz</ButtonGroupItem>
+          </>
+        </FormGroup>
+
+        <FormGroup choiceGroup labelText="Assign blame to">
+          <>
+            <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-sun">Sunshine</ChoiceGroupItem>
+            <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-moon">Moonlight</ChoiceGroupItem>
+            <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-good">Good times</ChoiceGroupItem>
+            <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-boog">Boogie</ChoiceGroupItem>
+          </>
+        </FormGroup>
+
+        <FormGroup choiceGroup labelText="Assign blame to">
+          <>
+            <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Sunshine</ChoiceGroupItem>
+            <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Moonlight</ChoiceGroupItem>
+            <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Good times</ChoiceGroupItem>
+            <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Boogie</ChoiceGroupItem>
           </>
         </FormGroup>
 

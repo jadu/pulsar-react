@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import shortid from 'shortid';
 
+import Fieldset from './Fieldset';
 import FormLabel from './FormLabel';
 import ErrorBlock from './ErrorBlock';
 import HelpBlock from './HelpBlock';
@@ -27,6 +28,7 @@ export default class FormGroup extends React.Component {
       changed,
       checkbox,
       children,
+      choiceGroup,
       className,
       error,
       flushLabel,
@@ -48,6 +50,7 @@ export default class FormGroup extends React.Component {
     let variantClasses = classnames(className, {
       [`form__control-col--${width}`]: width,
       'form__button-group': buttonGroup,
+      'form-choice': choiceGroup,
       'form__group--indent': indented,
       'form__group--toggle': toggle,
       'form__group--top': topLabel,
@@ -103,7 +106,7 @@ export default class FormGroup extends React.Component {
 
     // Standard group markup strategy for most components
     let groupBlock = (
-      <>
+      <div className={variantClasses}>
         <FormLabel 
           required={required} 
           idGuid={idGuid}
@@ -111,13 +114,24 @@ export default class FormGroup extends React.Component {
           {labelText}
         </FormLabel>
         {controlsBlock}
-      </>
+      </div>
     );
 
     // Switch markup strategies for certain non-standard components
-    if (toggle) {
+    if (choiceGroup) {
       groupBlock = (
-        <>
+        <Fieldset 
+          className={variantClasses}
+          legendText={labelText}
+          legendClassName="control__label"
+        >
+          {controlsBlock}
+        </Fieldset>
+      );
+    }
+    else if (toggle) {
+      groupBlock = (
+        <div className={variantClasses}>
           <FormLabel 
             className="toggle-switch-wrapper-label" 
             required={required} 
@@ -128,22 +142,20 @@ export default class FormGroup extends React.Component {
             </span>
             {controlsBlock}
           </FormLabel>
-        </>
+        </div>
       );
     } 
     else if (inlineCheckbox || inlineRadioButton) {
       groupBlock = (
-        <>
+        <div className={variantClasses}>
           {controlsBlock}
           {labelText}
-        </>
+        </div>
       );
     }
 
     return (
-      <div className={variantClasses}>
-        {groupBlock}
-      </div>
+      <>{groupBlock}</>
     );
   }
 }

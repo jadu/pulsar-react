@@ -5,12 +5,13 @@ export default class Fieldset extends React.Component {
   render() {
     let {
       children,
+      legendClassName,
       legendText,
       ...props} = this.props;
 
     return (
-      <fieldset>
-          <legend>{legendText}</legend>
+      <fieldset {...props}>
+          <legend className={legendClassName}>{legendText}</legend>
           {children}
       </fieldset>
     );
