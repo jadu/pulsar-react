@@ -6,7 +6,7 @@ A collection of Pulsar components implemented using React.
 
 | Component | Status |
 | --------- | ------ |
-| ButtonGroup | ✖ |
+| ButtonGroup | ✅ |
 | Checkbox | ✅ |
 | Choice | ✖ |
 | Color | ✖ |
