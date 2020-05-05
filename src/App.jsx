@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './components/html/Button';
 
+import ButtonGroupItem from './components/form/ButtonGroupItem';
 import Form from './components/form/Form';
 import FormActions from './components/form/FormActions';
 import FormGroup from './components/form/FormGroup';
@@ -42,8 +43,25 @@ export default class App extends React.Component {
       <div>
         <h1>Buttons</h1>
         <Button>Bar</Button>
-        <Button className="btn--primary" id="baz" data-foo="bar">Baz</Button>
+        <Button primary id="baz" data-foo="bar">Baz</Button>
         <Button disabled>Disabled</Button>
+
+        <FormGroup buttonGroup labelText="Button group">
+          <>
+            <ButtonGroupItem type="radio" id="foo-1" name="group-1">Foo</ButtonGroupItem>
+            <ButtonGroupItem type="radio" id="bar-1" name="group-1">Bar</ButtonGroupItem>
+            <ButtonGroupItem type="radio" id="baz-1" name="group-1">Baz</ButtonGroupItem>
+          </>
+        </FormGroup>
+
+        <FormGroup buttonGroup labelText="Button group">
+          <>
+            <ButtonGroupItem type="checkbox" id="foo-2" name="group-2">Foo</ButtonGroupItem>
+            <ButtonGroupItem type="checkbox" id="bar-2" name="group-2">Bar</ButtonGroupItem>
+            <ButtonGroupItem type="checkbox" id="baz-2" name="group-2">Baz</ButtonGroupItem>
+          </>
+        </FormGroup>
+
         <hr />
 
         <Form method="PUT">

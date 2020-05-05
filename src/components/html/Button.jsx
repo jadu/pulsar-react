@@ -9,9 +9,12 @@ export default class Button extends React.Component {
 
   render() {
     let {
+      ariaDescribedby,
       children,
       className,
       danger,
+      id,
+      idGuid,
       inverse,
       naked,
       primary,

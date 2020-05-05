@@ -18,7 +18,12 @@ export default class FormGroup extends React.Component {
   }
 
   render() {
+    if (!this.props.children) {
+      return null;
+    }
+
     let {
+      buttonGroup,
       changed,
       checkbox,
       children,
@@ -42,6 +47,7 @@ export default class FormGroup extends React.Component {
     // Convert variants to their required classes
     let variantClasses = classnames(className, {
       [`form__control-col--${width}`]: width,
+      'form__button-group': buttonGroup,
       'form__group--indent': indented,
       'form__group--toggle': toggle,
       'form__group--top': topLabel,
@@ -58,10 +64,10 @@ export default class FormGroup extends React.Component {
 
     // GUID to use if no explicit ID has been set
     let idGuid = 'id-guid-' + this.guid;
-
+    
     // GUID to use to link the input with any help text 
     let helpGuid = 'help-guid-' + this.guid;
-
+    
     // GUID to use to link the input with any errors 
     let errorGuid = 'error-guid-' + this.guid;
 
@@ -77,9 +83,14 @@ export default class FormGroup extends React.Component {
       idGuid: idGuid
     });
 
+    // Build list of classNames to be used on the controls block
+    let controlsClassName = classnames('controls', {
+      'btn__group': buttonGroup
+    });
+
     // Form controls, errors and help text
     let controlsBlock = (
-      <div className="controls">
+      <div className={controlsClassName}>
         {childrenWithGuids}
         <ErrorBlock errorGuid={errorGuid}>
           {error}
