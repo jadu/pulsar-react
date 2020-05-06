@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "webpack-dev-server"
   },
   "keywords": [],
@@ -15,8 +15,15 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.9.5",
     "@babel/preset-react": "^7.9.4",
+    "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
     "html-webpack-plugin": "^4.2.0",
+    "jadu-pulsar": "^10.3.1",
+    "jest": "^26.0.1",
+    "react-test-renderer": "^16.13.1",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
@@ -30,6 +37,14 @@
   "babel": {
     "plugins": [
       "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "jest": {
+    "setupFiles": [
+      "./tasks/jest/setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ]
   }
 }

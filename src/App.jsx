@@ -4,6 +4,7 @@ import Button from './components/html/Button';
 import ButtonGroupItem from './components/form/ButtonGroupItem';
 import Checkbox from './components/form/Checkbox';
 import ChoiceGroupItem from './components/form/ChoiceGroupItem';
+import ColorInput from './components/form/ColorInput';
 import DateInput from './components/form/DateInput';
 import Form from './components/form/Form';
 import FormActions from './components/form/FormActions';
@@ -16,7 +17,7 @@ import PasswordInput from './components/form/PasswordInput';
 import RadioButton from './components/form/RadioButton';
 import Select from './components/form/Select';
 import TextArea from './components/form/TextArea';
-import TextInput from './components/form/TextInput';
+import TextInput from './components/form/TextInput/TextInput';
 import TimeInput from './components/form/TimeInput';
 import ToggleSwitch from './components/form/ToggleSwitch';
 
@@ -89,8 +90,9 @@ export default class App extends React.Component {
             <ToggleSwitch />
           </FormGroup>
 
-          <FormGroup labelText="Text">
-            <TextInput />
+          <FormGroup labelText="Prepend" prependText="prepended" appendText="appended">
+            <TextInput 
+            />
           </FormGroup>
 
           <FormGroup labelText="Textarea">
@@ -838,6 +840,164 @@ export default class App extends React.Component {
               labelText="Nine Columns" 
             >
               <TextArea></TextArea>
+            </FormGroup>
+          </Fieldset>
+
+          {/* Color */}
+          <Fieldset legendText="Text inputs">
+            <FormGroup labelText="Basic" helpText={helpText}>
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup required
+              labelText="Required"
+            >
+              <ColorInput required />
+            </FormGroup>
+
+            <FormGroup 
+              labelText="Placeholder"
+            >
+              <ColorInput 
+                placeholder="Placeholder"
+              />
+            </FormGroup>
+
+            <FormGroup
+              labelText="Help text"
+              helpText={helpText}
+            >
+              <ColorInput 
+                placeholder="Placeholder"
+              />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="States and validation">
+            <FormGroup
+              error="This is my error message"
+              labelText="This is my top level label"
+            >
+              <ColorInput required />
+            </FormGroup>
+
+            <FormGroup
+              error="This is my error message"
+              helpText={helpText}
+              labelText="This is my top level label"
+            >
+              <ColorInput required />
+            </FormGroup>
+
+            <FormGroup changed
+              labelText={changedLabel}
+              helpText={changedHelp}
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup success
+              labelText={successLabel}
+              helpText={successHelp}
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup warning
+              labelText={warningLabel}
+              helpText={warningHelp}
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup
+              labelText={disabledLabel}
+              helpText={disabledHelp}
+            >
+              <ColorInput disabled />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="Alignment">
+            <FormGroup hideLabel
+              helpText="This example hides the label with the show-label option"
+              labelText="This label should not be displayed, but kept in the markup for screen readers"
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup 
+              helpText={helpText}
+              labelText="Text input with a longer than expected label which will probably wrap multiple lines"
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup topLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label but using the topLabel variant"
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup topLabel flushLabel
+              helpText={helpText}
+              labelText="Text input with a longer than expected label, using the topLabel and flushLabel variant"
+            >
+              <ColorInput />
+            </FormGroup>
+          </Fieldset>
+          <Fieldset legendText="Grid sizes">
+            <FormGroup width={1}
+              labelText="One Column" 
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup width={2}
+              labelText="Two Columns" 
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup width={3}
+              labelText="Three Columns" 
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup width={4}
+              labelText="Four Columns" 
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup width={5}
+              labelText="Five Columns" 
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup width={6}
+              labelText="Six Columns" 
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup width={7}
+              labelText="Seven Columns" 
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup width={8}
+              labelText="Eight Columns" 
+            >
+              <ColorInput />
+            </FormGroup>
+
+            <FormGroup width={9}
+              labelText="Nine Columns" 
+            >
+              <ColorInput />
             </FormGroup>
           </Fieldset>
 

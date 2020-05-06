@@ -24,6 +24,7 @@ export default class FormGroup extends React.Component {
     }
 
     let {
+      appendText,
       buttonGroup,
       changed,
       checkbox,
@@ -37,6 +38,7 @@ export default class FormGroup extends React.Component {
       inlineCheckbox,
       inlineRadioButton,
       labelText,
+      prependText,
       required,
       radio,
       success,
@@ -91,13 +93,33 @@ export default class FormGroup extends React.Component {
       'btn__group': buttonGroup
     });
 
-    // Form controls, errors and help text
+    // Form controls
+    let inputBlock = (
+      <>{childrenWithGuids}</>
+    );
+
+    // Wrap with input group if appended/prepended text is present
+    if (appendText || prependText) {
+      inputBlock = (
+        <div className="input-group">
+          {prependText && 
+            <span className="input-group-addon">{prependText}</span>
+          }
+          {childrenWithGuids}
+          {appendText && 
+            <span className="input-group-addon">{appendText}</span>
+          }
+        </div>
+      );
+    }
+
+    // Wrap input block alongside errors and help
     let controlsBlock = (
       <div className={controlsClassName}>
-        {childrenWithGuids}
+        {inputBlock}
         <ErrorBlock errorGuid={errorGuid}>
           {error}
-        </ErrorBlock>
+        </ErrorBlock> 
         <HelpBlock helpGuid={helpGuid}>
           {helpText}
         </HelpBlock>
