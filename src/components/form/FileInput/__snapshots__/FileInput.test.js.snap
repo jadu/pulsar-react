@@ -15,13 +15,13 @@ exports[`renders as form group 1`] = `
     <div
       className="controls"
     >
-      <TextInput
+      <FileInput
         ariaDescribedby={null}
-        className="form__control"
+        className="form__control file"
         idGuid="id-guid-1"
         key=".0"
         test="test"
-        type="text"
+        type="file"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -49,13 +49,13 @@ exports[`renders as form group, with error, using the aria-describedby attribute
     <div
       className="controls"
     >
-      <TextInput
+      <FileInput
         ariaDescribedby="error-guid-1"
-        className="form__control"
+        className="form__control file"
         idGuid="id-guid-1"
         key=".0"
         test="test"
-        type="text"
+        type="file"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -85,13 +85,13 @@ exports[`renders as form group, with helpText and error, using two aria-describe
     <div
       className="controls"
     >
-      <TextInput
+      <FileInput
         ariaDescribedby="error-guid-1 help-guid-1"
-        className="form__control"
+        className="form__control file"
         idGuid="id-guid-1"
         key=".0"
         test="test"
-        type="text"
+        type="file"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -123,13 +123,13 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
     <div
       className="controls"
     >
-      <TextInput
+      <FileInput
         ariaDescribedby="help-guid-1"
-        className="form__control"
+        className="form__control file"
         idGuid="id-guid-1"
         key=".0"
         test="test"
-        type="text"
+        type="file"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -146,55 +146,55 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
 
 exports[`renders the basic input 1`] = `
 <input
-  class="form__control"
-  type="text"
+  class="form__control file"
+  type="file"
 />
 `;
 
 exports[`renders the basic input with aria-describedby 1`] = `
 <input
   aria-describedby="foo"
-  class="form__control"
-  type="text"
+  class="form__control file"
+  type="file"
 />
 `;
 
 exports[`renders the basic input with id 1`] = `
 <input
-  class="form__control"
+  class="form__control file"
   id="foo"
-  type="text"
+  type="file"
 />
 `;
 
 exports[`renders the basic input with idGuid 1`] = `
 <input
-  class="form__control"
+  class="form__control file"
   id="bar"
-  type="text"
+  type="file"
 />
 `;
 
 exports[`renders the basic input with placeholder 1`] = `
 <input
-  class="form__control"
+  class="form__control file"
   placeholder="foo"
-  type="text"
+  type="file"
 />
 `;
 
 exports[`renders the basic input with required 1`] = `
 <input
-  class="form__control"
+  class="form__control file"
   required=""
-  type="text"
+  type="file"
 />
 `;
 
 exports[`will prefer id over idGuid 1`] = `
 <input
-  class="form__control"
+  class="form__control file"
   id="foo"
-  type="text"
+  type="file"
 />
 `;

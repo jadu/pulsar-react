@@ -15,13 +15,14 @@ exports[`renders as form group 1`] = `
     <div
       className="controls"
     >
-      <TextInput
+      <RadioButton
         ariaDescribedby={null}
-        className="form__control"
+        className="form__control radio"
         idGuid="id-guid-1"
         key=".0"
+        required={false}
         test="test"
-        type="text"
+        type="radio"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -49,13 +50,14 @@ exports[`renders as form group, with error, using the aria-describedby attribute
     <div
       className="controls"
     >
-      <TextInput
+      <RadioButton
         ariaDescribedby="error-guid-1"
-        className="form__control"
+        className="form__control radio"
         idGuid="id-guid-1"
         key=".0"
+        required={false}
         test="test"
-        type="text"
+        type="radio"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -85,13 +87,14 @@ exports[`renders as form group, with helpText and error, using two aria-describe
     <div
       className="controls"
     >
-      <TextInput
+      <RadioButton
         ariaDescribedby="error-guid-1 help-guid-1"
-        className="form__control"
+        className="form__control radio"
         idGuid="id-guid-1"
         key=".0"
+        required={false}
         test="test"
-        type="text"
+        type="radio"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -123,13 +126,14 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
     <div
       className="controls"
     >
-      <TextInput
+      <RadioButton
         ariaDescribedby="help-guid-1"
-        className="form__control"
+        className="form__control radio"
         idGuid="id-guid-1"
         key=".0"
+        required={false}
         test="test"
-        type="text"
+        type="radio"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -146,55 +150,55 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
 
 exports[`renders the basic input 1`] = `
 <input
-  class="form__control"
-  type="text"
+  class="form__control radio"
+  type="radio"
 />
 `;
 
 exports[`renders the basic input with aria-describedby 1`] = `
 <input
   aria-describedby="foo"
-  class="form__control"
-  type="text"
+  class="form__control radio"
+  type="radio"
 />
 `;
 
 exports[`renders the basic input with id 1`] = `
 <input
-  class="form__control"
+  class="form__control radio"
   id="foo"
-  type="text"
+  type="radio"
 />
 `;
 
 exports[`renders the basic input with idGuid 1`] = `
 <input
-  class="form__control"
+  class="form__control radio"
   id="bar"
-  type="text"
+  type="radio"
 />
 `;
 
 exports[`renders the basic input with placeholder 1`] = `
 <input
-  class="form__control"
+  class="form__control radio"
   placeholder="foo"
-  type="text"
+  type="radio"
 />
 `;
 
 exports[`renders the basic input with required 1`] = `
 <input
-  class="form__control"
+  class="form__control radio"
   required=""
-  type="text"
+  type="radio"
 />
 `;
 
 exports[`will prefer id over idGuid 1`] = `
 <input
-  class="form__control"
+  class="form__control radio"
   id="foo"
-  type="text"
+  type="radio"
 />
 `;

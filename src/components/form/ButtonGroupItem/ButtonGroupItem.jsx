@@ -1,8 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-import FormLabel from './FormLabel';
+import FormLabel from '../FormLabel';
 
-export default class Checkbox extends React.Component {
+export default class ButtonGroupItem extends React.Component {
 
   static defaultProps = {
     className: 'form__control',

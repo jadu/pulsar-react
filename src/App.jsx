@@ -1,25 +1,25 @@
 import React from 'react';
 import Button from './components/html/Button';
 
-import ButtonGroupItem from './components/form/ButtonGroupItem';
-import Checkbox from './components/form/Checkbox';
+import ButtonGroupItem from './components/form/ButtonGroupItem/ButtonGroupItem';
+import Checkbox from './components/form/Checkbox/Checkbox';
 import ChoiceGroupItem from './components/form/ChoiceGroupItem';
-import ColorInput from './components/form/ColorInput';
-import DateInput from './components/form/DateInput';
+import ColorInput from './components/form/ColorInput/ColorInput';
+import DateInput from './components/form/DateInput/DateInput';
 import Form from './components/form/Form';
 import FormActions from './components/form/FormActions';
 import FormGroup from './components/form/FormGroup';
 import Fieldset from './components/form/Fieldset';
-import FileInput from './components/form/FileInput';
-import InlineCheckbox from './components/form/InlineCheckbox';
-import InlineRadioButton from './components/form/InlineRadioButton';
-import PasswordInput from './components/form/PasswordInput';
-import RadioButton from './components/form/RadioButton';
-import Select from './components/form/Select';
-import TextArea from './components/form/TextArea';
+import FileInput from './components/form/FileInput/FileInput';
+import InlineCheckbox from './components/form/InlineCheckbox/InlineCheckbox';
+import InlineRadioButton from './components/form/InlineRadioButton/InlineRadioButton';
+import PasswordInput from './components/form/PasswordInput/PasswordInput';
+import RadioButton from './components/form/RadioButton/RadioButton';
+import Select from './components/form/Select/Select';
+import TextArea from './components/form/TextArea/TextArea';
 import TextInput from './components/form/TextInput/TextInput';
-import TimeInput from './components/form/TimeInput';
-import ToggleSwitch from './components/form/ToggleSwitch';
+import TimeInput from './components/form/TimeInput/TimeInput';
+import ToggleSwitch from './components/form/ToggleSwitch/ToggleSwitch';
 
 export default class App extends React.Component {
 
@@ -43,17 +43,12 @@ export default class App extends React.Component {
 
     return (
       <div>
-        <h1>Buttons</h1>
-        <Button>Bar</Button>
-        <Button primary id="baz" data-foo="bar">Baz</Button>
-        <Button disabled>Disabled</Button>
 
-        <FormGroup buttonGroup labelText="Button group">
-          <>
+
+        <FormGroup buttonGroup helpText="This is my help text" labelText="Button group">
             <ButtonGroupItem type="radio" id="foo-1" name="group-1">Foo</ButtonGroupItem>
             <ButtonGroupItem type="radio" id="bar-1" name="group-1">Bar</ButtonGroupItem>
             <ButtonGroupItem type="radio" id="baz-1" name="group-1">Baz</ButtonGroupItem>
-          </>
         </FormGroup>
 
         <FormGroup buttonGroup labelText="Button group">
@@ -1007,6 +1002,7 @@ export default class App extends React.Component {
             <Button danger>Delete</Button>
           </FormActions>
         </Form>
+
 
       </div>
     );

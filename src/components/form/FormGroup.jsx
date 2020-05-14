@@ -11,12 +11,9 @@ export default class FormGroup extends React.Component {
 
   static defaultProps = {
     className: 'form__group',
+    guid: shortid.generate(),
     required: false
   };
-
-  componentWillMount() {
-    this.guid = shortid.generate();
-  }
 
   render() {
     if (!this.props.children) {
@@ -68,13 +65,13 @@ export default class FormGroup extends React.Component {
     });
 
     // GUID to use if no explicit ID has been set
-    let idGuid = 'id-guid-' + this.guid;
+    let idGuid = 'id-guid-' + this.props.guid;
     
     // GUID to use to link the input with any help text 
-    let helpGuid = 'help-guid-' + this.guid;
+    let helpGuid = 'help-guid-' + this.props.guid;
     
     // GUID to use to link the input with any errors 
-    let errorGuid = 'error-guid-' + this.guid;
+    let errorGuid = 'error-guid-' + this.props.guid;
 
     // Build list of IDs for the input based on the presence of help/error text 
     let ariaDescribedby = classnames({
@@ -83,10 +80,15 @@ export default class FormGroup extends React.Component {
     });
 
     // If help/errors are present pass the GUIDs to the child inputs
-    let childrenWithGuids = React.cloneElement(children, {
-      ariaDescribedby: ariaDescribedby ? ariaDescribedby : null,
-      idGuid: idGuid
-    });
+    let childrenWithGuids = React.Children.map(
+      children,
+      (child, i) => {
+        return React.cloneElement(child, {
+          ariaDescribedby: ariaDescribedby ? ariaDescribedby : null,
+          idGuid: idGuid
+        });
+      }
+    );
 
     // Build list of classNames to be used on the controls block
     let controlsClassName = classnames('controls', {

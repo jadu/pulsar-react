@@ -1,0 +1,291 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders as form group 1`] = `
+<Fragment>
+  <div
+    className="form__group form__button-group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My Label
+    </FormLabel>
+    <div
+      className="controls btn__group"
+    >
+      <ButtonGroupItem
+        className="form__control"
+        id="foo-1"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Foo
+      </ButtonGroupItem>
+      <ButtonGroupItem
+        className="form__control"
+        id="bar-1"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Bar
+      </ButtonGroupItem>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders as form group, with error, using the aria-describedby attribute 1`] = `
+<Fragment>
+  <div
+    className="form__group form__button-group has-error"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My Label
+    </FormLabel>
+    <div
+      className="controls btn__group"
+    >
+      <ButtonGroupItem
+        className="form__control"
+        id="foo-1"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Foo
+      </ButtonGroupItem>
+      <ButtonGroupItem
+        className="form__control"
+        id="bar-1"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Bar
+      </ButtonGroupItem>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      >
+        bar
+      </ErrorBlock>
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders as form group, with helpText and error, using two aria-describedby attributes 1`] = `
+<Fragment>
+  <div
+    className="form__group form__button-group has-error"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My Label
+    </FormLabel>
+    <div
+      className="controls btn__group"
+    >
+      <ButtonGroupItem
+        className="form__control"
+        id="foo-1"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Foo
+      </ButtonGroupItem>
+      <ButtonGroupItem
+        className="form__control"
+        id="bar-1"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Bar
+      </ButtonGroupItem>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      >
+        bar
+      </ErrorBlock>
+      <HelpBlock
+        helpGuid="help-guid-1"
+      >
+        foo
+      </HelpBlock>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders as form group, with helpText, using the aria-describedby attribute 1`] = `
+<Fragment>
+  <div
+    className="form__group form__button-group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My Label
+    </FormLabel>
+    <div
+      className="controls btn__group"
+    >
+      <ButtonGroupItem
+        className="form__control"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Foo
+      </ButtonGroupItem>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      >
+        foo
+      </HelpBlock>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders the basic input with aria-describedby 1`] = `
+Array [
+  <input
+    aria-describedby="foo"
+    class="form__control radio"
+    type="radio"
+  />,
+  <label
+    class="control__label"
+  >
+    My Label
+  </label>,
+]
+`;
+
+exports[`renders the basic input with id 1`] = `
+Array [
+  <input
+    class="form__control radio"
+    id="foo"
+    type="radio"
+  />,
+  <label
+    class="control__label"
+    for="foo"
+  >
+    My Label
+  </label>,
+]
+`;
+
+exports[`renders the basic input with idGuid 1`] = `
+Array [
+  <input
+    class="form__control radio"
+    id="bar"
+    type="radio"
+  />,
+  <label
+    class="control__label"
+    for="bar"
+  >
+    My Label
+  </label>,
+]
+`;
+
+exports[`renders the basic input with labelText 1`] = `
+Array [
+  <input
+    class="form__control radio"
+    type="radio"
+  />,
+  <label
+    class="control__label"
+  >
+    My Label
+  </label>,
+]
+`;
+
+exports[`renders the basic input with name 1`] = `
+Array [
+  <input
+    class="form__control radio"
+    name="foo"
+    type="radio"
+  />,
+  <label
+    class="control__label"
+  >
+    My Label
+  </label>,
+]
+`;
+
+exports[`renders the basic input, as checkbox 1`] = `
+Array [
+  <input
+    class="form__control checkbox"
+    type="checkbox"
+  />,
+  <span
+    class="control__label"
+  />,
+]
+`;
+
+exports[`renders the basic input, defaulting to radio 1`] = `
+Array [
+  <input
+    class="form__control radio"
+    type="radio"
+  />,
+  <span
+    class="control__label"
+  />,
+]
+`;
+
+exports[`will prefer id over idGuid 1`] = `
+Array [
+  <input
+    class="form__control radio"
+    id="foo"
+    type="radio"
+  />,
+  <label
+    class="control__label"
+    for="foo"
+  >
+    My Label
+  </label>,
+]
+`;

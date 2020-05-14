@@ -5,53 +5,60 @@ import { shallow, render } from 'enzyme';
 
 
 import FormGroup from '../FormGroup';
-import TextInput from './TextInput';
+import TextArea from './TextArea';
 
 it('renders the basic input', () => {
   const tree = render(
-    <TextInput />
+    <TextArea></TextArea>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the basic input with id', () => {
   const tree = render(
-    <TextInput id="foo" />
+    <TextArea id="foo"></TextArea>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the basic input with idGuid', () => {
   const tree = render(
-    <TextInput idGuid="bar" />
+    <TextArea idGuid="bar"></TextArea>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('will prefer id over idGuid', () => {
   const tree = render(
-    <TextInput id="foo" idGuid="bar" />
+    <TextArea id="foo" idGuid="bar"></TextArea>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the basic input with required', () => {
   const tree = render(
-    <TextInput required />
+    <TextArea required></TextArea>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the basic input with placeholder', () => {
   const tree = render(
-    <TextInput placeholder="foo" />
+    <TextArea placeholder="foo"></TextArea>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the basic input with aria-describedby', () => {
   const tree = render(
-    <TextInput aria-describedby="foo" />
+    <TextArea aria-describedby="foo"></TextArea>
+  );
+  expect(tree).toMatchSnapshot();
+});
+
+it('allows rows to be defined', () => {
+  const tree = render(
+    <TextArea rows={10}></TextArea>
   );
   expect(tree).toMatchSnapshot();
 });
@@ -59,7 +66,7 @@ it('renders the basic input with aria-describedby', () => {
 it('renders as form group', () => {
   const tree = shallow(
     <FormGroup labelText="My label">
-      <TextInput />
+      <TextArea></TextArea>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -68,7 +75,7 @@ it('renders as form group', () => {
 it('renders as form group, with helpText, using the aria-describedby attribute', () => {
   const tree = shallow(
     <FormGroup labelText="My label" helpText="foo">
-      <TextInput />
+      <TextArea></TextArea>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -77,7 +84,7 @@ it('renders as form group, with helpText, using the aria-describedby attribute',
 it('renders as form group, with error, using the aria-describedby attribute', () => {
   const tree = shallow(
     <FormGroup labelText="My label" error="foo">
-      <TextInput />
+      <TextArea></TextArea>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -86,7 +93,7 @@ it('renders as form group, with error, using the aria-describedby attribute', ()
 it('renders as form group, with helpText and error, using two aria-describedby attributes', () => {
   const tree = shallow(
     <FormGroup labelText="My label" helpText="foo" error="bar">
-      <TextInput />
+      <TextArea></TextArea>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();

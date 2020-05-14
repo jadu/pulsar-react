@@ -15,13 +15,16 @@ exports[`renders as form group 1`] = `
     <div
       className="controls"
     >
-      <TextInput
+      <DateInput
         ariaDescribedby={null}
+        autoComplete="false"
         className="form__control"
+        data-datepicker="true"
+        data-format="default"
         idGuid="id-guid-1"
         key=".0"
         test="test"
-        type="text"
+        type="date"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -49,13 +52,16 @@ exports[`renders as form group, with error, using the aria-describedby attribute
     <div
       className="controls"
     >
-      <TextInput
+      <DateInput
         ariaDescribedby="error-guid-1"
+        autoComplete="false"
         className="form__control"
+        data-datepicker="true"
+        data-format="default"
         idGuid="id-guid-1"
         key=".0"
         test="test"
-        type="text"
+        type="date"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -85,13 +91,16 @@ exports[`renders as form group, with helpText and error, using two aria-describe
     <div
       className="controls"
     >
-      <TextInput
+      <DateInput
         ariaDescribedby="error-guid-1 help-guid-1"
+        autoComplete="false"
         className="form__control"
+        data-datepicker="true"
+        data-format="default"
         idGuid="id-guid-1"
         key=".0"
         test="test"
-        type="text"
+        type="date"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -123,13 +132,16 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
     <div
       className="controls"
     >
-      <TextInput
+      <DateInput
         ariaDescribedby="help-guid-1"
+        autoComplete="false"
         className="form__control"
+        data-datepicker="true"
+        data-format="default"
         idGuid="id-guid-1"
         key=".0"
         test="test"
-        type="text"
+        type="date"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -146,55 +158,76 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
 
 exports[`renders the basic input 1`] = `
 <input
+  autocomplete="false"
   class="form__control"
-  type="text"
+  data-datepicker="true"
+  data-format="default"
+  type="date"
 />
 `;
 
 exports[`renders the basic input with aria-describedby 1`] = `
 <input
   aria-describedby="foo"
+  autocomplete="false"
   class="form__control"
-  type="text"
+  data-datepicker="true"
+  data-format="default"
+  type="date"
 />
 `;
 
 exports[`renders the basic input with id 1`] = `
 <input
+  autocomplete="false"
   class="form__control"
+  data-datepicker="true"
+  data-format="default"
   id="foo"
-  type="text"
+  type="date"
 />
 `;
 
 exports[`renders the basic input with idGuid 1`] = `
 <input
+  autocomplete="false"
   class="form__control"
+  data-datepicker="true"
+  data-format="default"
   id="bar"
-  type="text"
+  type="date"
 />
 `;
 
 exports[`renders the basic input with placeholder 1`] = `
 <input
+  autocomplete="false"
   class="form__control"
+  data-datepicker="true"
+  data-format="default"
   placeholder="foo"
-  type="text"
+  type="date"
 />
 `;
 
 exports[`renders the basic input with required 1`] = `
 <input
+  autocomplete="false"
   class="form__control"
+  data-datepicker="true"
+  data-format="default"
   required=""
-  type="text"
+  type="date"
 />
 `;
 
 exports[`will prefer id over idGuid 1`] = `
 <input
+  autocomplete="false"
   class="form__control"
+  data-datepicker="true"
+  data-format="default"
   id="foo"
-  type="text"
+  type="date"
 />
 `;

@@ -1,0 +1,344 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders as form group 1`] = `
+<Fragment>
+  <div
+    className="form__group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My label
+    </FormLabel>
+    <div
+      className="controls"
+    >
+      <Select
+        ariaDescribedby={null}
+        className="form__control select"
+        idGuid="id-guid-1"
+        key=".0"
+        options={
+          Array [
+            Object {
+              "label": "Chocolate",
+              "value": "chocolate",
+            },
+            Object {
+              "label": "Strawberry",
+              "value": "strawberry",
+            },
+            Object {
+              "label": "Vanilla",
+              "value": "vanilla",
+            },
+          ]
+        }
+        test="test"
+      />
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders as form group, with error, using the aria-describedby attribute 1`] = `
+<Fragment>
+  <div
+    className="form__group has-error"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My label
+    </FormLabel>
+    <div
+      className="controls"
+    >
+      <Select
+        ariaDescribedby="error-guid-1"
+        className="form__control select"
+        idGuid="id-guid-1"
+        key=".0"
+        options={
+          Array [
+            Object {
+              "label": "Chocolate",
+              "value": "chocolate",
+            },
+            Object {
+              "label": "Strawberry",
+              "value": "strawberry",
+            },
+            Object {
+              "label": "Vanilla",
+              "value": "vanilla",
+            },
+          ]
+        }
+        test="test"
+      />
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      >
+        foo
+      </ErrorBlock>
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders as form group, with helpText and error, using two aria-describedby attributes 1`] = `
+<Fragment>
+  <div
+    className="form__group has-error"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My label
+    </FormLabel>
+    <div
+      className="controls"
+    >
+      <Select
+        ariaDescribedby="error-guid-1 help-guid-1"
+        className="form__control select"
+        idGuid="id-guid-1"
+        key=".0"
+        options={
+          Array [
+            Object {
+              "label": "Chocolate",
+              "value": "chocolate",
+            },
+            Object {
+              "label": "Strawberry",
+              "value": "strawberry",
+            },
+            Object {
+              "label": "Vanilla",
+              "value": "vanilla",
+            },
+          ]
+        }
+        test="test"
+      />
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      >
+        bar
+      </ErrorBlock>
+      <HelpBlock
+        helpGuid="help-guid-1"
+      >
+        foo
+      </HelpBlock>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders as form group, with helpText, using the aria-describedby attribute 1`] = `
+<Fragment>
+  <div
+    className="form__group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My label
+    </FormLabel>
+    <div
+      className="controls"
+    >
+      <Select
+        ariaDescribedby="help-guid-1"
+        className="form__control select"
+        idGuid="id-guid-1"
+        key=".0"
+        options={
+          Array [
+            Object {
+              "label": "Chocolate",
+              "value": "chocolate",
+            },
+            Object {
+              "label": "Strawberry",
+              "value": "strawberry",
+            },
+            Object {
+              "label": "Vanilla",
+              "value": "vanilla",
+            },
+          ]
+        }
+        test="test"
+      />
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      >
+        foo
+      </HelpBlock>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders the basic input 1`] = `
+<select
+  class="form__control select"
+>
+  <option
+    label="Chocolate"
+    value="chocolate"
+  />
+  <option
+    label="Strawberry"
+    value="strawberry"
+  />
+  <option
+    label="Vanilla"
+    value="vanilla"
+  />
+</select>
+`;
+
+exports[`renders the basic input with aria-describedby 1`] = `
+<select
+  aria-describedby="foo"
+  class="form__control select"
+>
+  <option
+    label="Chocolate"
+    value="chocolate"
+  />
+  <option
+    label="Strawberry"
+    value="strawberry"
+  />
+  <option
+    label="Vanilla"
+    value="vanilla"
+  />
+</select>
+`;
+
+exports[`renders the basic input with id 1`] = `
+<select
+  class="form__control select"
+  id="foo"
+>
+  <option
+    label="Chocolate"
+    value="chocolate"
+  />
+  <option
+    label="Strawberry"
+    value="strawberry"
+  />
+  <option
+    label="Vanilla"
+    value="vanilla"
+  />
+</select>
+`;
+
+exports[`renders the basic input with idGuid 1`] = `
+<select
+  class="form__control select"
+  id="bar"
+>
+  <option
+    label="Chocolate"
+    value="chocolate"
+  />
+  <option
+    label="Strawberry"
+    value="strawberry"
+  />
+  <option
+    label="Vanilla"
+    value="vanilla"
+  />
+</select>
+`;
+
+exports[`renders the basic input with placeholder 1`] = `
+<select
+  class="form__control select"
+  placeholder="foo"
+>
+  <option
+    label="Chocolate"
+    value="chocolate"
+  />
+  <option
+    label="Strawberry"
+    value="strawberry"
+  />
+  <option
+    label="Vanilla"
+    value="vanilla"
+  />
+</select>
+`;
+
+exports[`renders the basic input with required 1`] = `
+<select
+  class="form__control select"
+  required=""
+>
+  <option
+    label="Chocolate"
+    value="chocolate"
+  />
+  <option
+    label="Strawberry"
+    value="strawberry"
+  />
+  <option
+    label="Vanilla"
+    value="vanilla"
+  />
+</select>
+`;
+
+exports[`will prefer id over idGuid 1`] = `
+<select
+  class="form__control select"
+  id="foo"
+>
+  <option
+    label="Chocolate"
+    value="chocolate"
+  />
+  <option
+    label="Strawberry"
+    value="strawberry"
+  />
+  <option
+    label="Vanilla"
+    value="vanilla"
+  />
+</select>
+`;

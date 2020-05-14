@@ -1,11 +1,11 @@
 import React from 'react';
-import FormLabel from './FormLabel';
+import FormLabel from '../FormLabel';
 
-export default class InlineCheckboxInput extends React.Component {
+export default class InlineRadioButton extends React.Component {
 
   static defaultProps = {
-    className: 'form__control checkbox',
-    type: 'checkbox',
+    className: 'form__control radio',
+    type: 'radio',
     required: false
   };
 
