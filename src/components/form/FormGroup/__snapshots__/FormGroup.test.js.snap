@@ -1,0 +1,467 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should add the button group classes if using buttonGroup variant 1`] = `
+<Fragment>
+  <div
+    className="form__group form__button-group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls btn__group"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should add the changed class if using changed variant 1`] = `
+<Fragment>
+  <div
+    className="form__group has-changed"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should add the checkbox class if using checkbox variant 1`] = `
+<Fragment>
+  <div
+    className="form__group form-checkbox"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should add the error class if using error variant 1`] = `
+<Fragment>
+  <div
+    className="form__group has-error"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      >
+        error message
+      </ErrorBlock>
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should add the flush label class if using flushLabel variant 1`] = `
+<Fragment>
+  <div
+    className="form__group form__group--flush"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should add the indented class if using indented variant 1`] = `
+<Fragment>
+  <div
+    className="form__group form__group--indent"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should add the radio class if using radio variant 1`] = `
+<Fragment>
+  <div
+    className="form__group form-radio"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should add the success class if using success variant 1`] = `
+<Fragment>
+  <div
+    className="form__group has-success"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should add the top label class if using topLabel variant 1`] = `
+<Fragment>
+  <div
+    className="form__group form__group--top"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should add the warning class if using warning variant 1`] = `
+<Fragment>
+  <div
+    className="form__group has-warning"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should append and prepend text 1`] = `
+<Fragment>
+  <div
+    className="form__group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      <div
+        className="input-group"
+      >
+        <span
+          className="input-group-addon"
+        >
+          prepended
+        </span>
+        foo
+        <span
+          className="input-group-addon"
+        >
+          appended
+        </span>
+      </div>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should append text 1`] = `
+<Fragment>
+  <div
+    className="form__group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      <div
+        className="input-group"
+      >
+        foo
+        <span
+          className="input-group-addon"
+        >
+          appended
+        </span>
+      </div>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should prepend text 1`] = `
+<Fragment>
+  <div
+    className="form__group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    />
+    <div
+      className="controls"
+    >
+      <div
+        className="input-group"
+      >
+        <span
+          className="input-group-addon"
+        >
+          prepended
+        </span>
+        foo
+      </div>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should render the basic form group 1`] = `
+<div
+  class="form__group"
+>
+  <span
+    class="control__label"
+  />
+  <div
+    class="controls"
+  >
+    foo
+  </div>
+</div>
+`;
+
+exports[`should return null if no children 1`] = `null`;
+
+exports[`should use fieldset strategy if using choiceGroup variant 1`] = `
+<Fragment>
+  <Fieldset
+    className="form__group form-choice"
+    legendClassName="control__label"
+  >
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </Fieldset>
+</Fragment>
+`;
+
+exports[`should use inline strategy if using inlineCheckbox variant 1`] = `
+<Fragment>
+  <div
+    className="form__group form-checkbox-inline"
+  >
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should use inline strategy if using inlineRadioButton variant 1`] = `
+<Fragment>
+  <div
+    className="form__group form-radio-inline"
+  >
+    <div
+      className="controls"
+    >
+      foo
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`should use toggle strategy if using toggle variant 1`] = `
+<Fragment>
+  <div
+    className="form__group form__group--toggle"
+  >
+    <FormLabel
+      className="toggle-switch-wrapper-label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      <span
+        className="control__label"
+      />
+      <div
+        className="controls"
+      >
+        foo
+        <ErrorBlock
+          errorGuid="error-guid-1"
+        />
+        <HelpBlock
+          helpGuid="help-guid-1"
+        />
+      </div>
+    </FormLabel>
+  </div>
+</Fragment>
+`;

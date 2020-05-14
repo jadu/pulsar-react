@@ -18,7 +18,7 @@ export default class Form extends React.Component {
 
     return (
       <form {...props}>
-        {method == 'PUT' &&
+        {method.toLowerCase() == 'put' &&
           <input name="_method" value="PUT" type="hidden" />
         }
         {nonce &&

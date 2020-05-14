@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Is null if no Help is provided 1`] = `null`;
+
+exports[`Renders the help block when help is provided 1`] = `
+<span
+  class="help-block"
+>
+  Foo
+</span>
+`;
+
+exports[`Renders the help block with helpGuid as the ID 1`] = `
+<span
+  class="help-block"
+  id="bar"
+>
+  Foo
+</span>
+`;

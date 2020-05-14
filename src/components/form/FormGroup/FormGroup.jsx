@@ -2,10 +2,10 @@ import React from 'react';
 import classnames from 'classnames';
 import shortid from 'shortid';
 
-import Fieldset from './Fieldset';
-import FormLabel from './FormLabel';
-import ErrorBlock from './ErrorBlock';
-import HelpBlock from './HelpBlock';
+import Fieldset from '../Fieldset/Fieldset';
+import FormLabel from '../FormLabel/FormLabel';
+import ErrorBlock from '../ErrorBlock/ErrorBlock';
+import HelpBlock from '../HelpBlock/HelpBlock';
 
 export default class FormGroup extends React.Component {
 

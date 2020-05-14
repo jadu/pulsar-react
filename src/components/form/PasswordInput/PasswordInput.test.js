@@ -4,7 +4,7 @@ import React from 'react';
 import { shallow, render } from 'enzyme';
 
 
-import FormGroup from '../FormGroup';
+import FormGroup from '../FormGroup/FormGroup';
 import PasswordInput from './PasswordInput';
 
 it('renders the basic input', () => {

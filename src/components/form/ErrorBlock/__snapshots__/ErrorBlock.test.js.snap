@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Is null if no error is provided 1`] = `null`;
+
+exports[`Renders the help block when an error is provided 1`] = `
+<span
+  class="help-block is-error"
+>
+  <i
+    aria-hidden="true"
+    class="icon-warning-sign"
+  />
+   Foo
+</span>
+`;
+
+exports[`Renders the help block with errorGuid as the ID 1`] = `
+<span
+  class="help-block is-error"
+  id="bar"
+>
+  <i
+    aria-hidden="true"
+    class="icon-warning-sign"
+  />
+   Foo
+</span>
+`;

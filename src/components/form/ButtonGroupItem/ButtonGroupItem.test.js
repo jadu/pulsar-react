@@ -4,7 +4,7 @@ import React from 'react';
 import { shallow, render } from 'enzyme';
 
 
-import FormGroup from '../FormGroup';
+import FormGroup from '../FormGroup/FormGroup';
 import ButtonGroupItem from './ButtonGroupItem';
 
 it('renders the basic input, defaulting to radio', () => {
@@ -66,10 +66,8 @@ it('renders the basic input with aria-describedby', () => {
 it('renders as form group', () => {
   const tree = shallow(
     <FormGroup buttonGroup labelText="My Label">
-      <>
-        <ButtonGroupItem id="foo-1" name="group-1">Foo</ButtonGroupItem>
-        <ButtonGroupItem id="bar-1" name="group-1">Bar</ButtonGroupItem>
-      </>
+      <ButtonGroupItem id="foo-1" name="group-1">Foo</ButtonGroupItem>
+      <ButtonGroupItem id="bar-1" name="group-1">Bar</ButtonGroupItem>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -78,9 +76,7 @@ it('renders as form group', () => {
 it('renders as form group, with helpText, using the aria-describedby attribute', () => {
   const tree = shallow(
     <FormGroup buttonGroup labelText="My Label" helpText="foo">
-      <>
-        <ButtonGroupItem name="group-1">Foo</ButtonGroupItem>
-      </>
+      <ButtonGroupItem name="group-1">Foo</ButtonGroupItem>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -89,10 +85,8 @@ it('renders as form group, with helpText, using the aria-describedby attribute',
 it('renders as form group, with error, using the aria-describedby attribute', () => {
   const tree = shallow(
     <FormGroup buttonGroup labelText="My Label" error="bar">
-      <>
-        <ButtonGroupItem id="foo-1" name="group-1">Foo</ButtonGroupItem>
-        <ButtonGroupItem id="bar-1" name="group-1">Bar</ButtonGroupItem>
-      </>
+      <ButtonGroupItem id="foo-1" name="group-1">Foo</ButtonGroupItem>
+      <ButtonGroupItem id="bar-1" name="group-1">Bar</ButtonGroupItem>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -101,10 +95,8 @@ it('renders as form group, with error, using the aria-describedby attribute', ()
 it('renders as form group, with helpText and error, using two aria-describedby attributes', () => {
   const tree = shallow(
     <FormGroup buttonGroup labelText="My Label" helpText="foo" error="bar">
-      <>
-        <ButtonGroupItem id="foo-1" name="group-1">Foo</ButtonGroupItem>
-        <ButtonGroupItem id="bar-1" name="group-1">Bar</ButtonGroupItem>
-      </>
+      <ButtonGroupItem id="foo-1" name="group-1">Foo</ButtonGroupItem>
+      <ButtonGroupItem id="bar-1" name="group-1">Bar</ButtonGroupItem>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();

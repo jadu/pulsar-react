@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders the fieldset with the legend 1`] = `
+<fieldset>
+  <legend>
+    Bar
+  </legend>
+  Foo
+</fieldset>
+`;
+
+exports[`Renders the fieldset with the legend classes 1`] = `
+<fieldset>
+  <legend
+    class="baz"
+  >
+    Bar
+  </legend>
+  Foo
+</fieldset>
+`;
+
+exports[`Renders the fieldset without a legend 1`] = `
+<fieldset>
+  Foo
+</fieldset>
+`;

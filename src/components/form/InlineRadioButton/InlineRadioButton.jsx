@@ -1,5 +1,5 @@
 import React from 'react';
-import FormLabel from '../FormLabel';
+import FormLabel from '../FormLabel/FormLabel';
 
 export default class InlineRadioButton extends React.Component {
 

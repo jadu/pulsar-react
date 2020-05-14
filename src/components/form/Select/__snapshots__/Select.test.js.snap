@@ -36,7 +36,6 @@ exports[`renders as form group 1`] = `
             },
           ]
         }
-        test="test"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -85,7 +84,6 @@ exports[`renders as form group, with error, using the aria-describedby attribute
             },
           ]
         }
-        test="test"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -136,7 +134,6 @@ exports[`renders as form group, with helpText and error, using two aria-describe
             },
           ]
         }
-        test="test"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -189,7 +186,6 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
             },
           ]
         }
-        test="test"
       />
       <ErrorBlock
         errorGuid="error-guid-1"

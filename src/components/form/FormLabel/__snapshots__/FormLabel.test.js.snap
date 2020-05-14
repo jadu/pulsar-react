@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should add the required indicator 1`] = `
+<label
+  class="control__label"
+>
+  foo
+  <span
+    aria-hidden="true"
+    class="required-indicator"
+    data-tippy-content="required"
+  >
+    *
+  </span>
+</label>
+`;
+
+exports[`should allow htmlFor attribute 1`] = `
+<label
+  class="control__label"
+  for="bar"
+>
+  foo
+</label>
+`;
+
+exports[`should allow idGuid to be used as htmlFor attribute 1`] = `
+<label
+  class="control__label"
+  for="baz"
+>
+  foo
+</label>
+`;
+
+exports[`should allow the label to be hidden 1`] = `
+<label
+  class="control__label hide"
+>
+  foo
+</label>
+`;
+
+exports[`should prefer htmlFor over idGuid attribute 1`] = `
+<label
+  class="control__label"
+  for="bar"
+>
+  foo
+</label>
+`;
+
+exports[`should render an empty span if no label is provided 1`] = `
+<span
+  class="control__label"
+/>
+`;
+
+exports[`should render the basic label 1`] = `
+<label
+  class="control__label"
+>
+  foo
+</label>
+`;

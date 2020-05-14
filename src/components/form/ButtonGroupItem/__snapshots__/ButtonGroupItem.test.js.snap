@@ -16,8 +16,11 @@ exports[`renders as form group 1`] = `
       className="controls btn__group"
     >
       <ButtonGroupItem
+        ariaDescribedby={null}
         className="form__control"
         id="foo-1"
+        idGuid="id-guid-1"
+        key=".0"
         name="group-1"
         required={false}
         type="radio"
@@ -25,8 +28,11 @@ exports[`renders as form group 1`] = `
         Foo
       </ButtonGroupItem>
       <ButtonGroupItem
+        ariaDescribedby={null}
         className="form__control"
         id="bar-1"
+        idGuid="id-guid-1"
+        key=".1"
         name="group-1"
         required={false}
         type="radio"
@@ -60,8 +66,11 @@ exports[`renders as form group, with error, using the aria-describedby attribute
       className="controls btn__group"
     >
       <ButtonGroupItem
+        ariaDescribedby="error-guid-1"
         className="form__control"
         id="foo-1"
+        idGuid="id-guid-1"
+        key=".0"
         name="group-1"
         required={false}
         type="radio"
@@ -69,8 +78,11 @@ exports[`renders as form group, with error, using the aria-describedby attribute
         Foo
       </ButtonGroupItem>
       <ButtonGroupItem
+        ariaDescribedby="error-guid-1"
         className="form__control"
         id="bar-1"
+        idGuid="id-guid-1"
+        key=".1"
         name="group-1"
         required={false}
         type="radio"
@@ -106,8 +118,11 @@ exports[`renders as form group, with helpText and error, using two aria-describe
       className="controls btn__group"
     >
       <ButtonGroupItem
+        ariaDescribedby="error-guid-1 help-guid-1"
         className="form__control"
         id="foo-1"
+        idGuid="id-guid-1"
+        key=".0"
         name="group-1"
         required={false}
         type="radio"
@@ -115,8 +130,11 @@ exports[`renders as form group, with helpText and error, using two aria-describe
         Foo
       </ButtonGroupItem>
       <ButtonGroupItem
+        ariaDescribedby="error-guid-1 help-guid-1"
         className="form__control"
         id="bar-1"
+        idGuid="id-guid-1"
+        key=".1"
         name="group-1"
         required={false}
         type="radio"
@@ -154,7 +172,10 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
       className="controls btn__group"
     >
       <ButtonGroupItem
+        ariaDescribedby="help-guid-1"
         className="form__control"
+        idGuid="id-guid-1"
+        key=".0"
         name="group-1"
         required={false}
         type="radio"

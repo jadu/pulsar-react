@@ -3,13 +3,13 @@ import Button from './components/html/Button';
 
 import ButtonGroupItem from './components/form/ButtonGroupItem/ButtonGroupItem';
 import Checkbox from './components/form/Checkbox/Checkbox';
-import ChoiceGroupItem from './components/form/ChoiceGroupItem';
+import ChoiceGroupItem from './components/form/ChoiceGroupItem/ChoiceGroupItem';
 import ColorInput from './components/form/ColorInput/ColorInput';
 import DateInput from './components/form/DateInput/DateInput';
-import Form from './components/form/Form';
-import FormActions from './components/form/FormActions';
-import FormGroup from './components/form/FormGroup';
-import Fieldset from './components/form/Fieldset';
+import Form from './components/form/Form/Form';
+import FormActions from './components/form/FormActions/FormActions';
+import FormGroup from './components/form/FormGroup/FormGroup';
+import Fieldset from './components/form/Fieldset/Fieldset';
 import FileInput from './components/form/FileInput/FileInput';
 import InlineCheckbox from './components/form/InlineCheckbox/InlineCheckbox';
 import InlineRadioButton from './components/form/InlineRadioButton/InlineRadioButton';
@@ -52,29 +52,23 @@ export default class App extends React.Component {
         </FormGroup>
 
         <FormGroup buttonGroup labelText="Button group">
-          <>
-            <ButtonGroupItem type="checkbox" id="foo-2" name="group-2">Foo</ButtonGroupItem>
-            <ButtonGroupItem type="checkbox" id="bar-2" name="group-2">Bar</ButtonGroupItem>
-            <ButtonGroupItem type="checkbox" id="baz-2" name="group-2">Baz</ButtonGroupItem>
-          </>
+          <ButtonGroupItem type="checkbox" id="foo-2" name="group-2">Foo</ButtonGroupItem>
+          <ButtonGroupItem type="checkbox" id="bar-2" name="group-2">Bar</ButtonGroupItem>
+          <ButtonGroupItem type="checkbox" id="baz-2" name="group-2">Baz</ButtonGroupItem>
         </FormGroup>
 
         <FormGroup choiceGroup labelText="Assign blame to">
-          <>
-            <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-sun">Sunshine</ChoiceGroupItem>
-            <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-moon">Moonlight</ChoiceGroupItem>
-            <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-good">Good times</ChoiceGroupItem>
-            <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-boog">Boogie</ChoiceGroupItem>
-          </>
+          <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-sun">Sunshine</ChoiceGroupItem>
+          <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-moon">Moonlight</ChoiceGroupItem>
+          <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-good">Good times</ChoiceGroupItem>
+          <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-boog">Boogie</ChoiceGroupItem>
         </FormGroup>
 
         <FormGroup choiceGroup labelText="Assign blame to">
-          <>
-            <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Sunshine</ChoiceGroupItem>
-            <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Moonlight</ChoiceGroupItem>
-            <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Good times</ChoiceGroupItem>
-            <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Boogie</ChoiceGroupItem>
-          </>
+          <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Sunshine</ChoiceGroupItem>
+          <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Moonlight</ChoiceGroupItem>
+          <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Good times</ChoiceGroupItem>
+          <ChoiceGroupItem type="checkbox" name="choice-2" value="foo-1">Boogie</ChoiceGroupItem>
         </FormGroup>
 
         <hr />

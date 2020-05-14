@@ -1,0 +1,327 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders as form group 1`] = `
+<Fragment>
+  <div
+    className="form__group form__button-group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My Label
+    </FormLabel>
+    <div
+      className="controls btn__group"
+    >
+      <Checkbox
+        ariaDescribedby={null}
+        className="form__control"
+        id="foo-1"
+        idGuid="id-guid-1"
+        key=".0"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Foo
+      </Checkbox>
+      <Checkbox
+        ariaDescribedby={null}
+        className="form__control"
+        id="bar-1"
+        idGuid="id-guid-1"
+        key=".1"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Bar
+      </Checkbox>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders as form group, with error, using the aria-describedby attribute 1`] = `
+<Fragment>
+  <div
+    className="form__group form__button-group has-error"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My Label
+    </FormLabel>
+    <div
+      className="controls btn__group"
+    >
+      <Checkbox
+        ariaDescribedby="error-guid-1"
+        className="form__control"
+        id="foo-1"
+        idGuid="id-guid-1"
+        key=".0"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Foo
+      </Checkbox>
+      <Checkbox
+        ariaDescribedby="error-guid-1"
+        className="form__control"
+        id="bar-1"
+        idGuid="id-guid-1"
+        key=".1"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Bar
+      </Checkbox>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      >
+        bar
+      </ErrorBlock>
+      <HelpBlock
+        helpGuid="help-guid-1"
+      />
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders as form group, with helpText and error, using two aria-describedby attributes 1`] = `
+<Fragment>
+  <div
+    className="form__group form__button-group has-error"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My Label
+    </FormLabel>
+    <div
+      className="controls btn__group"
+    >
+      <Checkbox
+        ariaDescribedby="error-guid-1 help-guid-1"
+        className="form__control"
+        id="foo-1"
+        idGuid="id-guid-1"
+        key=".0"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Foo
+      </Checkbox>
+      <Checkbox
+        ariaDescribedby="error-guid-1 help-guid-1"
+        className="form__control"
+        id="bar-1"
+        idGuid="id-guid-1"
+        key=".1"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Bar
+      </Checkbox>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      >
+        bar
+      </ErrorBlock>
+      <HelpBlock
+        helpGuid="help-guid-1"
+      >
+        foo
+      </HelpBlock>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders as form group, with helpText, using the aria-describedby attribute 1`] = `
+<Fragment>
+  <div
+    className="form__group form__button-group"
+  >
+    <FormLabel
+      className="control__label"
+      idGuid="id-guid-1"
+      required={false}
+    >
+      My Label
+    </FormLabel>
+    <div
+      className="controls btn__group"
+    >
+      <Checkbox
+        ariaDescribedby="help-guid-1"
+        className="form__control"
+        idGuid="id-guid-1"
+        key=".0"
+        name="group-1"
+        required={false}
+        type="radio"
+      >
+        Foo
+      </Checkbox>
+      <ErrorBlock
+        errorGuid="error-guid-1"
+      />
+      <HelpBlock
+        helpGuid="help-guid-1"
+      >
+        foo
+      </HelpBlock>
+    </div>
+  </div>
+</Fragment>
+`;
+
+exports[`renders the basic input with aria-describedby 1`] = `
+<label
+  class="control__label"
+>
+  <input
+    aria-describedby="foo"
+    class="form__control radio"
+    type="radio"
+  />
+  <span
+    class="form-choice__label"
+  >
+    My Label
+  </span>
+</label>
+`;
+
+exports[`renders the basic input with id 1`] = `
+<label
+  class="control__label"
+>
+  <input
+    class="form__control radio"
+    id="foo"
+    type="radio"
+  />
+  <span
+    class="form-choice__label"
+  >
+    My Label
+  </span>
+</label>
+`;
+
+exports[`renders the basic input with idGuid 1`] = `
+<label
+  class="control__label"
+  for="bar"
+>
+  <input
+    class="form__control radio"
+    id="bar"
+    type="radio"
+  />
+  <span
+    class="form-choice__label"
+  >
+    My Label
+  </span>
+</label>
+`;
+
+exports[`renders the basic input with labelText 1`] = `
+<label
+  class="control__label"
+>
+  <input
+    class="form__control radio"
+    type="radio"
+  />
+  <span
+    class="form-choice__label"
+  >
+    My Label
+  </span>
+</label>
+`;
+
+exports[`renders the basic input with name 1`] = `
+<label
+  class="control__label"
+>
+  <input
+    class="form__control radio"
+    name="foo"
+    type="radio"
+  />
+  <span
+    class="form-choice__label"
+  >
+    My Label
+  </span>
+</label>
+`;
+
+exports[`renders the basic input, as checkbox 1`] = `
+<label
+  class="control__label"
+>
+  <input
+    class="form__control checkbox"
+    type="checkbox"
+  />
+  <span
+    class="form-choice__label"
+  />
+</label>
+`;
+
+exports[`renders the basic input, defaulting to radio 1`] = `
+<label
+  class="control__label"
+>
+  <input
+    class="form__control radio"
+    type="radio"
+  />
+  <span
+    class="form-choice__label"
+  />
+</label>
+`;
+
+exports[`will prefer id over idGuid 1`] = `
+<label
+  class="control__label"
+  for="bar"
+>
+  <input
+    class="form__control radio"
+    id="foo"
+    type="radio"
+  />
+  <span
+    class="form-choice__label"
+  >
+    My Label
+  </span>
+</label>
+`;
