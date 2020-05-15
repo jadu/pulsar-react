@@ -9,6 +9,7 @@ exports[`renders as form group 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     >
       My label
     </FormLabel>
@@ -45,6 +46,7 @@ exports[`renders as form group, with error, using the aria-describedby attribute
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     >
       My label
     </FormLabel>
@@ -83,6 +85,7 @@ exports[`renders as form group, with helpText and error, using two aria-describe
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     >
       My label
     </FormLabel>
@@ -123,6 +126,7 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     >
       My label
     </FormLabel>

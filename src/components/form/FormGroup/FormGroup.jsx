@@ -28,6 +28,7 @@ export default class FormGroup extends React.Component {
       children,
       choiceGroup,
       className,
+      controls,
       error,
       flushLabel,
       helpText,
@@ -38,6 +39,7 @@ export default class FormGroup extends React.Component {
       prependText,
       required,
       radio,
+      rangeInput,
       success,
       toggle,
       topLabel,
@@ -58,6 +60,7 @@ export default class FormGroup extends React.Component {
       'form-checkbox-inline': inlineCheckbox,
       'form-radio-inline': inlineRadioButton,
       'form-radio': radio,
+      'form-range': rangeInput,
       'has-changed': changed,
       'has-success': success,
       'has-warning': warning,
@@ -134,6 +137,7 @@ export default class FormGroup extends React.Component {
         <FormLabel 
           required={required} 
           idGuid={idGuid}
+          tag={controls ? 'span' : 'label'}
         >
           {labelText}
         </FormLabel>

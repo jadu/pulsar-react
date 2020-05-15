@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`can use a span instead of a label tag 1`] = `
+<span
+  class="control__label"
+>
+  foo
+</span>
+`;
+
 exports[`should add the required indicator 1`] = `
 <label
   class="control__label"

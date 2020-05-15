@@ -9,6 +9,7 @@ exports[`should add the button group classes if using buttonGroup variant 1`] = 
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls btn__group"
@@ -34,6 +35,7 @@ exports[`should add the changed class if using changed variant 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -59,6 +61,7 @@ exports[`should add the checkbox class if using checkbox variant 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -84,6 +87,7 @@ exports[`should add the error class if using error variant 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -111,6 +115,7 @@ exports[`should add the flush label class if using flushLabel variant 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -136,6 +141,7 @@ exports[`should add the indented class if using indented variant 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -161,6 +167,7 @@ exports[`should add the radio class if using radio variant 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -186,6 +193,7 @@ exports[`should add the success class if using success variant 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -211,6 +219,7 @@ exports[`should add the top label class if using topLabel variant 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -236,6 +245,7 @@ exports[`should add the warning class if using warning variant 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -261,6 +271,7 @@ exports[`should append and prepend text 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -300,6 +311,7 @@ exports[`should append text 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -334,6 +346,7 @@ exports[`should prepend text 1`] = `
       className="control__label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     />
     <div
       className="controls"
@@ -446,6 +459,7 @@ exports[`should use toggle strategy if using toggle variant 1`] = `
       className="toggle-switch-wrapper-label"
       idGuid="id-guid-1"
       required={false}
+      tag="label"
     >
       <span
         className="control__label"

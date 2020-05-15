@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the basic input 1`] = `
+<p>
+  foo
+</p>
+`;

@@ -5,7 +5,9 @@ import ButtonGroupItem from './components/form/ButtonGroupItem/ButtonGroupItem';
 import Checkbox from './components/form/Checkbox/Checkbox';
 import ChoiceGroupItem from './components/form/ChoiceGroupItem/ChoiceGroupItem';
 import ColorInput from './components/form/ColorInput/ColorInput';
+import Content from './components/form/Content/Content';
 import DateInput from './components/form/DateInput/DateInput';
+import ErrorSummary from './components/form/ErrorSummary/ErrorSummary';
 import Form from './components/form/Form/Form';
 import FormActions from './components/form/FormActions/FormActions';
 import FormGroup from './components/form/FormGroup/FormGroup';
@@ -14,8 +16,10 @@ import FileInput from './components/form/FileInput/FileInput';
 import InlineCheckbox from './components/form/InlineCheckbox/InlineCheckbox';
 import InlineRadioButton from './components/form/InlineRadioButton/InlineRadioButton';
 import PasswordInput from './components/form/PasswordInput/PasswordInput';
+import RangeInput from './components/form/RangeInput/RangeInput';
 import RadioButton from './components/form/RadioButton/RadioButton';
 import Select from './components/form/Select/Select';
+import Select2 from './components/form/Select2/Select2';
 import TextArea from './components/form/TextArea/TextArea';
 import TextInput from './components/form/TextInput/TextInput';
 import TimeInput from './components/form/TimeInput/TimeInput';
@@ -43,7 +47,11 @@ export default class App extends React.Component {
 
     return (
       <div>
+        <ErrorSummary />
 
+        <FormGroup content labelText="Content">
+          <Content>This is content</Content>
+        </FormGroup>
 
         <FormGroup buttonGroup helpText="This is my help text" labelText="Button group">
             <ButtonGroupItem type="radio" id="foo-1" name="group-1">Foo</ButtonGroupItem>
@@ -74,6 +82,10 @@ export default class App extends React.Component {
         <hr />
 
         <Form method="PUT">
+
+          <FormGroup rangeInput labelText="Basic" helpText={helpText}>
+            <RangeInput />
+          </FormGroup>
 
           <FormGroup toggle labelText="Toggle">
             <ToggleSwitch />
@@ -110,6 +122,10 @@ export default class App extends React.Component {
 
           <FormGroup labelText="Select">
             <Select options={selectOptions} />
+          </FormGroup>
+
+          <FormGroup labelText="Select2">
+            <Select2 options={selectOptions} />
           </FormGroup>
 
           <FormGroup labelText="Time">

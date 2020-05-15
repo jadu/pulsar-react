@@ -16,9 +16,9 @@ exports[`renders as form group 1`] = `
     <div
       className="controls"
     >
-      <Select
+      <Select2
         ariaDescribedby={null}
-        className="form__control select"
+        className="form__control select js-select2"
         idGuid="id-guid-1"
         key=".0"
         options={
@@ -65,9 +65,9 @@ exports[`renders as form group, with error, using the aria-describedby attribute
     <div
       className="controls"
     >
-      <Select
+      <Select2
         ariaDescribedby="error-guid-1"
-        className="form__control select"
+        className="form__control select js-select2"
         idGuid="id-guid-1"
         key=".0"
         options={
@@ -116,9 +116,9 @@ exports[`renders as form group, with helpText and error, using two aria-describe
     <div
       className="controls"
     >
-      <Select
+      <Select2
         ariaDescribedby="error-guid-1 help-guid-1"
-        className="form__control select"
+        className="form__control select js-select2"
         idGuid="id-guid-1"
         key=".0"
         options={
@@ -169,9 +169,9 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
     <div
       className="controls"
     >
-      <Select
+      <Select2
         ariaDescribedby="help-guid-1"
-        className="form__control select"
+        className="form__control select js-select2"
         idGuid="id-guid-1"
         key=".0"
         options={
@@ -206,7 +206,7 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
 
 exports[`renders the basic input 1`] = `
 <select
-  class="form__control select"
+  class="form__control select js-select2"
 >
   <option
     label="Chocolate"
@@ -226,7 +226,7 @@ exports[`renders the basic input 1`] = `
 exports[`renders the basic input with aria-describedby 1`] = `
 <select
   aria-describedby="foo"
-  class="form__control select"
+  class="form__control select js-select2"
 >
   <option
     label="Chocolate"
@@ -245,7 +245,7 @@ exports[`renders the basic input with aria-describedby 1`] = `
 
 exports[`renders the basic input with id 1`] = `
 <select
-  class="form__control select"
+  class="form__control select js-select2"
   id="foo"
 >
   <option
@@ -265,7 +265,7 @@ exports[`renders the basic input with id 1`] = `
 
 exports[`renders the basic input with idGuid 1`] = `
 <select
-  class="form__control select"
+  class="form__control select js-select2"
   id="bar"
 >
   <option
@@ -285,7 +285,7 @@ exports[`renders the basic input with idGuid 1`] = `
 
 exports[`renders the basic input with placeholder 1`] = `
 <select
-  class="form__control select"
+  class="form__control select js-select2"
   placeholder="foo"
 >
   <option
@@ -305,7 +305,7 @@ exports[`renders the basic input with placeholder 1`] = `
 
 exports[`renders the basic input with required 1`] = `
 <select
-  class="form__control select"
+  class="form__control select js-select2"
   required=""
 >
   <option
@@ -325,7 +325,7 @@ exports[`renders the basic input with required 1`] = `
 
 exports[`will prefer id over idGuid 1`] = `
 <select
-  class="form__control select"
+  class="form__control select js-select2"
   id="foo"
 >
   <option

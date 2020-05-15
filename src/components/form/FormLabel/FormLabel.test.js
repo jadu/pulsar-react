@@ -53,3 +53,10 @@ it('should prefer htmlFor over idGuid attribute', () => {
   );
   expect(tree).toMatchSnapshot();
 });
+
+it('can use a span instead of a label tag', () => {
+  const tree = render(
+    <FormLabel tag="span">foo</FormLabel>
+  );
+  expect(tree).toMatchSnapshot();
+});

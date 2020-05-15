@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the basic input 1`] = `
+<input
+  class="form__control"
+  type="hidden"
+/>
+`;
+
+exports[`renders the basic input with id 1`] = `
+<input
+  class="form__control"
+  id="foo"
+  type="hidden"
+/>
+`;
+
+exports[`renders the basic input with idGuid 1`] = `
+<input
+  class="form__control"
+  id="bar"
+  type="hidden"
+/>
+`;
+
+exports[`will prefer id over idGuid 1`] = `
+<input
+  class="form__control"
+  id="foo"
+  type="hidden"
+/>
+`;

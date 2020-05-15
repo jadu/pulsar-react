@@ -4,7 +4,8 @@ import classnames from 'classnames';
 export default class FormLabel extends React.Component {
 
   static defaultProps = {
-    className: 'control__label'
+    className: 'control__label',
+    tag: 'label'
   };
 
   render() {
@@ -14,8 +15,11 @@ export default class FormLabel extends React.Component {
       hideLabel,
       htmlFor,
       idGuid,
+      tag,
       required,
       ...props} = this.props;
+
+    let LabelTag = tag;
 
     let variantClasses = classnames(className, {
       'hide': hideLabel
@@ -28,13 +32,14 @@ export default class FormLabel extends React.Component {
     return (
       <>
       {children ? (
-        <label 
+        <LabelTag
           htmlFor={htmlFor ? htmlFor : idGuid} 
           className={variantClasses}
+          {...props}
         >
           {children}
           {requiredIndicator}
-        </label>
+        </LabelTag>
       )
       : (
         <span className="control__label"></span>
