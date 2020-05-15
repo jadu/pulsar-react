@@ -10,7 +10,7 @@ A collection of Pulsar components implemented using React.
 | Checkbox | ✅ |
 | Choice | ✅ |
 | Color | ✅ |
-| Compound | ✖ |
+| Compound | ✅ (achieved with form group `inline` variant |
 | Content | ✅ |
 | DateInput | ✅ |
 | ErrorSummary | ✖ |
