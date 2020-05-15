@@ -1,16 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`allows rows to be defined 1`] = `
-<textarea
-  class="form__control textarea"
-  rows="10"
-/>
-`;
-
 exports[`converts the width param to the grid classes 1`] = `
-<textarea
-  class="form__control textarea form__control-col--3"
-  rows="2"
+<input
+  class="form__control"
+  type="range"
+  width="3"
 />
 `;
 
@@ -30,12 +24,12 @@ exports[`renders as form group 1`] = `
     <div
       className="controls"
     >
-      <TextArea
+      <RangeInput
         ariaDescribedby={null}
-        className="form__control textarea"
+        className="form__control"
         idGuid="id-guid-1"
         key=".0"
-        rows={2}
+        type="range"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -64,12 +58,12 @@ exports[`renders as form group, with error, using the aria-describedby attribute
     <div
       className="controls"
     >
-      <TextArea
+      <RangeInput
         ariaDescribedby="error-guid-1"
-        className="form__control textarea"
+        className="form__control"
         idGuid="id-guid-1"
         key=".0"
-        rows={2}
+        type="range"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -100,12 +94,12 @@ exports[`renders as form group, with helpText and error, using two aria-describe
     <div
       className="controls"
     >
-      <TextArea
+      <RangeInput
         ariaDescribedby="error-guid-1 help-guid-1"
-        className="form__control textarea"
+        className="form__control"
         idGuid="id-guid-1"
         key=".0"
-        rows={2}
+        type="range"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -138,12 +132,12 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
     <div
       className="controls"
     >
-      <TextArea
+      <RangeInput
         ariaDescribedby="help-guid-1"
-        className="form__control textarea"
+        className="form__control"
         idGuid="id-guid-1"
         key=".0"
-        rows={2}
+        type="range"
       />
       <ErrorBlock
         errorGuid="error-guid-1"
@@ -159,56 +153,56 @@ exports[`renders as form group, with helpText, using the aria-describedby attrib
 `;
 
 exports[`renders the basic input 1`] = `
-<textarea
-  class="form__control textarea"
-  rows="2"
+<input
+  class="form__control"
+  type="range"
 />
 `;
 
 exports[`renders the basic input with aria-describedby 1`] = `
-<textarea
+<input
   aria-describedby="foo"
-  class="form__control textarea"
-  rows="2"
+  class="form__control"
+  type="range"
 />
 `;
 
 exports[`renders the basic input with id 1`] = `
-<textarea
-  class="form__control textarea"
+<input
+  class="form__control"
   id="foo"
-  rows="2"
+  type="range"
 />
 `;
 
 exports[`renders the basic input with idGuid 1`] = `
-<textarea
-  class="form__control textarea"
+<input
+  class="form__control"
   id="bar"
-  rows="2"
+  type="range"
 />
 `;
 
 exports[`renders the basic input with placeholder 1`] = `
-<textarea
-  class="form__control textarea"
+<input
+  class="form__control"
   placeholder="foo"
-  rows="2"
+  type="range"
 />
 `;
 
 exports[`renders the basic input with required 1`] = `
-<textarea
-  class="form__control textarea"
+<input
+  class="form__control"
   required=""
-  rows="2"
+  type="range"
 />
 `;
 
 exports[`will prefer id over idGuid 1`] = `
-<textarea
-  class="form__control textarea"
+<input
+  class="form__control"
   id="foo"
-  rows="2"
+  type="range"
 />
 `;

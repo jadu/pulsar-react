@@ -1,5 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`converts the width param to the grid classes 1`] = `
+<select
+  class="form__control select js-select2 form__control-col--3"
+>
+  <option
+    label="Chocolate"
+    value="chocolate"
+  />
+  <option
+    label="Strawberry"
+    value="strawberry"
+  />
+  <option
+    label="Vanilla"
+    value="vanilla"
+  />
+</select>
+`;
+
+exports[`converts the width param to the grid classes when no options provided 1`] = `
+<select
+  class="form__control select js-select2 form__control-col--2"
+  disabled=""
+>
+  <option>
+    Loading...
+  </option>
+</select>
+`;
+
 exports[`renders as form group 1`] = `
 <Fragment>
   <div

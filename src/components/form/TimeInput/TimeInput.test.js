@@ -56,6 +56,13 @@ it('renders the basic input with aria-describedby', () => {
   expect(tree).toMatchSnapshot();
 });
 
+it('converts the width param to the grid classes', () => {
+  const tree = render(
+    <TimeInput width={3} />
+  );
+  expect(tree).toMatchSnapshot();
+});
+
 it('renders as form group', () => {
   const tree = shallow(
     <FormGroup labelText="My label">

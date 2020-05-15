@@ -49,6 +49,12 @@ export default class App extends React.Component {
       <div>
         <ErrorSummary />
 
+        <FormGroup inline labelText="Compound date fields" helpText="Use <code>DD/MM/YYYY format">
+          <TextInput width={1} placeholder="DD" />
+          <TextInput width={1} placeholder="MM" />
+          <TextInput width={1} placeholder="YYYY" />
+        </FormGroup>
+
         <FormGroup content labelText="Content">
           <Content>This is content</Content>
         </FormGroup>
@@ -68,7 +74,7 @@ export default class App extends React.Component {
         <FormGroup choiceGroup labelText="Assign blame to">
           <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-sun">Sunshine</ChoiceGroupItem>
           <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-moon">Moonlight</ChoiceGroupItem>
-          <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-good">Good times</ChoiceGroupItem>
+          <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-good">Good times</ChoiceGroupItem> 
           <ChoiceGroupItem type="radio" name="choice-1" value="choice-1-boog">Boogie</ChoiceGroupItem>
         </FormGroup>
 
@@ -92,8 +98,7 @@ export default class App extends React.Component {
           </FormGroup>
 
           <FormGroup labelText="Prepend" prependText="prepended" appendText="appended">
-            <TextInput 
-            />
+            <TextInput />
           </FormGroup>
 
           <FormGroup labelText="Textarea">

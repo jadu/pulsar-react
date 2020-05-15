@@ -1,5 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`converts the width param to the grid classes 1`] = `
+<input
+  class="form__control form__control-col--3"
+  type="time"
+/>
+`;
+
 exports[`renders as form group 1`] = `
 <Fragment>
   <div

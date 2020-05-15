@@ -63,6 +63,13 @@ it('allows rows to be defined', () => {
   expect(tree).toMatchSnapshot();
 });
 
+it('converts the width param to the grid classes', () => {
+  const tree = render(
+    <TextArea width={3}></TextArea>
+  );
+  expect(tree).toMatchSnapshot();
+});
+
 it('renders as form group', () => {
   const tree = shallow(
     <FormGroup labelText="My label">

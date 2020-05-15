@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 
 export default class Select extends React.Component {
 
@@ -9,17 +10,27 @@ export default class Select extends React.Component {
   render() {
     let {
       ariaDescribedby,
+      className,
       emptyOption,
       id,
       idGuid,
       loadingText,
       options,
+      width,
       ...props
     } = this.props;
 
+    let inputClassName = classnames(className, {
+      [`form__control-col--${width}`]: width
+    });
+
     if (!options) {
       return (
-        <select disabled {...props}>
+        <select 
+          disabled 
+          className={inputClassName}
+          {...props}
+        >
           <option>{loadingText || 'Loading...'}</option>
         </select>
       )
@@ -27,6 +38,7 @@ export default class Select extends React.Component {
 
     return (
       <select
+        className={inputClassName}
         id={id ? id : idGuid} 
         aria-describedby={ariaDescribedby}
         {...props} 

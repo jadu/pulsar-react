@@ -61,6 +61,21 @@ it('renders the basic input with aria-describedby', () => {
   expect(tree).toMatchSnapshot();
 });
 
+it('converts the width param to the grid classes when no options provided', () => {
+  const tree = render(
+    <Select width={2} />
+  );
+  expect(tree).toMatchSnapshot();
+});
+
+it('converts the width param to the grid classes', () => {
+  const tree = render(
+    <Select options={selectOptions} width={3} />
+  );
+  expect(tree).toMatchSnapshot();
+});
+
+
 it('renders as form group', () => {
   const tree = shallow(
     <FormGroup labelText="My label">
