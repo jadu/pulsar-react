@@ -13,8 +13,6 @@ A collection of Pulsar components implemented using React.
 | Compound | ✅ (achieved with form group `inline` variant |
 | Content | ✅ |
 | DateInput | ✅ |
-| ErrorSummary | ✖ |
-| Fieldset | ✅ |
 | File | ✅ |
 | Form | ✅ |
 | Hidden | ✅ |
@@ -35,9 +33,43 @@ A collection of Pulsar components implemented using React.
 | Component | Status |
 | --------- | ------ |
 | ErrorBlock | ✅ |
+| ErrorSummary | ✖ |
+| Fieldset | ✅ |
 | FormGroup | ✅ |
 | FormLabel | ✅ |
 | HelpBlock | ✅ |
+
+## HTML component support
+
+| Component | Status |
+| --------- | ------ |
+| Badge | ✖ |
+| Block list | ✖ |
+| Breadcrumb | ✖ |
+| Button | ✖ |
+| Button group | ✖ |
+| Dropdown button | ✖ |
+| Card | ✖ |
+| Datatable | ✖ |
+| Flash message | ✖ |
+| Icon | ✖ |
+| Label | ✖ |
+| Link | ✖ |
+| Link list | ✖ |
+| List | ✖ |
+| Loading spinner | ✖ |
+| Media | ✖ |
+| Metadata | ✖ |
+| Modal | ✖ |
+| Pagination | ✖ |
+| Panel | ✖ |
+| Popover | ✖ |
+| Progress bar | ✖ |
+| Progress list | ✖ |
+| Remove button | ✖ |
+| Status | ✖ |
+| Table | ✖ |
+| Tooltip | ✖ |
 
 # Basic examples
 
