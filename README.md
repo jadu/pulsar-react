@@ -49,6 +49,12 @@ A collection of Pulsar components implemented using React.
   <ButtonGroupItem type="radio" id="bar-1" name="group-1">Bar</ButtonGroupItem>
   <ButtonGroupItem type="radio" id="baz-1" name="group-1">Baz</ButtonGroupItem>
 </FormGroup>
+
+<FormGroup buttonGroup labelText="Group label">
+  <ButtonGroupItem type="checkbox" id="foo-1" name="group-1">Foo</ButtonGroupItem>
+  <ButtonGroupItem type="checkbox" id="bar-1" name="group-1">Bar</ButtonGroupItem>
+  <ButtonGroupItem type="checkbox" id="baz-1" name="group-1">Baz</ButtonGroupItem>
+</FormGroup>
 ```
 
 **Checkbox**
