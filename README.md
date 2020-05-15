@@ -246,5 +246,3 @@ To do...
   <ToggleSwitch name="foo" />
 </FormGroup>
 ```
-```
-
