@@ -43,10 +43,10 @@ A collection of Pulsar components implemented using React.
 
 | Component | Status |
 | --------- | ------ |
-| Badge | ✖ |
+| Badge | ✅ |
 | Block list | ✖ |
 | Breadcrumb | ✖ |
-| Button | ✖ |
+| Button | ✅ |
 | Button group | ✖ |
 | Dropdown button | ✖ |
 | Card | ✖ |
