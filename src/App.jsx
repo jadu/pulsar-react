@@ -109,7 +109,7 @@ export default class App extends React.Component {
             <Checkbox />
           </FormGroup>
 
-          <FormGroup radio labelText="Radio">
+          <FormGroup radioButton labelText="Radio">
             <RadioButton />
           </FormGroup>
 
@@ -423,17 +423,17 @@ export default class App extends React.Component {
 
           {/* Radios */}
           <Fieldset legendText="Radio buttons">
-            <FormGroup radio labelText="Basic">
+            <FormGroup radioButton labelText="Basic">
               <RadioButton />
             </FormGroup>
 
-            <FormGroup radio required
+            <FormGroup radioButton required
               labelText="Required"
             >
               <RadioButton required />
             </FormGroup>
 
-            <FormGroup radio
+            <FormGroup radioButton
               labelText="Help text"
               helpText={helpText}
             >
@@ -443,14 +443,14 @@ export default class App extends React.Component {
             </FormGroup>
           </Fieldset>
           <Fieldset legendText="States and validation">
-            <FormGroup radio
+            <FormGroup radioButton
               error="This is my error message"
               labelText="This is my top level label"
             >
               <RadioButton required />
             </FormGroup>
 
-            <FormGroup radio
+            <FormGroup radioButton
               error="This is my error message"
               helpText={helpText}
               labelText="This is my top level label"
@@ -458,28 +458,28 @@ export default class App extends React.Component {
               <RadioButton required />
             </FormGroup>
 
-            <FormGroup radio changed
+            <FormGroup radioButton changed
               labelText={changedLabel}
               helpText={changedHelp}
             >
               <RadioButton />
             </FormGroup>
 
-            <FormGroup radio success
+            <FormGroup radioButton success
               labelText={successLabel}
               helpText={successHelp}
             >
               <RadioButton />
             </FormGroup>
 
-            <FormGroup radio warning
+            <FormGroup radioButton warning
               labelText={warningLabel}
               helpText={warningHelp}
             >
               <RadioButton />
             </FormGroup>
 
-            <FormGroup radio
+            <FormGroup radioButton
               labelText={disabledLabel}
               helpText={disabledHelp}
 
@@ -488,28 +488,28 @@ export default class App extends React.Component {
             </FormGroup>
           </Fieldset>
           <Fieldset legendText="Alignment">
-            <FormGroup radio hideLabel
+            <FormGroup radioButton hideLabel
               helpText="This example hides the label with the show-label option"
               labelText="This label should not be displayed, but kept in the markup for screen readers"
             >
               <RadioButton />
             </FormGroup>
 
-            <FormGroup radio 
+            <FormGroup radioButton 
               helpText={helpText}
               labelText="Text input with a longer than expected label which will probably wrap multiple lines"
             >
               <RadioButton />
             </FormGroup>
 
-            <FormGroup radio topLabel
+            <FormGroup radioButton topLabel
               helpText={helpText}
               labelText="Text input with a longer than expected label but using the topLabel variant"
             >
               <RadioButton />
             </FormGroup>
 
-            <FormGroup radio topLabel flushLabel
+            <FormGroup radioButton topLabel flushLabel
               helpText={helpText}
               labelText="Text input with a longer than expected label, using the topLabel and flushLabel variant"
             >

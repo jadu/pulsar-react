@@ -104,7 +104,7 @@ it('should use inline strategy if using inlineRadioButton variant', () => {
 
 it('should add the radio class if using radio variant', () => {
   const tree = shallow(
-    <FormGroup radio>
+    <FormGroup radioButton>
       <>foo</>
     </FormGroup>
   );
