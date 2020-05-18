@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders as a link if the href attribute is supplied 1`] = `
+<a
+  class="btn"
+  href="#bar"
+>
+  foo
+</a>
+`;
+
+exports[`renders multiple variations 1`] = `
+<button
+  class="btn btn--outline btn--primary btn--small"
+>
+  foo
+</button>
+`;
+
+exports[`renders the base button 1`] = `
+<button
+  class="btn"
+>
+  foo
+</button>
+`;
+
+exports[`renders the danger variation 1`] = `
+<button
+  class="btn btn--danger"
+>
+  foo
+</button>
+`;
+
+exports[`renders the inverse variation 1`] = `
+<button
+  class="btn btn--inverse"
+>
+  foo
+</button>
+`;
+
+exports[`renders the naked variation 1`] = `
+<button
+  class="btn btn--naked"
+>
+  foo
+</button>
+`;
+
+exports[`renders the outline variation 1`] = `
+<button
+  class="btn btn--outline"
+>
+  foo
+</button>
+`;
+
+exports[`renders the primary variation 1`] = `
+<button
+  class="btn btn--primary"
+>
+  foo
+</button>
+`;
+
+exports[`renders the small variation 1`] = `
+<button
+  class="btn btn--small"
+>
+  foo
+</button>
+`;
+
+exports[`renders the success variation 1`] = `
+<button
+  class="btn btn--success"
+>
+  foo
+</button>
+`;
+
+exports[`renders the warning variation 1`] = `
+<button
+  class="btn btn--warning"
+>
+  foo
+</button>
+`;

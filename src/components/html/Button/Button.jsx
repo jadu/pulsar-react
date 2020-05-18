@@ -10,13 +10,10 @@ export default class Button extends React.Component {
 
   render() {
     let {
-      ariaDescribedby,
       children,
       className,
       danger,
       href,
-      id,
-      idGuid,
       inverse,
       naked,
       outline,
