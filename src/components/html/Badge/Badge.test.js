@@ -3,95 +3,95 @@
 import React from 'react';
 import { shallow, render } from 'enzyme';
 
-import Button from './Button';
+import Badge from './Badge';
 
-it('renders the base button', () => {
+it('renders the base badge', () => {
   const tree = render(
-    <Button>foo</Button>
+    <Badge>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the primary variation', () => {
   const tree = render(
-    <Button primary>foo</Button>
+    <Badge primary>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the info variation', () => {
   const tree = render(
-    <Button info>foo</Button>
+    <Badge info>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the success variation', () => {
   const tree = render(
-    <Button success>foo</Button>
+    <Badge success>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the warning variation', () => {
   const tree = render(
-    <Button warning>foo</Button>
+    <Badge warning>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the danger variation', () => {
   const tree = render(
-    <Button danger>foo</Button>
+    <Badge danger>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the inverse variation', () => {
   const tree = render(
-    <Button inverse>foo</Button>
+    <Badge inverse>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the white variation', () => {
   const tree = render(
-    <Button white>foo</Button>
+    <Badge white>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the outline variation', () => {
   const tree = render(
-    <Button outline>foo</Button>
+    <Badge outline>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the naked variation', () => {
   const tree = render(
-    <Button naked>foo</Button>
+    <Badge naked>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders the small variation', () => {
   const tree = render(
-    <Button small>foo</Button>
+    <Badge small>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders multiple variations', () => {
   const tree = render(
-    <Button primary outline small>foo</Button>
+    <Badge primary outline small>foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });
 
 it('renders as a link if the href attribute is supplied', () => {
   const tree = render(
-    <Button href="#bar">foo</Button>
+    <Badge href="#bar">foo</Badge>
   );
   expect(tree).toMatchSnapshot();
 });

@@ -1,106 +1,106 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders as a link if the href attribute is supplied 1`] = `
-<a
-  class="btn"
+<span
+  class="badge"
   href="#bar"
 >
   foo
-</a>
+</span>
 `;
 
 exports[`renders multiple variations 1`] = `
-<button
-  class="btn btn--outline btn--primary btn--small"
+<span
+  class="badge badge--primary"
 >
   foo
-</button>
+</span>
 `;
 
-exports[`renders the base button 1`] = `
-<button
-  class="btn"
+exports[`renders the base badge 1`] = `
+<span
+  class="badge"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the danger variation 1`] = `
-<button
-  class="btn btn--danger"
+<span
+  class="badge badge--danger"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the info variation 1`] = `
-<button
-  class="btn btn--info"
+<span
+  class="badge badge--info"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the inverse variation 1`] = `
-<button
-  class="btn btn--inverse"
+<span
+  class="badge badge--inverse"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the naked variation 1`] = `
-<button
-  class="btn btn--naked"
+<span
+  class="badge"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the outline variation 1`] = `
-<button
-  class="btn btn--outline"
+<span
+  class="badge"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the primary variation 1`] = `
-<button
-  class="btn btn--primary"
+<span
+  class="badge badge--primary"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the small variation 1`] = `
-<button
-  class="btn btn--small"
+<span
+  class="badge"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the success variation 1`] = `
-<button
-  class="btn btn--success"
+<span
+  class="badge badge--success"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the warning variation 1`] = `
-<button
-  class="btn btn--warning"
+<span
+  class="badge badge--warning"
 >
   foo
-</button>
+</span>
 `;
 
 exports[`renders the white variation 1`] = `
-<button
-  class="btn btn--white"
+<span
+  class="badge badge--white"
 >
   foo
-</button>
+</span>
 `;

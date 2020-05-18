@@ -4,8 +4,7 @@ import classnames from 'classnames';
 export default class Button extends React.Component {
 
   static defaultProps = {
-    className: 'btn',
-    tag: 'button'
+    className: 'badge'
   };
 
   render() {
@@ -13,44 +12,36 @@ export default class Button extends React.Component {
       children,
       className,
       danger,
-      href,
       info,
       inverse,
       naked,
       outline,
       primary,
       small,
-      tag,
       success,
       warning,
       white,
       ...props
     } = this.props;
 
-    let ButtonTag = href ? 'a' : tag;
-
     let variantClasses = classnames(className, {
-      'btn--danger': danger,
-      'btn--info': info,
-      'btn--inverse': inverse,
-      'btn--naked': naked,
-      'btn--outline': outline,
-      'btn--primary': primary,
-      'btn--success': success,
-      'btn--small': small,
-      'btn--warning': warning,
-      'btn--white': white
+      'badge--danger': danger,
+      'badge--info': info,
+      'badge--inverse': inverse,
+      'badge--primary': primary,
+      'badge--success': success,
+      'badge--warning': warning,
+      'badge--white': white
     });
 
     return (
       <>
-        <ButtonTag 
+        <span 
           className={variantClasses}
-          href={href ? href : null}
           {...props}
         >
           {children}
-        </ButtonTag>
+        </span>
       </>
     );
   }
