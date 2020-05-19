@@ -49,7 +49,7 @@ A collection of Pulsar components implemented using React.
 | Button | ✅ |
 | Button group | ✅ |
 | Dropdown button | ✅ |
-| Card | ✖ |
+| Card | ✖ no current Twig helper |
 | Datatable | ✖ |
 | Flash message | ✖ |
 | Icon | ✖ |
