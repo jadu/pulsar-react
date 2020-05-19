@@ -222,6 +222,12 @@ To do...
 </FormGroup>
 ```
 
+**Label**
+
+```jsx
+<Label>foo</Label>
+```
+
 **PasswordInput**
 
 ```jsx
