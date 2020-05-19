@@ -73,7 +73,13 @@ A collection of Pulsar components implemented using React.
 
 # Basic examples
 
-**Button group**
+**Button**
+
+```jsx
+  <Button>Foo</Button>
+```
+
+**Button group (Form)**
 
 ```jsx
 <FormGroup buttonGroup labelText="Group label">
@@ -87,6 +93,14 @@ A collection of Pulsar components implemented using React.
   <ButtonGroupItem type="checkbox" id="bar-1" name="group-1">Bar</ButtonGroupItem>
   <ButtonGroupItem type="checkbox" id="baz-1" name="group-1">Baz</ButtonGroupItem>
 </FormGroup>
+```
+
+**Button group (HTML)**
+
+```jsx
+<ButtonGroup>
+  <Button>Foo</Button>
+</ButtonGroup>
 ```
 
 **Checkbox**
