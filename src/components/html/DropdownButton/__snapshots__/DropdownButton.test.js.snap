@@ -1,0 +1,151 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`add additional classes on the button 1`] = `
+<ButtonGroup
+  className="dropdown"
+>
+  <Button
+    aria-expanded="false"
+    className="foo btn dropdown__toggle"
+    tag="button"
+  >
+    Hello
+     
+    <span
+      className="caret"
+    />
+  </Button>
+  <ul
+    className="dropdown__menu pull-left"
+  />
+</ButtonGroup>
+`;
+
+exports[`allows a custom label 1`] = `
+<ButtonGroup
+  className="dropdown"
+>
+  <Button
+    aria-expanded="false"
+    className="btn dropdown__toggle"
+    tag="button"
+  >
+    Hello
+     
+    <span
+      className="caret"
+    />
+  </Button>
+  <ul
+    className="dropdown__menu pull-left"
+  />
+</ButtonGroup>
+`;
+
+exports[`renders multiple list items 1`] = `
+<ButtonGroup
+  className="dropdown"
+>
+  <Button
+    aria-expanded="false"
+    className="btn dropdown__toggle"
+    tag="button"
+  >
+    Label
+     
+    <span
+      className="caret"
+    />
+  </Button>
+  <ul
+    className="dropdown__menu pull-left"
+  >
+    <li
+      id="chocolate"
+      key="0"
+    >
+      Chocolate
+    </li>
+    <li
+      id="strawberry"
+      key="1"
+    >
+      Strawberry
+    </li>
+    <li
+      id="vanilla"
+      key="2"
+    >
+      Vanilla
+    </li>
+  </ul>
+</ButtonGroup>
+`;
+
+exports[`renders one list item 1`] = `
+<ButtonGroup
+  className="dropdown"
+>
+  <Button
+    aria-expanded="false"
+    className="btn dropdown__toggle"
+    tag="button"
+  >
+    Label
+     
+    <span
+      className="caret"
+    />
+  </Button>
+  <ul
+    className="dropdown__menu pull-left"
+  >
+    <li
+      id="chocolate"
+      key="0"
+    >
+      Chocolate
+    </li>
+  </ul>
+</ButtonGroup>
+`;
+
+exports[`renders the basic dropdown button 1`] = `
+<ButtonGroup
+  className="dropdown"
+>
+  <Button
+    aria-expanded="false"
+    className="btn dropdown__toggle"
+    tag="button"
+  >
+    Label
+     
+    <span
+      className="caret"
+    />
+  </Button>
+  <ul
+    className="dropdown__menu pull-left"
+  />
+</ButtonGroup>
+`;
+
+exports[`should obey the button variations 1`] = `
+<div
+  class="dropdown"
+>
+  <button
+    aria-expanded="false"
+    class="btn dropdown__toggle btn--primary"
+  >
+    Label 
+    <span
+      class="caret"
+    />
+  </button>
+  <ul
+    class="dropdown__menu pull-left"
+  />
+</div>
+`;
