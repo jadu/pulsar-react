@@ -5,8 +5,10 @@ exports[`add additional classes on the button 1`] = `
   className="dropdown"
 >
   <Button
+    aria-controls="id-guid-1"
     aria-expanded="false"
     className="foo btn dropdown__toggle"
+    data-toggle="dropdown"
     tag="button"
   >
     Hello
@@ -17,6 +19,7 @@ exports[`add additional classes on the button 1`] = `
   </Button>
   <ul
     className="dropdown__menu pull-left"
+    id="id-guid-1"
   />
 </ButtonGroup>
 `;
@@ -26,8 +29,10 @@ exports[`allows a custom label 1`] = `
   className="dropdown"
 >
   <Button
+    aria-controls="id-guid-1"
     aria-expanded="false"
     className="btn dropdown__toggle"
+    data-toggle="dropdown"
     tag="button"
   >
     Hello
@@ -38,6 +43,7 @@ exports[`allows a custom label 1`] = `
   </Button>
   <ul
     className="dropdown__menu pull-left"
+    id="id-guid-1"
   />
 </ButtonGroup>
 `;
@@ -47,8 +53,10 @@ exports[`renders multiple list items 1`] = `
   className="dropdown"
 >
   <Button
+    aria-controls="id-guid-1"
     aria-expanded="false"
     className="btn dropdown__toggle"
+    data-toggle="dropdown"
     tag="button"
   >
     Label
@@ -59,6 +67,7 @@ exports[`renders multiple list items 1`] = `
   </Button>
   <ul
     className="dropdown__menu pull-left"
+    id="id-guid-1"
   >
     <li
       id="chocolate"
@@ -87,8 +96,10 @@ exports[`renders one list item 1`] = `
   className="dropdown"
 >
   <Button
+    aria-controls="id-guid-1"
     aria-expanded="false"
     className="btn dropdown__toggle"
+    data-toggle="dropdown"
     tag="button"
   >
     Label
@@ -99,6 +110,7 @@ exports[`renders one list item 1`] = `
   </Button>
   <ul
     className="dropdown__menu pull-left"
+    id="id-guid-1"
   >
     <li
       id="chocolate"
@@ -115,8 +127,10 @@ exports[`renders the basic dropdown button 1`] = `
   className="dropdown"
 >
   <Button
+    aria-controls="id-guid-1"
     aria-expanded="false"
     className="btn dropdown__toggle"
+    data-toggle="dropdown"
     tag="button"
   >
     Label
@@ -127,6 +141,7 @@ exports[`renders the basic dropdown button 1`] = `
   </Button>
   <ul
     className="dropdown__menu pull-left"
+    id="id-guid-1"
   />
 </ButtonGroup>
 `;
@@ -136,8 +151,10 @@ exports[`should obey the button variations 1`] = `
   class="dropdown"
 >
   <button
+    aria-controls="id-guid-1"
     aria-expanded="false"
     class="btn dropdown__toggle btn--primary"
+    data-toggle="dropdown"
   >
     Label 
     <span
@@ -146,6 +163,7 @@ exports[`should obey the button variations 1`] = `
   </button>
   <ul
     class="dropdown__menu pull-left"
+    id="id-guid-1"
   />
 </div>
 `;

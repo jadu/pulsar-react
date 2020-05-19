@@ -1,5 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
+import shortid from 'shortid';
+
 import ButtonGroup from '../ButtonGroup/ButtonGroup';
 import Button from '../Button/Button';
 
@@ -7,6 +9,8 @@ export default class DropdownButton extends React.Component {
 
   static defaultProps = {
     'aria-expanded': 'false',
+    'data-toggle': 'dropdown',
+    guid: 'id-guid-' + shortid.generate(),
     items: [],
     label: 'Label'
   };
@@ -16,6 +20,7 @@ export default class DropdownButton extends React.Component {
       children,
       className,
       danger,
+      guid,
       info,
       inverse,
       items,
@@ -44,12 +49,13 @@ export default class DropdownButton extends React.Component {
     return (
       <ButtonGroup className="dropdown">
         <Button
+          aria-controls={guid}
           className={variantClasses}
           {...props}
         >
           {label} <span className="caret"></span>
         </Button>
-        <ul className="dropdown__menu pull-left">
+        <ul id={guid} className="dropdown__menu pull-left">
           {
             items.map(function(item, i) {
               let {label, ...props} = item;
@@ -63,14 +69,3 @@ export default class DropdownButton extends React.Component {
     );
   }
 }
-
-
-// <div  class="btn__group dropdown">
-//   <button aria-haspopup="true" aria-expanded="false" aria-controls="guid-1195386946" data-toggle="dropdown"  class="btn dropdown__toggle">
-//     My Action&nbsp;<span class="caret"></span>
-//   </button>
-//   <ul id="guid-1195386946"  class="dropdown__menu pull-left">
-//     <li><a href="#foo">Foo</a></li>
-//     <li><a href="#bar">Bar</a></li>
-//   </ul>
-// </div>
