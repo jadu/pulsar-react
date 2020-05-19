@@ -156,6 +156,19 @@ A collection of Pulsar components implemented using React.
 </FormGroup>
 ```
 
+**Dropdown Button**
+
+```jsx
+<DropdownButton 
+  label="Menu"
+  items={[
+    { id: 'chocolate', label: 'Chocolate' },
+    { id: 'strawberry', label: 'Strawberry' },
+    { id: 'vanilla', label: 'Vanilla' }
+  ]}
+/>
+```
+
 **ErrorSummary**
 
 To do...
