@@ -53,7 +53,7 @@ A collection of Pulsar components implemented using React.
 | Datatable | ✖ |
 | Flash message | ✖ |
 | Icon | ✖ |
-| Label | ✖ |
+| Label | ✅ |
 | Link | ✖ |
 | Link list | ✖ |
 | List | ✖ |
