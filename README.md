@@ -48,7 +48,7 @@ A collection of Pulsar components implemented using React.
 | Breadcrumb | ✖ |
 | Button | ✅ |
 | Button group | ✅ |
-| Dropdown button | ✖ |
+| Dropdown button | ✅ |
 | Card | ✖ |
 | Datatable | ✖ |
 | Flash message | ✖ |
