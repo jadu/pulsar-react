@@ -56,7 +56,7 @@ A collection of Pulsar components implemented using React.
 | Label | ✅ |
 | Link | ✅ |
 | Link list | ✖ |
-| List | ✖ |
+| List | ✅ New OrderedList & UnorderedList components |
 | Loading spinner | ✖ |
 | Media | ✖ |
 | Metadata | ✖ |
@@ -234,6 +234,14 @@ To do...
 <Link href="#foo">Bar</Link>
 ```
 
+**Ordered List**
+
+```jsx
+<OrderedList>
+  <ListItem>Foo</ListItem>
+</OrderedList>
+```
+
 **PasswordInput**
 
 ```jsx
@@ -316,4 +324,12 @@ To do...
 <FormGroup labelText="Group label">
   <ToggleSwitch name="foo" />
 </FormGroup>
+```
+
+**Unordered List**
+
+```jsx
+<UnorderedList>
+  <ListItem>Foo</ListItem>
+</UnorderedList>
 ```
