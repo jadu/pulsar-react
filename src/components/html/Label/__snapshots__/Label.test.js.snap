@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders multiple variations 1`] = `
+<span
+  class="label label--large label--primary"
+>
+  foo
+</span>
+`;
+
+exports[`renders the base label 1`] = `
+<span
+  class="label"
+>
+  foo
+</span>
+`;
+
+exports[`renders the danger variation 1`] = `
+<span
+  class="label label--danger"
+>
+  foo
+</span>
+`;
+
+exports[`renders the info variation 1`] = `
+<span
+  class="label label--info"
+>
+  foo
+</span>
+`;
+
+exports[`renders the inverse variation 1`] = `
+<span
+  class="label label--inverse"
+>
+  foo
+</span>
+`;
+
+exports[`renders the large variation 1`] = `
+<span
+  class="label label--large"
+>
+  foo
+</span>
+`;
+
+exports[`renders the primary variation 1`] = `
+<span
+  class="label label--primary"
+>
+  foo
+</span>
+`;
+
+exports[`renders the success variation 1`] = `
+<span
+  class="label label--success"
+>
+  foo
+</span>
+`;
+
+exports[`renders the warning variation 1`] = `
+<span
+  class="label label--warning"
+>
+  foo
+</span>
+`;
+
+exports[`renders the white variation 1`] = `
+<span
+  class="label label--white"
+>
+  foo
+</span>
+`;

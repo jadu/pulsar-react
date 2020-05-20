@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the base Link 1`] = `
+<a
+  href="#foo"
+>
+  bar
+</a>
+`;
