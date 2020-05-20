@@ -54,7 +54,7 @@ A collection of Pulsar components implemented using React.
 | Flash message | ✖ |
 | Icon | ✖ |
 | Label | ✅ |
-| Link | ✖ |
+| Link | ✅ |
 | Link list | ✖ |
 | List | ✖ |
 | Loading spinner | ✖ |
@@ -226,6 +226,12 @@ To do...
 
 ```jsx
 <Label>foo</Label>
+```
+
+**Link**
+
+```jsx
+<Link href="#foo">Bar</Link>
 ```
 
 **PasswordInput**
