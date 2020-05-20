@@ -55,7 +55,7 @@ A collection of Pulsar components implemented using React.
 | Icon | ✖ |
 | Label | ✅ |
 | Link | ✅ |
-| Link list | ✖ |
+| Link list | ✅ Achievable by nesting a List>ListItem>Link |
 | List | ✅ New OrderedList & UnorderedList components |
 | Loading spinner | ✖ |
 | Media | ✖ |
