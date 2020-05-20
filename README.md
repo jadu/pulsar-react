@@ -48,12 +48,12 @@ A collection of Pulsar components implemented using React.
 | Breadcrumb | ✖ |
 | Button | ✅ |
 | Button group | ✅ |
-| Dropdown button | ✖ |
-| Card | ✖ |
+| Dropdown button | ✅ |
+| Card | ✖ no current Twig helper |
 | Datatable | ✖ |
 | Flash message | ✖ |
 | Icon | ✖ |
-| Label | ✖ |
+| Label | ✅ |
 | Link | ✖ |
 | Link list | ✖ |
 | List | ✖ |
@@ -156,6 +156,19 @@ A collection of Pulsar components implemented using React.
 </FormGroup>
 ```
 
+**Dropdown Button**
+
+```jsx
+<DropdownButton 
+  label="Menu"
+  items={[
+    { id: 'chocolate', label: 'Chocolate' },
+    { id: 'strawberry', label: 'Strawberry' },
+    { id: 'vanilla', label: 'Vanilla' }
+  ]}
+/>
+```
+
 **ErrorSummary**
 
 To do...
@@ -207,6 +220,12 @@ To do...
     name="foo"
   />
 </FormGroup>
+```
+
+**Label**
+
+```jsx
+<Label>foo</Label>
 ```
 
 **PasswordInput**
