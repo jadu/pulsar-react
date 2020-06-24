@@ -71,13 +71,13 @@ export default class FormGroup extends React.Component {
     let guid = this.props.guid || shortid.generate();
 
     // GUID to use if no explicit ID has been set
-    let idGuid = 'id-guid-' + this.props.guid;
+    let idGuid = 'id-guid-' + guid;
     
     // GUID to use to link the input with any help text 
-    let helpGuid = 'help-guid-' + this.props.guid;
+    let helpGuid = 'help-guid-' + guid;
     
     // GUID to use to link the input with any errors 
-    let errorGuid = 'error-guid-' + this.props.guid;
+    let errorGuid = 'error-guid-' + guid;
 
     // Build list of IDs for the input based on the presence of help/error text 
     let ariaDescribedby = classnames({
