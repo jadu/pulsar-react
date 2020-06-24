@@ -102,7 +102,7 @@ export default class FormGroup extends React.Component {
 
     // Form controls
     let inputBlock = (
-      <>{childrenWithGuids}</>
+      <React.Fragment>{childrenWithGuids}</React.Fragment>
     );
 
     // Wrap with input group if appended/prepended text is present
@@ -185,7 +185,7 @@ export default class FormGroup extends React.Component {
     }
 
     return (
-      <>{groupBlock}</>
+      <React.Fragment>{groupBlock}</React.Fragment>
     );
   }
 }

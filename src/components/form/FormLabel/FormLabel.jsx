@@ -30,7 +30,7 @@ export default class FormLabel extends React.Component {
     );
 
     return (
-      <>
+      <React.Fragment>
       {children ? (
         <LabelTag
           htmlFor={htmlFor ? htmlFor : idGuid} 
@@ -44,7 +44,7 @@ export default class FormLabel extends React.Component {
       : (
         <span className="control__label"></span>
       )}
-      </>
+      </React.Fragment>
     );
   }
 }

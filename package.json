@@ -9,6 +9,9 @@
   },
   "keywords": [],
   "author": "",
+  "browserify": {
+    "transform": [["babelify", { "presets": ["es2015", "react", "stage-0"] }]]
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.0",

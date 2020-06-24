@@ -13,13 +13,13 @@ export default class ButtonGroup extends React.Component {
     } = this.props;
 
     return (
-      <>
+      <React.Fragment>
         <div
           {...props}
         >
           {children}
         </div>
-      </>
+      </React.Fragment>
     );
   }
 }

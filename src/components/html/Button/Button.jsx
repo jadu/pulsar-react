@@ -43,7 +43,7 @@ export default class Button extends React.Component {
     });
 
     return (
-      <>
+      <React.Fragment>
         <ButtonTag 
           className={variantClasses}
           href={href ? href : null}
@@ -51,7 +51,7 @@ export default class Button extends React.Component {
         >
           {children}
         </ButtonTag>
-      </>
+      </React.Fragment>
     );
   }
 }

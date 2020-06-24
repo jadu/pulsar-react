@@ -24,7 +24,7 @@ export default class ButtonGroupItem extends React.Component {
     let inputClassName = classnames(className, type);
 
     return (
-      <>
+      <React.Fragment>
         <input 
           className={inputClassName}
           id={id ? id : idGuid} 
@@ -37,7 +37,7 @@ export default class ButtonGroupItem extends React.Component {
         >
           {children}
         </FormLabel>
-      </>
+      </React.Fragment>
     );
   }
 }
