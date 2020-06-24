@@ -11,7 +11,6 @@ export default class FormGroup extends React.Component {
 
   static defaultProps = {
     className: 'form__group',
-    guid: shortid.generate(),
     required: false
   };
 
@@ -69,6 +68,8 @@ export default class FormGroup extends React.Component {
       'has-error': error
     });
 
+    let guid = this.props.guid || shortid.generate();
+
     // GUID to use if no explicit ID has been set
     let idGuid = 'id-guid-' + this.props.guid;
     
@@ -90,8 +91,7 @@ export default class FormGroup extends React.Component {
       (child, i) => {
         return React.cloneElement(child, {
           ariaDescribedby: ariaDescribedby ? ariaDescribedby : null,
-          idGuid: idGuid,
-          inputId: idGuid
+          idGuid: idGuid
         });
       }
     );
