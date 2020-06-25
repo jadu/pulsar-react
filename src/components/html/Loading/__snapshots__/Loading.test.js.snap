@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allows a custom loading message with the block variation 1`] = `
+<div
+  class="loading-block"
+>
+  <span
+    class="loading"
+  >
+    <i>
+      Loading...
+    </i>
+  </span>
+  <span
+    class="loading-block__message"
+  >
+    foo
+  </span>
+</div>
+`;
+
+exports[`renders the base elements 1`] = `
+<span
+  class="loading"
+>
+  <i>
+    Loading...
+  </i>
+</span>
+`;
+
+exports[`renders the block variation 1`] = `
+<div
+  class="loading-block"
+>
+  <span
+    class="loading"
+  >
+    <i>
+      Loading...
+    </i>
+  </span>
+</div>
+`;
+
+exports[`renders the large variation 1`] = `
+<span
+  class="loading loading--large"
+>
+  <i>
+    Loading...
+  </i>
+</span>
+`;
