@@ -31,6 +31,7 @@ export default class FormGroup extends React.Component {
       error,
       flushLabel,
       helpText,
+      hideLabel,
       indented,
       inline,
       inlineCheckbox,
@@ -141,6 +142,7 @@ export default class FormGroup extends React.Component {
           required={required} 
           idGuid={idGuid}
           tag={controls ? 'span' : 'label'}
+          hideLabel={hideLabel}
         >
           {labelText}
         </FormLabel>
