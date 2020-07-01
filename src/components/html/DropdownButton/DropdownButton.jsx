@@ -57,11 +57,8 @@ export default class DropdownButton extends React.Component {
         </Button>
         <ul id={guid} className="dropdown__menu pull-left">
           {
-            items.map(function(item, i) {
-              let {label, ...props} = item;
-              props.key = i;
-
-              return <li {...props}>{label}</li>
+            React.Children.map(children, (item, i) => {
+              return <li key={i}>{item}</li>
             })
           }
         </ul>

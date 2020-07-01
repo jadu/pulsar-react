@@ -4,7 +4,7 @@ import classnames from 'classnames';
 export default class Select extends React.Component {
 
   static defaultProps = {
-    className: 'form__control select'
+    className: 'form__control select',
     emptyOption: 'Choose...'
   };
 
