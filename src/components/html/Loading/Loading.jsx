@@ -36,7 +36,7 @@ export default class Loading extends React.Component {
     ) : spinner;
 
     return (
-      <>{loadingBlock}</>
+      <React.Fragment>{loadingBlock}</React.Fragment>
     );
   }
 }
