@@ -5,7 +5,8 @@ export default class Button extends React.Component {
 
   static defaultProps = {
     className: 'btn',
-    tag: 'button'
+    tag: 'button',
+    type: ''
   };
 
   render() {
@@ -21,6 +22,7 @@ export default class Button extends React.Component {
       primary,
       small,
       tag,
+      type,
       success,
       warning,
       white,
@@ -30,16 +32,16 @@ export default class Button extends React.Component {
     let ButtonTag = href ? 'a' : tag;
 
     let variantClasses = classnames(className, {
-      'btn--danger': danger,
-      'btn--info': info,
-      'btn--inverse': inverse,
-      'btn--naked': naked,
+      'btn--danger': type === 'danger',
+      'btn--info': type === 'info',
+      'btn--inverse': type === 'inverse',
+      'btn--naked': type === 'naked',
       'btn--outline': outline,
-      'btn--primary': primary,
-      'btn--success': success,
+      'btn--primary': type === 'primary',
+      'btn--success': type === 'success',
       'btn--small': small,
-      'btn--warning': warning,
-      'btn--white': white
+      'btn--warning': type === 'warning',
+      'btn--white': type === 'white'
     });
 
     return (
