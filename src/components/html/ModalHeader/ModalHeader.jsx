@@ -15,7 +15,7 @@ export default class ModalHeader extends React.Component {
 
   	return <div className={className} {...props}>
       <Button className="close" data-dismiss="modal" aria-hidden="true">&times;</Button>
-      <h2 className="modal__title">{title}</h2></div>
+      <h2 className="modal__title">{title}</h2>
     </div>;
   }
 }
