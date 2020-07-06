@@ -14,12 +14,13 @@ export default class ToggleSwitch extends React.Component {
       id,
       idGuid,
       labelText,
+      nodeRef,
       ...props
     } = this.props;
 
     return (
       <span className="controls">
-        <input id={idGuid} {...props} />
+        <input id={idGuid} ref={nodeRef} {...props} />
         <span className="toggle-switch-label"></span>
       </span>
     );

@@ -18,6 +18,7 @@ export default class Button extends React.Component {
       info,
       inverse,
       naked,
+      nodeRef,
       outline,
       primary,
       small,
@@ -49,6 +50,7 @@ export default class Button extends React.Component {
         <ButtonTag 
           className={variantClasses}
           href={href ? href : null}
+          ref={nodeRef}
           {...props}
         >
           {children}
