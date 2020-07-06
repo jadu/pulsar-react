@@ -19,7 +19,7 @@ export default class Modal extends React.Component {
       'modal--danger': danger,
     });
 
-    return <div aria-modal="true" role="dialog" aria-hidden="false" tabindex="-1" className={variantClasses} {...props}>
+    return <div aria-modal="true" role="dialog" aria-hidden="false" tabIndex="-1" className={variantClasses} {...props}>
   	  <div className="modal__dialog">
         <div className="modal__content">
     	  {children}
