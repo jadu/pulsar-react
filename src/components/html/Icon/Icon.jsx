@@ -6,16 +6,18 @@ export default class Icon extends React.Component {
     let {
       children,
       className,
+      name,
       ...props
     } = this.props;
 
-    let ariaHidden = this.props['aria-hidden'];
-    if (ariaHidden === undefined) {
-      ariaHidden = true;
-    }
+    className = 'icon-' + name + (className ? ' ' + className : '');
 
-    return <i className={className} aria-hidden={ariaHidden} {...props}>
-      {children}
+    return <i className={className} aria-hidden={!children} {...props}>
+      {children &&
+        <span className="hide">
+          {children}
+        </span>
+      }
     </i>;
   }
 }
