@@ -90,6 +90,10 @@ export default class FormGroup extends React.Component {
     let childrenWithGuids = React.Children.map(
       children,
       (child, i) => {
+        if (child.type === 'div') {
+          return child;
+        }
+
         return React.cloneElement(child, {
           ariaDescribedby: ariaDescribedby ? ariaDescribedby : null,
           idGuid: idGuid
