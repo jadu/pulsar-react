@@ -10,7 +10,6 @@ export default class DropdownButton extends React.Component {
   static defaultProps = {
     'aria-expanded': 'false',
     'data-toggle': 'dropdown',
-    guid: 'id-guid-' + shortid.generate(),
     items: [],
     label: 'Label'
   };
@@ -20,7 +19,6 @@ export default class DropdownButton extends React.Component {
       children,
       className,
       danger,
-      guid,
       info,
       inverse,
       items,
@@ -33,6 +31,8 @@ export default class DropdownButton extends React.Component {
       white,
       ...props
     } = this.props;
+
+    let guid = this.props.guid || shortid.generate();
 
     let variantClasses = classnames(className, 'btn dropdown__toggle', {
       'btn--danger': danger,
