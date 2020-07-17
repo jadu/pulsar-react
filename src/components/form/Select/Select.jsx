@@ -47,6 +47,17 @@ export default class Select extends React.Component {
         {emptyOption ? <option value="">{emptyOption}</option> : null}
         {
           options.map(function(option, i) {
+            if (option.options) {
+              return <optgroup label={option.label}>
+                {option.options.map(function(optGroupOption, i) {
+                  let {text, ...props} = optGroupOption;
+                  props.key = i;
+
+                  return <option {...props}>{text}</option>
+                })}
+              </optgroup>;
+            }
+
             let {text, ...props} = option;
             props.key = i;
 
