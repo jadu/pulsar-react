@@ -90,7 +90,7 @@ export default class FormGroup extends React.Component {
     let childrenWithGuids = React.Children.map(
       children,
       (child, i) => {
-        if (child.type === 'div') {
+        if (['div', 'p'].indexOf(child.type) !== -1) {
           return child;
         }
 
@@ -142,6 +142,7 @@ export default class FormGroup extends React.Component {
     // Standard group markup strategy for most components
     let groupBlock = (
       <div className={variantClasses}>
+        {labelText &&
         <FormLabel 
           required={required} 
           idGuid={idGuid}
@@ -150,6 +151,8 @@ export default class FormGroup extends React.Component {
         >
           {labelText}
         </FormLabel>
+        }
+
         {controlsBlock}
       </div>
     );
