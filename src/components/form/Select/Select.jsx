@@ -49,7 +49,7 @@ export default class Select extends React.Component {
           options.map(function(option, i) {
             if (option.options) {
               return <optgroup key={i} label={option.label}>
-                {option.options.map(function(optGroupOption, i) {
+                {option.options.map(function(optGroupOption, j) {
                   let {text, ...props} = optGroupOption;
                   props.key = j;
 
