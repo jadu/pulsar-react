@@ -96,7 +96,7 @@ export default class FormGroup extends React.Component {
 
         return React.cloneElement(child, {
           ariaDescribedby: ariaDescribedby ? ariaDescribedby : null,
-          idGuid: idGuid
+          id: idGuid
         });
       }
     );
