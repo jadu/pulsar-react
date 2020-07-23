@@ -10,14 +10,25 @@
   "keywords": [],
   "author": "",
   "browserify": {
-    "transform": [["babelify", { "presets": ["es2015", "react", "stage-0"] }]]
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015",
+            "react",
+            "stage-0"
+          ]
+        }
+      ]
+    ]
   },
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^6.24.0",
-    "@babel/plugin-transform-class-properties": "^6.24.0",
-    "@babel/preset-env": "6.24.0",
-    "@babel/preset-react": "6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-plugin-transform-class-properties": "^6.24.0",
+    "babel-preset-env": "^1.0",
+    "babel-preset-react": "^6.24.0",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
