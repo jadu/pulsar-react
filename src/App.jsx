@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from './components/html/Button';
+import Button from './components/html/Button/Button';
 
 import ButtonGroupItem from './components/form/ButtonGroupItem/ButtonGroupItem';
 import Checkbox from './components/form/Checkbox/Checkbox';

@@ -16,6 +16,7 @@
         {
           "presets": [
             "es2015",
+            "es2017",
             "react",
             "stage-0"
           ]
@@ -26,21 +27,22 @@
   "license": "ISC",
   "devDependencies": {
     "babel-core": "^6.24.0",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^6.1.0",
     "babel-plugin-transform-class-properties": "^6.24.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.0",
     "babel-preset-react": "^6.24.0",
-    "babel-jest": "^26.0.1",
-    "babel-loader": "^8.1.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
-    "html-webpack-plugin": "^4.2.0",
+    "html-webpack-plugin": "^2.3.0",
     "jadu-pulsar": "^10.3.1",
     "jest": "^26.0.1",
     "react-test-renderer": "^16.13.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack": "^2.0",
+    "webpack-cli": "^1.0",
+    "webpack-dev-server": "^2.0"
   },
   "dependencies": {
     "classnames": "^2.2.6",
@@ -49,7 +51,8 @@
     "shortid": "^2.2.15"
   },
   "babel": {
-    "plugins": [
+    "plugins": [     
+      "babel-plugin-transform-object-rest-spread",
       "babel-plugin-transform-class-properties"
     ]
   },
