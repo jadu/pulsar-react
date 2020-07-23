@@ -15,6 +15,7 @@ import Fieldset from './components/form/Fieldset/Fieldset';
 import FileInput from './components/form/FileInput/FileInput';
 import InlineCheckbox from './components/form/InlineCheckbox/InlineCheckbox';
 import InlineRadioButton from './components/form/InlineRadioButton/InlineRadioButton';
+import InputGroup from './components/form/InputGroup/InputGroup';
 import PasswordInput from './components/form/PasswordInput/PasswordInput';
 import RangeInput from './components/form/RangeInput/RangeInput';
 import RadioButton from './components/form/RadioButton/RadioButton';
@@ -99,6 +100,14 @@ export default class App extends React.Component {
 
           <FormGroup labelText="Prepend" prependText="prepended" appendText="appended">
             <TextInput />
+          </FormGroup>
+
+          <FormGroup labelText="Append Button">
+            <InputGroup>
+              <Button>Prepended</Button>
+              <TextInput />
+              <Button>Appended</Button>
+            </InputGroup>
           </FormGroup>
 
           <FormGroup labelText="Textarea">
