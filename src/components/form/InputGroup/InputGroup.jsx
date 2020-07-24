@@ -2,19 +2,14 @@ import React from 'react';
 
 export default class InputGroup extends React.Component {
 
-  static defaultProps = {
-    className: 'input-group has-btn-appended'
-  };
-
   render() {
     let {
-      className,
       children,
       ...props
     } = this.props;
 
     return (
-      <div {...props.className}>
+      <div className="input-group has-btn-appended">
         {
           children.map(function(child, i) {
             if (child.props.tag === 'button') {
