@@ -12,7 +12,7 @@ export default class InputGroup extends React.Component {
       <div className="input-group has-btn-appended">
         {
           children.map(function(child, i) {
-            if (child.props.tag === 'button') {
+            if (child && child.props.tag === 'button') {
               return <span key={i} className="input-group-btn">{child}</span>
             }
             return child
