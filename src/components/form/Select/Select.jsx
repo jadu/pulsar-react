@@ -16,6 +16,7 @@ export default class Select extends React.Component {
       id,
       idGuid,
       loadingText,
+      nodeRef,
       options,
       width,
       ...props
@@ -30,6 +31,7 @@ export default class Select extends React.Component {
         <select 
           disabled 
           className={inputClassName}
+          ref={nodeRef}
           {...props}
         >
           <option>{loadingText || 'Loading...'}</option>
@@ -42,6 +44,7 @@ export default class Select extends React.Component {
         className={inputClassName}
         id={id ? id : idGuid} 
         aria-describedby={ariaDescribedby}
+        ref={nodeRef}
         {...props} 
       >
         {emptyOption ? <option value="">{emptyOption}</option> : null}
