@@ -10,12 +10,13 @@ export default class ModalHeader extends React.Component {
   render() {
     let {
       className,
+      onCloseModal,
       title,
       ...props
     } = this.props;
 
   	return <div className={className} {...props}>
-      <Button className="close" data-dismiss="modal" aria-hidden="true">&times;</Button>
+      <Button className="close" data-dismiss="modal" aria-hidden="true" onClick={onCloseModal}>&times;</Button>
       <h2 className="modal__title">{title}</h2>
     </div>;
   }
