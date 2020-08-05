@@ -13,7 +13,7 @@ export default class InputGroup extends React.Component {
     let childrenWithGuids = React.Children.map(
       children,
       (child, i) => {
-        if (child && child.props.className === 'form__control') {
+        if (child && child.props.className.indexOf('form__control') !== -1) {
           return React.cloneElement(child, {
             ariaDescribedby: ariaDescribedby,
             id: id
