@@ -8,7 +8,7 @@ export default class TabContent extends React.Component {
     } = this.props;
 
     return (
-      <main className="tab__content">
+      <main className="tab__content" id="skip-target">
         {children}
       </main>
     );
