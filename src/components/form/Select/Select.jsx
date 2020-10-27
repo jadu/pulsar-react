@@ -4,7 +4,8 @@ import classnames from 'classnames';
 export default class Select extends React.Component {
 
   static defaultProps = {
-    className: 'form__control select'
+    className: 'form__control select',
+    emptyOption: 'Choose...'
   };
 
   render() {
@@ -15,6 +16,7 @@ export default class Select extends React.Component {
       id,
       idGuid,
       loadingText,
+      nodeRef,
       options,
       width,
       ...props
@@ -29,6 +31,7 @@ export default class Select extends React.Component {
         <select 
           disabled 
           className={inputClassName}
+          ref={nodeRef}
           {...props}
         >
           <option>{loadingText || 'Loading...'}</option>
@@ -41,11 +44,23 @@ export default class Select extends React.Component {
         className={inputClassName}
         id={id ? id : idGuid} 
         aria-describedby={ariaDescribedby}
+        ref={nodeRef}
         {...props} 
       >
         {emptyOption ? <option value="">{emptyOption}</option> : null}
         {
           options.map(function(option, i) {
+            if (option.options) {
+              return <optgroup key={i} label={option.label}>
+                {option.options.map(function(optGroupOption, j) {
+                  let {text, ...props} = optGroupOption;
+                  props.key = j;
+
+                  return <option {...props}>{text}</option>
+                })}
+              </optgroup>;
+            }
+
             let {text, ...props} = option;
             props.key = i;
 

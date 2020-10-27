@@ -15,7 +15,7 @@ it('should return null if no children', () => {
 it('should render the basic form group', () => {
   const tree = render(
     <FormGroup>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -24,7 +24,7 @@ it('should render the basic form group', () => {
 it('should add the button group classes if using buttonGroup variant', () => {
   const tree = shallow(
     <FormGroup buttonGroup>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -33,7 +33,7 @@ it('should add the button group classes if using buttonGroup variant', () => {
 it('should use fieldset strategy if using choiceGroup variant', () => {
   const tree = shallow(
     <FormGroup choiceGroup>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -42,7 +42,7 @@ it('should use fieldset strategy if using choiceGroup variant', () => {
 it('should add the indented class if using indented variant', () => {
   const tree = shallow(
     <FormGroup indented>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -51,7 +51,7 @@ it('should add the indented class if using indented variant', () => {
 it('should use toggle strategy if using toggle variant', () => {
   const tree = shallow(
     <FormGroup toggle>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -60,7 +60,7 @@ it('should use toggle strategy if using toggle variant', () => {
 it('should add the top label class if using topLabel variant', () => {
   const tree = shallow(
     <FormGroup topLabel>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -69,7 +69,7 @@ it('should add the top label class if using topLabel variant', () => {
 it('should add the flush label class if using flushLabel variant', () => {
   const tree = shallow(
     <FormGroup flushLabel>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -78,7 +78,7 @@ it('should add the flush label class if using flushLabel variant', () => {
 it('should add the checkbox class if using checkbox variant', () => {
   const tree = shallow(
     <FormGroup checkbox>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -87,7 +87,7 @@ it('should add the checkbox class if using checkbox variant', () => {
 it('should use inline strategy if using inlineCheckbox variant', () => {
   const tree = shallow(
     <FormGroup inlineCheckbox>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -96,7 +96,7 @@ it('should use inline strategy if using inlineCheckbox variant', () => {
 it('should use inline strategy if using inlineRadioButton variant', () => {
   const tree = shallow(
     <FormGroup inlineRadioButton>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -105,7 +105,7 @@ it('should use inline strategy if using inlineRadioButton variant', () => {
 it('should add the radio class if using radio variant', () => {
   const tree = shallow(
     <FormGroup radioButton>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -114,7 +114,7 @@ it('should add the radio class if using radio variant', () => {
 it('should add the success class if using success variant', () => {
   const tree = shallow(
     <FormGroup success>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -123,7 +123,7 @@ it('should add the success class if using success variant', () => {
 it('should add the changed class if using changed variant', () => {
   const tree = shallow(
     <FormGroup changed>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -132,7 +132,7 @@ it('should add the changed class if using changed variant', () => {
 it('should add the warning class if using warning variant', () => {
   const tree = shallow(
     <FormGroup warning>
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -141,7 +141,7 @@ it('should add the warning class if using warning variant', () => {
 it('should add the error class if using error variant', () => {
   const tree = shallow(
     <FormGroup error="error message">
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -150,7 +150,7 @@ it('should add the error class if using error variant', () => {
 it('should prepend text', () => {
   const tree = shallow(
     <FormGroup prependText="prepended">
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -159,7 +159,7 @@ it('should prepend text', () => {
 it('should append text', () => {
   const tree = shallow(
     <FormGroup appendText="appended">
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();
@@ -168,7 +168,7 @@ it('should append text', () => {
 it('should append and prepend text', () => {
   const tree = shallow(
     <FormGroup prependText="prepended" appendText="appended">
-      <>foo</>
+      <React.Fragment>foo</React.Fragment>
     </FormGroup>
   );
   expect(tree).toMatchSnapshot();

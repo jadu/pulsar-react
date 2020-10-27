@@ -11,7 +11,6 @@ export default class FormGroup extends React.Component {
 
   static defaultProps = {
     className: 'form__group',
-    guid: shortid.generate(),
     required: false
   };
 
@@ -32,6 +31,7 @@ export default class FormGroup extends React.Component {
       error,
       flushLabel,
       helpText,
+      hideLabel,
       indented,
       inline,
       inlineCheckbox,
@@ -69,14 +69,16 @@ export default class FormGroup extends React.Component {
       'has-error': error
     });
 
+    let guid = this.props.guid || shortid.generate();
+
     // GUID to use if no explicit ID has been set
-    let idGuid = 'id-guid-' + this.props.guid;
+    let idGuid = 'id-guid-' + guid;
     
     // GUID to use to link the input with any help text 
-    let helpGuid = 'help-guid-' + this.props.guid;
+    let helpGuid = 'help-guid-' + guid;
     
     // GUID to use to link the input with any errors 
-    let errorGuid = 'error-guid-' + this.props.guid;
+    let errorGuid = 'error-guid-' + guid;
 
     // Build list of IDs for the input based on the presence of help/error text 
     let ariaDescribedby = classnames({
@@ -88,9 +90,13 @@ export default class FormGroup extends React.Component {
     let childrenWithGuids = React.Children.map(
       children,
       (child, i) => {
+        if (['div', 'p'].indexOf(child.type) !== -1) {
+          return child;
+        }
+
         return React.cloneElement(child, {
           ariaDescribedby: ariaDescribedby ? ariaDescribedby : null,
-          idGuid: idGuid
+          id: idGuid
         });
       }
     );
@@ -102,7 +108,7 @@ export default class FormGroup extends React.Component {
 
     // Form controls
     let inputBlock = (
-      <>{childrenWithGuids}</>
+      <React.Fragment>{childrenWithGuids}</React.Fragment>
     );
 
     // Wrap with input group if appended/prepended text is present
@@ -136,13 +142,17 @@ export default class FormGroup extends React.Component {
     // Standard group markup strategy for most components
     let groupBlock = (
       <div className={variantClasses}>
+        {labelText &&
         <FormLabel 
           required={required} 
           idGuid={idGuid}
           tag={controls ? 'span' : 'label'}
+          hideLabel={hideLabel}
         >
           {labelText}
         </FormLabel>
+        }
+
         {controlsBlock}
       </div>
     );
@@ -185,7 +195,7 @@ export default class FormGroup extends React.Component {
     }
 
     return (
-      <>{groupBlock}</>
+      <React.Fragment>{groupBlock}</React.Fragment>
     );
   }
 }

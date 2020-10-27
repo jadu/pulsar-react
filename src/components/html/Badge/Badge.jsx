@@ -35,14 +35,14 @@ export default class Button extends React.Component {
     });
 
     return (
-      <>
+      <React.Fragment>
         <span 
           className={variantClasses}
           {...props}
         >
           {children}
         </span>
-      </>
+      </React.Fragment>
     );
   }
 }
