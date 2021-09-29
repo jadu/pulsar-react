@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'classnames';
 import FormLabel from '../FormLabel/FormLabel';
 
-export default class Checkbox extends React.Component {
+export default class ChoiceGroupItem extends React.Component {
 
   static defaultProps = {
     className: 'form__control',

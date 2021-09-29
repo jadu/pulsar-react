@@ -9,7 +9,7 @@ export default class MountedModal extends React.Component {
         }
 
         return <ModalPortal portalId="react-modal-container">
-            <Modal style={{display: 'block'}} className="in">
+            <Modal style={{display: 'block'}} className={`${this.props.large ? 'modal--large' : ''} in`}>
                 {this.props.children}
             </Modal>
 
