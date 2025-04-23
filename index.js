@@ -34,5 +34,10 @@ export { default as DropdownButton } from './src/components/html/DropdownButton/
 export { default as Label } from './src/components/html/Label/Label.jsx';
 export { default as Link } from './src/components/html/Link/Link.jsx';
 export { default as ListItem } from './src/components/html/ListItem/ListItem.jsx';
+export { default as Loading } from './src/components/html/Loading/Loading.jsx';
+export { default as Modal } from './src/components/html/Modal/Modal.jsx';
+export { default as ModalBody } from './src/components/html/ModalBody/ModalBody.jsx';
+export { default as ModalFooter } from './src/components/html/ModalFooter/ModalFooter.jsx';
+export { default as ModalHeader } from './src/components/html/ModalHeader/ModalHeader.jsx';
 export { default as OrderedList } from './src/components/html/OrderedList/OrderedList.jsx';
 export { default as UnorderedList } from './src/components/html/UnorderedList/UnorderedList.jsx';
