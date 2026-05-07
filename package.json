@@ -15,10 +15,8 @@
         "babelify",
         {
           "presets": [
-            "es2015",
-            "es2017",
-            "react",
-            "stage-0"
+            "@babel/preset-env",
+            "@babel/preset-react"
           ]
         }
       ]
