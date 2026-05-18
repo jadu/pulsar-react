@@ -1,5 +1,5 @@
 import React from "react";
-import * as ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 export default class ModalPortal extends React.Component {
     constructor(props) {
@@ -23,10 +23,10 @@ export default class ModalPortal extends React.Component {
     }
 
     componentDidUpdate() {
-        ReactDOM.render(
-            <React.Fragment>{this.props.children}</React.Fragment>,
-            this.portalElement
-        );
+        ReactDOM.render(this.portalElement)
+            .render(
+                <React.Fragment>{this.props.children}</React.Fragment>
+            );
     }
 
     render() {
