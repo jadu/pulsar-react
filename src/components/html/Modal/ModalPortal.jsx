@@ -2,11 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 export default class ModalPortal extends React.Component {
-    this.root = null;
-
     constructor(props) {
         super(props);
         this.portalElement = null;
+        this.root = null;
     }
 
     componentDidMount() {
