@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 export default class ModalPortal extends React.Component {
+    this.root = null;
+
     constructor(props) {
         super(props);
         this.portalElement = null;
@@ -19,11 +21,11 @@ export default class ModalPortal extends React.Component {
 
     componentWillUnmount() {
         document.body.removeChild(this.portalElement);
-        ReactDOM.unmountComponentAtNode(this.portalElement)
+        this.root.unmount()
     }
 
     componentDidUpdate() {
-        ReactDOM.render(this.portalElement)
+        this.root = ReactDOM.createRoot(this.portalElement)
             .render(
                 <React.Fragment>{this.props.children}</React.Fragment>
             );
