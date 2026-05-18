@@ -19,11 +19,11 @@ export default class ModalPortal extends React.Component {
     }
 
     componentWillUnmount() {
-        document.body.removeChild(this.portalElement);
         if (this.root) {
             this.root.unmount();
             this.root = null;
         }
+        document.body.removeChild(this.portalElement);
     }
 
     componentDidUpdate() {
