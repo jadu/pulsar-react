@@ -27,10 +27,12 @@ export { default as FormLabel } from './src/components/form/FormLabel/FormLabel.
 export { default as HelpBlock } from './src/components/form/HelpBlock/HelpBlock.jsx';
 
 // HTML Components
+export { default as ActionsBar } from './src/components/html/ActionsBar/ActionsBar.jsx';
 export { default as Badge } from './src/components/html/Badge/Badge.jsx';
 export { default as Button } from './src/components/html/Button/Button.jsx';
 export { default as ButtonGroup } from './src/components/html/ButtonGroup/ButtonGroup.jsx';
 export { default as DropdownButton } from './src/components/html/DropdownButton/DropdownButton.jsx';
+export { default as Icon } from './src/components/html/Icon/Icon.jsx';
 export { default as Label } from './src/components/html/Label/Label.jsx';
 export { default as Link } from './src/components/html/Link/Link.jsx';
 export { default as ListItem } from './src/components/html/ListItem/ListItem.jsx';
@@ -40,4 +42,7 @@ export { default as ModalBody } from './src/components/html/ModalBody/ModalBody.
 export { default as ModalFooter } from './src/components/html/ModalFooter/ModalFooter.jsx';
 export { default as ModalHeader } from './src/components/html/ModalHeader/ModalHeader.jsx';
 export { default as OrderedList } from './src/components/html/OrderedList/OrderedList.jsx';
+export { default as TabInner } from './src/components/html/TabInner/TabInner.jsx';
+export { default as TabContainer } from './src/components/html/TabContainer/TabContainer.jsx';
+export { default as TabContent } from './src/components/html/TabContent/TabContent.jsx';
 export { default as UnorderedList } from './src/components/html/UnorderedList/UnorderedList.jsx';
