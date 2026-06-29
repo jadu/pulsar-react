@@ -22,6 +22,7 @@ export { default as ButtonGroupItem } from './src/components/form/ButtonGroupIte
 // Form Structure Components
 export { default as ErrorBlock } from './src/components/form/ErrorBlock/ErrorBlock.jsx';
 export { default as Fieldset } from './src/components/form/Fieldset/Fieldset.jsx';
+export { default as FormActions } from './src/components/form/FormActions/FormActions.jsx';
 export { default as FormGroup } from './src/components/form/FormGroup/FormGroup.jsx';
 export { default as FormLabel } from './src/components/form/FormLabel/FormLabel.jsx';
 export { default as HelpBlock } from './src/components/form/HelpBlock/HelpBlock.jsx';
@@ -37,6 +38,8 @@ export { default as Label } from './src/components/html/Label/Label.jsx';
 export { default as Link } from './src/components/html/Link/Link.jsx';
 export { default as ListItem } from './src/components/html/ListItem/ListItem.jsx';
 export { default as Loading } from './src/components/html/Loading/Loading.jsx';
+export { default as MountedModal } from './src/components/html/Modal/MountedModal.jsx';
+export { default as ModalPortal } from './src/components/html/Modal/ModalPortal.jsx';
 export { default as Modal } from './src/components/html/Modal/Modal.jsx';
 export { default as ModalBody } from './src/components/html/ModalBody/ModalBody.jsx';
 export { default as ModalFooter } from './src/components/html/ModalFooter/ModalFooter.jsx';
