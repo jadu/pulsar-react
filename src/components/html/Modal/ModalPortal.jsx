@@ -27,10 +27,13 @@ export default class ModalPortal extends React.Component {
     }
 
     componentDidUpdate() {
-        this.root = ReactDOM.createRoot(this.portalElement)
-            .render(
-                <React.Fragment>{this.props.children}</React.Fragment>
-            );
+        if (!this.root) {
+            this.root = ReactDOM.createRoot(this.portalElement);
+        }
+
+        this.root.render(
+            <React.Fragment>{this.props.children}</React.Fragment>
+        );
     }
 
     render() {

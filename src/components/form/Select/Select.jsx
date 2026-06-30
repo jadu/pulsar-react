@@ -54,17 +54,15 @@ export default class Select extends React.Component {
               return <optgroup key={i} label={option.label}>
                 {option.options.map(function(optGroupOption, j) {
                   let {text, ...props} = optGroupOption;
-                  props.key = j;
 
-                  return <option {...props}>{text}</option>
+                  return <option key={j} {...props}>{text}</option>
                 })}
               </optgroup>;
             }
 
             let {text, ...props} = option;
-            props.key = i;
 
-            return <option {...props}>{text}</option>
+            return <option key={i} {...props}>{text}</option>
           })
         }
       </select>
