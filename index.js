@@ -1,5 +1,6 @@
 // Form Components
 export { default as Checkbox } from './src/components/form/Checkbox/Checkbox.jsx';
+export { default as ChoiceGroupItem } from './src/components/form/ChoiceGroupItem/ChoiceGroupItem.jsx';
 export { default as ColorInput } from './src/components/form/ColorInput/ColorInput.jsx';
 export { default as Content } from './src/components/form/Content/Content.jsx';
 export { default as DateInput } from './src/components/form/DateInput/DateInput.jsx';
